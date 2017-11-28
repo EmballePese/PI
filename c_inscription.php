@@ -2,7 +2,7 @@
 
 include('variable_inscription.php');
 
-if(empty($_GET['user'])|| empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty($_GET['adress'])|| empty($_GET['city'])|| empty($_GET['cp'])|| empty($_GET['tel'])|| empty($_GET['mail'])){
+if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty($_GET['adress'])|| empty($_GET['city'])|| empty($_GET['cp'])|| empty($_GET['tel'])|| empty($_GET['mail'])){
 	
 	include('v_inscription.php');
 	echo"Il manque des informations !";

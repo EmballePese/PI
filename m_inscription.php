@@ -9,21 +9,19 @@ catch (Exception $e)
 	die('Erreur : '. $e->getMessage());
 }
 
-$recov = $bdd->query('SELECT * FROM jeux_video');
+$recov = $bdd->query('SELECT * FROM User');
 $exist = false;
 
 while ($donnees = $recov->fetch()){
-		if($user == $donnees['mail']){
+		if($mail == $donnees['Mail']){
 			$message = "User already taken";
 			$exist = true;
-		} 
-		$donnees["id_user"] = 
-	// print_r($donnees['nom']."<br>");		
+		} 	
 }
 
 if($exist == false){
 
-$bdd->exec('INSERT INTO user(Categorie, Nom, Prenom, Adresse, CP, Ville, Tel, Mail, Mdp) VALUES(2,\''.$name.'\', \''.$forename.'\', \''.$adress.'\', \''.$cp.'\',\''.$city.'\',\''.$tel.'\',\''.$mail.'\',\''.$mdp.'\',)');
+$bdd->exec('INSERT INTO User VALUES (0,2,\''.$name.'\',\''.$forename.'\',\''.$adress.'\',\''.$cp.'\',\''.$city.'\',\''.$tel.'\',\''.$mail.'\',\''.$mdp.'\')');
 
 $message = "Vous êtes inscrit sur notre magnifique site de vrac ! Votre mdp est : ".$mdp." Ne les oubliez pas ! ;)
 <form action=\"./v_connexion.php\">

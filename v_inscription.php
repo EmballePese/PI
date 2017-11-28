@@ -14,9 +14,8 @@ echo"<form action=\"./c_inscription.php\" method=\"GET\">
 	Code Postal : <input type=\"text\"name=\"cp\" value=\"$cp\"><p>
 	Ville : <input type=\"text\" name=\"city\"value=\"$city\"><p>
 	Mail: <input type=\"text\" name=\"mail\"value=\"$mail\"><p>
+	Mot de passe : <input type=\"text\" name=\"mdp\"value=\"$mdp\"><p>
 	Tel : <input type=\"text\" name=\"tel\"value=\"$tel\"><p>
-	Utilisateur : <input type=\"text\" name=\"user\"value=\"$user\"><p>
-    Mot de passe : <input type=\"text\" name=\"mdp\"value=\"$mdp\">
 	<p>
 	<button>Inscription</button>
 	</form>";

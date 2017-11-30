@@ -2,31 +2,28 @@
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'MonMySQL');
+	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', '');
 }
 catch (Exception $e)
-{	
+{
 	die('Erreur : '. $e->getMessage());
 }
 
-$recov = $bdd->query('SELECT * FROM jeux_video');
-$exist = false;
+$recov = $bdd->query('SELECT * FROM User');
+
+$exist = FALSE;
 
 while ($donnees = $recov->fetch()){
-		if($user == $donnees['nom']){
-            if($mdp == $donnees['possesseur']){
-			$message = "Bienvenue ".$user;
-			$exist = true;
-            }
-		} 
-		
-	// print_r($donnees['nom']."<br>");		
+	if($mail == $donnees['Mail']){
+    if($mdp == $donnees['Mdp']){
+			$message = "Bienvenue ".$mail;
+			$exist = TRUE;
+    }
+	}
+	// print_r($donnees['nom']."<br>");
 }
 
-
-echo$message;
-	
 $recov->closeCursor();
-	
+
 
 ?>

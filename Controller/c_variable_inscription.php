@@ -4,7 +4,6 @@ if(isset($_GET['name'])){
 }else{
 	$name = "";
 }
-
 if(isset($_GET['forename'])){
 	$forename = $_GET['forename'];
 }else{
@@ -34,11 +33,6 @@ if(isset($_GET['tel'])){
 	$tel = $_GET['tel'];
 }else{
 	$tel = "";
-}
-if(isset($_GET['user'])){
-	$user = $_GET['user'];
-}else{
-	$user = "";
 }
 if(isset($_GET['mdp'])){
 	$mdp = $_GET['mdp'];

@@ -19,6 +19,14 @@ margin:0px;
 text-align:justify;
 line-height:19px;
 }
+.p1{
+display:inline;
+text-align:left;
+margin:auto;
+}
+.tab_center{
+margin:auto;
+}
 p.details{
 padding:5px 15px 5px 15px;
 font-size:11px;

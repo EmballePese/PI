@@ -16,6 +16,7 @@ $exist = FALSE;
 while ($donnees = $recov->fetch()){
 	if($mail == $donnees['Mail']){
     if($mdp == $donnees['Mdp']){
+			include("../accueil/template.html");
 			$message = "Bienvenue ".$mail;
 			$exist = TRUE;
     }

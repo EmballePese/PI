@@ -6,14 +6,14 @@ $mdp = $_GET['mdp'];
 if(empty($_GET['mail'])|| empty($_GET['mdp'])){
 
 	include('../View/v_connexion.php');
-	echo("Des champs sont vides !");
+	echo("<h3 align='center'>Mauvais mot de passe ou login</h3>");
 
 }else{
 
     include('../Model/m_connexion.php');
     if($exist == false){
     include('../View/v_connexion.php');
-    echo("Mauvais mot de passe ou login");
+    echo("<h3 align='center'>Mauvais mot de passe ou login</h3>");
 	} else{
 		echo$message;
 		}

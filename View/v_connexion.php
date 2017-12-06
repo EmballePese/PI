@@ -3,7 +3,7 @@
 <head>
 <title>Flower Shop - About</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="../accueil/style.css" />
+<link rel="stylesheet" type="text/css" href="../Look/style.css" />
 </head>
 <body>
 <div id="wrap">

@@ -23,11 +23,14 @@ if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty
 		echo"<h3 align='center'>L'un des champs est incorrect</h3>";
 	}else{
 		include('../Model/m_inscription.php');
+
 		if($exist == true){
 		include('../View/v_inscription.php');
+		echo"<h3 align='center'>Utilisateur dejà existant!</h3>";
+		}else{
+		include('../View/v_confirmation_inscription.php');
 		}
 	}
-
 }
 
 ?>

@@ -2,14 +2,23 @@
 
 include('c_variable_inscription.php');
 
-if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty($_GET['adress'])|| empty($_GET['city'])|| empty($_GET['cp'])|| empty($_GET['tel'])|| empty($_GET['mail'])){
+if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty($_GET['tel'])|| empty($_GET['mail'])){
 
 	include('../View/v_inscription.php');
 	echo"<h3 align='center'>Il manque des informations !</h3>";
 
 }else{
 
-	if(!is_numeric($cp) || !is_numeric($tel)){
+	if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+		$correct_mail = true;
+	} else {
+		$correct_mail = false;
+	}
+	
+	if(!is_numeric($cp)&&!empty($cp) || !is_numeric($tel)||strpos($mdp, ' ') !== false||strpos($name, ' ') !== false||strpos($forename, ' ') !== false||strpos($city, ' ') !== false||strpos($cp, ' ') !== false||strpos($tel, ' ') !== false||strpos($mail, ' ') !== false){
+		include('../View/v_inscription.php');
+		echo"<h3 align='center'>L'un des champs est incorrect</h3>";
+	}else if($correct_mail == false){
 		include('../View/v_inscription.php');
 		echo"<h3 align='center'>L'un des champs est incorrect</h3>";
 	}else{

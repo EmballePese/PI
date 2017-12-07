@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,7 +24,18 @@
     </div>
   </div>
   <div class="center_content">
-    <h2>Votre compte :</h2>
+<?php
+if(empty($_SESSION['user']))
+{
+	header('Location: v_connexion.php');
+}
+else
+{
+	$user = $_SESSION['user'];
+	echo "<h3>Vous êtes connecté(e) sous $user</h3>";
+	include('../Model/m_account.php');
+}
+?>
   </div>
 </div>
 </body>

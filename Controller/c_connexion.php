@@ -14,8 +14,10 @@ if(empty($_GET['mail'])|| empty($_GET['mdp'])){
     if($exist == false){
     include('../View/v_connexion.php');
     echo("<h3 align='center'>Mauvais mot de passe ou login</h3>");
-	} else{
-		echo$message;
+	} else{	
+		session_start();
+		$_SESSION['user'] = $mail;
+		header('Location: ../Index.php');
 		}
 }
 

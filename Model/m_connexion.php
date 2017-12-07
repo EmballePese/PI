@@ -2,7 +2,7 @@
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
 }
 catch (Exception $e)
 {
@@ -16,7 +16,6 @@ $exist = FALSE;
 while ($donnees = $recov->fetch()){
 	if($mail == $donnees['Mail']){
     if($mdp == $donnees['Mdp']){
-			include("../Index.html");
 			$message = "Bienvenue ".$mail;
 			$exist = TRUE;
     }

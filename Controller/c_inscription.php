@@ -15,9 +15,11 @@ if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty
 		$correct_mail = false;
 	}
 	
-	if(strlen($tel)!=10)/*||strlen($cp)!=5) probleme avec le CP car il peut aussi être vide */{
+	
+	
+	if(strlen($tel)!=10||strlen($cp)!=5 && !empty($cp)){
 		include('../View/v_inscription.php');
-		echo"<h3 align='center'>Champ trop grand/petit</h3>";
+		echo"<h3 align='center'>Champ(s) trop grand/petit</h3>";
 	}else if(!is_numeric($cp)&&!empty($cp) || !is_numeric($tel)||strpos($mdp, ' ') !== false||strpos($name, ' ') !== false||strpos($forename, ' ') !== false||strpos($city, ' ') !== false||strpos($cp, ' ') !== false||strpos($tel, ' ') !== false||strpos($mail, ' ') !== false){
 		include('../View/v_inscription.php');
 		echo"<h3 align='center'>L'un des champs est incorrect</h3>";

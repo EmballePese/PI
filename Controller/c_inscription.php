@@ -15,12 +15,16 @@ if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty
 		$correct_mail = false;
 	}
 	
-	if(!is_numeric($cp)&&!empty($cp) || !is_numeric($tel)||strpos($mdp, ' ') !== false||strpos($name, ' ') !== false||strpos($forename, ' ') !== false||strpos($city, ' ') !== false||strpos($cp, ' ') !== false||strpos($tel, ' ') !== false||strpos($mail, ' ') !== false){
+	
+	if(count($tel)>10||count($cp)>5){
+		include('../View/v_inscription.php');
+		echo"<h3 align='center'>Champ trop grand</h3>";
+	}else if(!is_numeric($cp)&&!empty($cp) || !is_numeric($tel)||strpos($mdp, ' ') !== false||strpos($name, ' ') !== false||strpos($forename, ' ') !== false||strpos($city, ' ') !== false||strpos($cp, ' ') !== false||strpos($tel, ' ') !== false||strpos($mail, ' ') !== false){
 		include('../View/v_inscription.php');
 		echo"<h3 align='center'>L'un des champs est incorrect</h3>";
 	}else if($correct_mail == false){
 		include('../View/v_inscription.php');
-		echo"<h3 align='center'>L'un des champs est incorrect</h3>";
+		echo"<h3 align='center'>Mail Incorrect</h3>";
 	}else{
 		include('../Model/m_inscription.php');
 

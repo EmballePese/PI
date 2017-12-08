@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -25,16 +22,16 @@ session_start();
   </div>
   <div class="center_content">
 <?php
-if(empty($_SESSION['user']))
-{
-	header('Location: v_connexion.php');
-}
-else
-{
-	$user = $_SESSION['user'];
 	echo "<h3>Vous êtes connecté(e) sous $user</h3>";
-	include('../Model/m_account.php');
-}
+	echo("Vos informations personelles <br><br>");
+	echo("Nom : ".$donnees['Nom']."<br>");
+	echo("Prenom : ".$donnees['Prenom']."<br>");
+	echo("Adresse : ".$donnees['Adresse']."<br>");
+	echo("Code Postal : ".$donnees['CP']."<br>");
+	echo("Ville : ".$donnees['Ville']."<br>");
+	echo("Tel : ".$donnees['Tel']."<br>");
+	echo("Mail : ".$donnees['Mail']."<br>");
+
 ?>
   </div>
 </div>

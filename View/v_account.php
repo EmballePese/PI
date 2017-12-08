@@ -22,6 +22,7 @@
   </div>
   <div class="center_content">
 <?php
+	$user = $donnees['Prenom'];
 	echo "<h3>Vous êtes connecté(e) sous $user</h3>";
 	echo("Vos informations personelles <br><br>");
 	echo("Nom : ".$donnees['Nom']."<br>");
@@ -31,8 +32,11 @@
 	echo("Ville : ".$donnees['Ville']."<br>");
 	echo("Tel : ".$donnees['Tel']."<br>");
 	echo("Mail : ".$donnees['Mail']."<br>");
-
 ?>
+	 <form action="../Controller/c_deconnexion.php">
+		<input type="Submit" value="Deconnexion">
+	</form> 
+
   </div>
 </div>
 </body>

@@ -1,7 +1,7 @@
     <?php
     try
     {
-    	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', '');
+    	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
     }
     catch (Exception $e)
     {
@@ -17,7 +17,9 @@
     		}
     }
 
-    if($exist == false){
+	if($exist == false){
+	$mdp_clair = $mdp;
+	$mdp = sha1($mdp);
     $bdd->exec("INSERT INTO User VALUES (0,2,'$name','$forename','$adress','$cp','$city','$tel','$mail','$mdp')");
 	}
 

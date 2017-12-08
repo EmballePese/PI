@@ -27,7 +27,7 @@
 			<tr><td>Code Postal</td> <td>:</td> <td><input type=\"text\"name=\"cp\" value=\"$cp\"></td></tr><p>
 			<tr><td>Ville</td> <td>:</td> <td><input type=\"text\" name=\"city\"value=\"$city\"></td></tr><p>
 			<tr><td>Mail*</td> <td>:</td> <td><input type=\"text\" name=\"mail\"value=\"$mail\"></td></tr><p>
-			<tr><td>Mot de passe*</td> <td>:</td> <td><input type=\"text\" name=\"mdp\"value=\"$mdp\"></td></tr><p>
+			<tr><td>Mot de passe*</td> <td>:</td> <td><input type=\"password\" name=\"mdp\"value=\"$mdp\"></td></tr><p>
 			<tr><td>Tel*</td> <td>:</td> <td><input type=\"text\" name=\"tel\"value=\"$tel\"></td></tr><p>
 			<p>
 			<tr><td colspan=2></td><td style=\"text-align:center;\"><button>Inscription</button></td></tr>

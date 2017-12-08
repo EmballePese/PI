@@ -36,6 +36,12 @@
 	 <form action="../Controller/c_deconnexion.php">
 		<input type="Submit" value="Deconnexion">
 	</form> 
+	</br>
+	 <form action="../Controller/c_desinscription.php">
+		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr></br>
+        <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr></br>
+		<input type="Submit" value="Se desinscrire">
+	</form> 
 
   </div>
 </div>

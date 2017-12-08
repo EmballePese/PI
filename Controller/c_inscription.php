@@ -15,8 +15,7 @@ if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty
 		$correct_mail = false;
 	}
 	
-	
-	if(count($tel)>10||count($cp)>5){
+	if(strlen($tel)>10||strlen($cp)>5){
 		include('../View/v_inscription.php');
 		echo"<h3 align='center'>Champ trop grand</h3>";
 	}else if(!is_numeric($cp)&&!empty($cp) || !is_numeric($tel)||strpos($mdp, ' ') !== false||strpos($name, ' ') !== false||strpos($forename, ' ') !== false||strpos($city, ' ') !== false||strpos($cp, ' ') !== false||strpos($tel, ' ') !== false||strpos($mail, ' ') !== false){

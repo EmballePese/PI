@@ -21,29 +21,24 @@
     </div>
   </div>
   <div class="center_content">
-    <h2>Voici les categories disponibles :</h2></br>
+    <h2>Voici les Articles disponibles :</h2></br>
+<?php
+	for($i=0;$i<count($tab);$i++){
+		echo"<form action=\"./Enigma.php\" method=\"GET\">";
+		echo"Nom :".$tab[$i]['Nom']."</br>";
+		echo"En stock :".$tab[$i]['Qte_stock']."</br>";
+		echo"Composition :".$tab[$i]['Composition']."</br>";
+		echo"Date Limite de Consomation :".$tab[$i]['DLC']."</br>";
+		echo"Prix :".$tab[$i]['Prix_achat']*$tab[$i]['Marge']."</br>";
+		echo"<input type=\"number\" name=\"quantity\" min=\"1\" max=\"20\">";
+		echo"<button> Ajouter </button> </br>
+		</form>";
+	}
+	?>
 	
-	<form action="../Controller/c_categorie.php" method="GET">
-	<input type="image" src="../Look/images/ratatouille.png" width="100" height="100"></br>
-	<input type="hidden" value="Plat_Prepare" name="cat">
-	Plat préparé</br>
-	</form>
-	
-	<form action="../Controller/c_categorie.php" method="GET">
-	<input type="image" src="../Look/images/Pomme.png" width="100" height="100"></br>
-	<input type="hidden" value="Fruit_Legume"name="cat">
-	Fruit/Legume</br>
-	</form>
-	
-	<form action="../Controller/c_categorie.php" method="GET">
-	<input type="image" src="../Look/images/jus de pomme.png"  width="100" height="100"></br>
-	<input type="hidden" value="Boisson"name="cat">
-	Boisson</br>
-	</form>
-		
-	
+	<form action="../View/v_product.php">
+	<button> Retour aux rubriques </button>
 	</form>
   </div>
 </div>
 </body>
-</html>

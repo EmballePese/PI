@@ -24,21 +24,27 @@
     <h2>Voici les Articles disponibles :</h2></br>
 <?php
 	for($i=0;$i<count($tab);$i++){
-		echo"<form action=\"./Enigma.php\" method=\"GET\">";
+		echo"<form action=\"./c_categorie.php\" method=\"GET\">";
 		echo"Nom :".$tab[$i]['Nom']."</br>";
 		echo"En stock :".$tab[$i]['Qte_stock']."</br>";
 		echo"Composition :".$tab[$i]['Composition']."</br>";
 		echo"Date Limite de Consomation :".$tab[$i]['DLC']."</br>";
-		echo"Prix :".$tab[$i]['Prix_achat']*$tab[$i]['Marge']."</br>";
+		echo"Prix :".$tab[$i]['Prix_total']."</br>";
 		echo"<input type=\"number\" name=\"quantity\" min=\"1\" max=\"20\">";
+		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_total']."\" name=\"Price".$tab[$i]['Nom']."\">";
+		echo"<input type=\"hidden\" value=\"".$cat."\" name=\"cat\">";
+		echo"<input type=\"hidden\" value=\"true\" name=\"Ajouter\">";
+		echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
 		echo"<button> Ajouter </button> </br>
-		</form>";
+			 </form>
+			 </br>";
 	}
 	?>
-	
+	</br>
 	<form action="../View/v_product.php">
 	<button> Retour aux rubriques </button>
 	</form>
   </div>
 </div>
 </body>
+</html>

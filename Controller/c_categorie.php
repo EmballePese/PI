@@ -55,5 +55,4 @@ if($ajouter == true){
 	}
 }
 include('../View/v_categorie.php');
-var_dump($_SESSION['basket']);
 ?>

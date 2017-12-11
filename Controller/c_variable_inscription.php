@@ -63,4 +63,14 @@ if(isset($_GET['ajouter'])){
 if(!isset($message)){
 	$message = "";
 }
+if(isset($_GET['line'])){
+	$line = $_GET['line'];
+}else{
+	$line = "";
+}
+if(isset($_GET['op'])){
+	$op = $_GET['op'];
+}else{
+	$op = "";
+}
 ?>

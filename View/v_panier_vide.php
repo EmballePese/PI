@@ -14,7 +14,7 @@
 		  <li><a href="">Statut : à venir</a></li>
           <li class="selected"><a href="../Index.php">A propos</a></li>
 		  <li><a href="../View/v_product.php">Articles</a></li>
-          <li><a href="../Controller/c_basket.php">Mon panier</a></li>
+          <li><a href="../View/v_basket.php">Mon panier</a></li>
           <li><a href="../Controller/c_account.php">Mon compte</a></li>
         </ul>
       </div>
@@ -24,26 +24,7 @@
     <table class="tab_center">
 	<h2> Mon Panier : </h2>
 			<?php
-		echo("<table class=\"tab_center\">
-		<tr>
-		<th>Nom</th>
-		<th>Prix</th>
-		<th>Quantité</th>
-		</tr>
-		");
-	for($i=0;$i<count($order);$i++)
-	{
-		echo("<tr><td>".$order[$i]['name']."</td>");
-		echo("<td>".$order[$i]['price_tot']."</td>");
-		echo("<td>".$order[$i]['quantity']."</td>");
-		echo("<td><form action=\"c_basket.php\" method=\"get\">
-			<input type=\"hidden\" name=\"line\" value=\"$i\">
-			<input type=\"submit\" name=\"op\" value=\"+\"></form></td>");
-		echo("<td><form action=\"c_basket.php\" method=\"get\">
-			<input type=\"hidden\" name=\"line\" value=\"$i\">
-			<input type=\"submit\" name=\"op\" value=\"-\"></form></td></tr>");
-	}
-	echo $message;
+				echo $message;
 			?>
     </table>
   </div>

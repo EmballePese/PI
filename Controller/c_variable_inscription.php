@@ -43,8 +43,7 @@ if(isset($_GET['type'])){
 	$type = intval($_GET['type']);
 }else{
 	$type = "";
-
-
+}
 if(isset($_SESSION['a'])){
 $a = $_SESSION['a'];
 }else{

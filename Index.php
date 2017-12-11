@@ -22,9 +22,9 @@
   </div>
   <div class="center_content">
     <div class="left_content">
-      <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" /></span>A propos</div>
+      <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" /></span>Bienvenue sur Emballé-pesé</div>
       <div class="feat_prod_box_details">
-	  <p class="details"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. <br />
+	  <p class="details"> <br/>
 		  <br />
       </div>
 </div>

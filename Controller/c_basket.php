@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../View/v_basket.php');
+$new_basket = array();
 $line = $_GET['line'];
 $op = $_GET['op'];
 if(isset($line) && isset($op))
@@ -14,11 +14,12 @@ if(isset($line) && isset($op))
 		$_SESSION['basket'][$line]['quantity']--;
 		if($_SESSION['basket'][$line]['quantity'] == 0)
 		{
-			array_splice($_SESSION['basket'],$line);
+			unset($_SESSION['basket'][$line]);
+			$_SESSION['basket'] = array_values($_SESSION['basket']);
+			$_SESSION['a']--;
 		}
 	}	
 }
-var_dump($_SESSION['basket']);
 if(empty($_SESSION['basket']))
 {
 	echo("<h3>Votre panier est vide ;(</h3>");
@@ -46,6 +47,7 @@ else
 			<input type=\"submit\" name=\"op\" value=\"-\"></form></td></tr>");
 	}
 }
+include('../View/v_basket.php');
 echo("
 </table>
 </div>

@@ -42,13 +42,13 @@ if($Ajouter == true){
 	$price_total = $quantity*$price_prod;
 	$exist=false;
 	for($b=0;$b<=$a;$b++){
-	if(isset($basket[$b])){
-		if($basket[$b]['name'] == $tab[$i]['Nom']){
-			$a = $b;
-			$exist = true;
-			break;
+		if(isset($basket[$b])){
+			if($basket[$b]['name'] == $tab[$i]['Nom']){
+				$a = $b;
+				$exist = true;
+				break;
+			}
 		}
-	}
 	}
 	if($exist == true){
 		$basket[$a]['quantity'] = $quantity + $basket[$a]['quantity'];
@@ -57,7 +57,7 @@ if($Ajouter == true){
 			$basket[$a]['price_tot'] = 20*$price_prod;
 			echo"Quantité maximum est de 20, Vous ne pouvez pas en commander plus";
 		}else{
-		$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
+			$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
 		}
 	}else{
 	$basket[$a]['price_tot'] = $price_total;

@@ -5,10 +5,12 @@ if(isset($line) && isset($op))
 {   
 	if($op == "+" && $_SESSION['basket'][$line]['quantity'] < 20)
 	{
+		$_SESSION['basket'][$line]['price_tot'] += ($_SESSION['basket'][$line]['price_tot'] / $_SESSION['basket'][$line]['quantity']);	
 		$_SESSION['basket'][$line]['quantity']++;
 	}
 	else if($op == "-" && $_SESSION['basket'][$line]['quantity'] > 0)
 	{
+		$_SESSION['basket'][$line]['price_tot'] -= ($_SESSION['basket'][$line]['price_tot'] / $_SESSION['basket'][$line]['quantity']);          
 		$_SESSION['basket'][$line]['quantity']--;
 		if($_SESSION['basket'][$line]['quantity'] == 0)
 		{

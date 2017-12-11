@@ -1,10 +1,11 @@
 <?php
 session_start();
 
-if($_SESSION['a'] == 0){
-$a=0;
-}else{
+if(isset($_SESSION['a'])){
 $a = $_SESSION['a'];
+}else{
+$a =0;
+$_SESSION['a'] =0;
 }
 
 $cat = $_GET['cat'];
@@ -41,11 +42,13 @@ if($Ajouter == true){
 	$price_total = $quantity*$price_prod;
 	$exist=false;
 	for($b=0;$b<=$a;$b++){
+	if(isset($basket[$b])){
 		if($basket[$b]['name'] == $tab[$i]['Nom']){
 			$a = $b;
 			$exist = true;
 			break;
 		}
+	}
 	}
 	if($exist == true){
 		$basket[$a]['quantity'] = $quantity + $basket[$a]['quantity'];

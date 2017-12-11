@@ -20,7 +20,7 @@
 	if($exist == false){
 	$mdp_clair = $mdp;
 	$mdp = sha1($mdp);
-    $bdd->exec("INSERT INTO User VALUES (0,2,'$name','$forename','$adress','$cp','$city','$tel','$mail','$mdp')");
+    $bdd->exec("INSERT INTO User VALUES (0,'$type','$name','$forename','$adress','$cp','$city','$tel','$mail','$mdp')");
 	}
 
     $recov->closeCursor();

@@ -2,11 +2,11 @@
 
 include('c_variable_inscription.php');
 
-if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty($_GET['tel'])|| empty($_GET['mail'])){
+if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty($_GET['tel'])|| empty($_GET['mail'])|| empty($_GET["type"])){
 	
 	$message="<h3 align='center'>Il manque des informations !</h3>";
 	include('../View/v_inscription.php');
-	
+
 
 }else{
 
@@ -15,9 +15,9 @@ if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty
 	} else {
 		$correct_mail = false;
 	}
-	
-	
-	
+
+
+
 	if(strlen($tel)!=10||strlen($cp)!=5 && !empty($cp)){
 		$message="<h3 align='center'>Champ(s) trop grand/petit</h3>";
 		include('../View/v_inscription.php');

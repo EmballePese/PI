@@ -33,7 +33,7 @@
 		echo"<input type=\"number\" name=\"quantity\" min=\"1\" max=\"20\">";
 		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_total']."\" name=\"Price".$tab[$i]['Nom']."\">";
 		echo"<input type=\"hidden\" value=\"".$cat."\" name=\"cat\">";
-		echo"<input type=\"hidden\" value=\"true\" name=\"Ajouter\">";
+		echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
 		echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
 		echo"<button> Ajouter </button> </br>
 			 </form>

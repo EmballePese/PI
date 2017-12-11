@@ -7,6 +7,17 @@ $a = $_SESSION['a'];
 $a =0;
 $_SESSION['a'] =0;
 }
+if(isset($_GET['quantity'])){
+	$quantity = $_GET['quantity'];
+}else{
+	$quantity = 0;
+}
+if(isset($_GET['ajouter'])){
+	$ajouter = $_GET['ajouter'];
+}else{
+	$ajouter = 0;
+}
+
 
 $cat = $_GET['cat'];
 
@@ -16,21 +27,9 @@ foreach($tab as $key => $value){
 	$tab[$i]['Prix_total'] = ($tab[$i]['Prix_achat']*$tab[$i]['Marge']) + $tab[$i]['Prix_achat'];
 	$i++;
 }
-
-if(isset($_GET['quantity'])){
-	$quantity = $_GET['quantity'];
-}else{
-	$quantity = 0;
-}
-if(isset($_GET['Ajouter'])){
-	$Ajouter = $_GET['Ajouter'];
-}else{
-	$Ajouter = 0;
-}
-
 include('../View/v_categorie.php');
 
-if($Ajouter == true){
+if($ajouter == true){
 	if(isset($_SESSION['user'])){
 		if(isset($_SESSION['basket'])){
 			$basket =$_SESSION['basket'];

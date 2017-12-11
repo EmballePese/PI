@@ -39,4 +39,23 @@ if(isset($_GET['mdp'])){
 }else{
 	$mdp = "";
 }
+if(isset($_SESSION['a'])){
+$a = $_SESSION['a'];
+}else{
+$a =0;
+$_SESSION['a'] =0;
+}
+if(isset($_GET['quantity'])){
+	$quantity = $_GET['quantity'];
+}else{
+	$quantity = 0;
+}
+if(isset($_GET['ajouter'])){
+	$ajouter = $_GET['ajouter'];
+}else{
+	$ajouter = 0;
+}
+if(!isset($message)){
+	$message = "";
+}
 ?>

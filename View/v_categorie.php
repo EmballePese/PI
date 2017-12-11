@@ -39,6 +39,7 @@
 			 </form>
 			 </br>";
 	}
+	echo $message;
 	?>
 	</br>
 	<form action="../View/v_product.php">

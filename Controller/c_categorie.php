@@ -1,24 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['a'])){
-$a = $_SESSION['a'];
-}else{
-$a =0;
-$_SESSION['a'] =0;
-}
-if(isset($_GET['quantity'])){
-	$quantity = $_GET['quantity'];
-}else{
-	$quantity = 0;
-}
-if(isset($_GET['ajouter'])){
-	$ajouter = $_GET['ajouter'];
-}else{
-	$ajouter = 0;
-}
-
-
+include('../Controller/c_variable_inscription.php');
 $cat = $_GET['cat'];
 
 include('../Model/m_categorie.php');
@@ -27,7 +10,6 @@ foreach($tab as $key => $value){
 	$tab[$i]['Prix_total'] = ($tab[$i]['Prix_achat']*$tab[$i]['Marge']) + $tab[$i]['Prix_achat'];
 	$i++;
 }
-include('../View/v_categorie.php');
 
 if($ajouter == true){
 	if(isset($_SESSION['user'])){
@@ -54,7 +36,7 @@ if($ajouter == true){
 		if($basket[$a]['quantity']> 20){
 			$basket[$a]['quantity'] = 20;
 			$basket[$a]['price_tot'] = 20*$price_prod;
-			echo"Quantité maximum est de 20, Vous ne pouvez pas en commander plus";
+			$message = $message."Quantité maximum est de 20, Vous ne pouvez pas en commander plus</br>";
 		}else{
 			$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
 		}
@@ -63,15 +45,14 @@ if($ajouter == true){
 	$basket[$a]['quantity'] = $quantity;
 	$basket[$a]['name'] = $tab[$i]['Nom'];
 	$_SESSION['a']++;
+	$message ="<h3>Votre Article a bien été ajouté</h3></br>";
 	}
 	$_SESSION['basket'] = $basket;
 		
-		var_dump($_SESSION['basket']);
-		
-		echo"<h3>Votre Article a bien été ajouté</h3>";
 	}else{
 		
-	echo"Vous devez vous connecter pour ajouter un article dans votre panier";
+	$message = "Vous devez vous connecter pour ajouter un article dans votre panier </br>";
 	}
 }
+include('../View/v_categorie.php');
 ?>

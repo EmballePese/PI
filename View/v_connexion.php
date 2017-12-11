@@ -30,6 +30,10 @@
       </form>
     </table>
     <p> Pas encore de compte ? Vous pouvez vous inscrire en cliquant <a href="../View/v_inscription.php"> ici</a>.</p>
+	<?php
+	include('../Controller/c_variable_inscription.php');
+	echo$message;
+	?>
   </div>
 </div>
 </body>

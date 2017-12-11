@@ -38,6 +38,7 @@
 			<tr><td colspan=2></td><td style=\"text-align:center;\"><button>Inscription</button></td></tr>
 			Les champs * sont obligatoires
 			</form>";
+			echo $message;
 			?>
     </table>
   </div>

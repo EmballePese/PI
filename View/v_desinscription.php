@@ -11,7 +11,7 @@
     <div id="menu">
       <div class="logo">
         <ul>
-          <<li><a href="">Statut : à venir</a></li>
+          <li><a href="">Statut : à venir</a></li>
           <li class="selected"><a href="../Index.php">A propos</a></li>
           <li><a href="../View/v_product.php">Articles</a></li>
           <li><a href="../View/v_basket.php">Mon panier</a></li>

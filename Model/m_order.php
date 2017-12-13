@@ -18,7 +18,7 @@ catch (Exception $e)
 			$id = $donnees['id_user'];
     }
 	
-	$bdd->exec("INSERT INTO Cmd_vente VALUES (0,'$id','$paye','$delivry','$date_order','$date_order')");
+	$bdd->exec("INSERT INTO cmd_vente VALUES (0,'$id','$paye','$delivry','$date_order','$date_delivry')");
 		
 		
 	$recov = $bdd->query("SELECT *
@@ -53,3 +53,4 @@ catch (Exception $e)
 $recov->closeCursor();
 
 ?>
+

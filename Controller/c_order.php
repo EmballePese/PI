@@ -7,15 +7,16 @@ if($step == "1"){
 		$message = "<h2>Veuillez indiquer vos coordonnées : </h2></br>
 					<form action=\"c_order.php\" method=\"get\">
 					<tr><td>Adresse</td> <td>:</td> <td><input type=\"text\" name=\"adress\" value=\"$adress\"></td></tr><p>
-					<tr><td>Code Postal</td>:<td>:</td><td><input type=\"text\"name=\"cp\" value=\"$cp\"></td></tr><p>
+					<tr><td>Code Postal</td>:<td>:</td><td><input type=\"text\"name=\"cp\" value=\"$cp\" maxlength=\"5\"></td></tr><p>
 					<tr><td>Ville</td> <td>:</td> <td><input type=\"text\" name=\"city\"value=\"$city\"></td></tr><p>
-					<input type=\"hidden\" name=\"step\"value=\"2\">
+					<input type=\"hidden\" name=\"step\"value=\"1\">
 					<input type=\"hidden\" name=\"meth\"value=\"1\">
 					<button> Valider </button>
 					<form>";
-		$_SESSION['adresse'] = $_GET['adress'].",".$_GET['cp'].",".$_GET['city'];
+					
+		$_SESSION['adresse'] = $adress.",".$cp.",".$city;
 		$_SESSION['delivry'] = "House";
-		if(!empty($adress)&&!empty($cp)&&!empty($city)){
+		if(!empty($adress)&&!empty($cp)&&!empty($city)&&is_numeric($cp)){
 			header("Location:../Controller/c_order.php?step=2");
 		}
 	}else if($meth=="2"){
@@ -63,18 +64,21 @@ if($step == "1"){
 	
 }else if($step =="4"){
 	$date_order =date("Y-m-d");
+	$date_delivry = date("Y-m-d",strtotime("$date_order +3 day"));
 	$user = $_SESSION['user'];
 	$paye="oui";
 	$order = $_SESSION['basket'];
 	$delivry =$_SESSION['delivry'];
 	include('../Model/m_order.php');
-	$message="Votre commande est effectué ;) ";
+	$_SESSION['basket'] ="";
+	$_SESSION['a'] =0;
+	$message="<h2> Merci d'avoir choisit Emballé-pesé</h3></br>";
+	if($delivry =="House"){
+		$message2 = "Vous receverez au plus tard votre commande le ".$date_delivry;
+	}else{
+		$message2 = "Vous pourrez recuperer au plus tard votre commande le ".$date_delivry;
+	}
 	include('../View/v_order4.php');
 	
 }
-	
-
-	
-
-
 ?>

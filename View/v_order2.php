@@ -41,10 +41,6 @@
 </form>
 <?php
 echo$message;
-var_dump($_GET['adress']);
-var_dump($cp);
-var_dump($city);
-var_dump($_SESSION['adresse']);
 ?>
     <table class="tab_center">
     </table>

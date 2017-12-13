@@ -121,4 +121,9 @@ if(isset($_GET['date'])){
 }else{
 	$date = "";
 }
+if(!isset($message_processing)){
+	$message_processing ="";
+}if(!isset($message_pass)){
+	$message_pass ="";
+}
 ?>

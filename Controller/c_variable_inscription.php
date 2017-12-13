@@ -73,4 +73,52 @@ if(isset($_GET['op'])){
 }else{
 	$op = "";
 }
+if(!isset($price_htc)){
+	$price_htc = "";
+}
+if(isset($_GET['step'])){
+	$step = $_GET['step'];
+}else{
+	$step = "";
+}
+if(isset($_GET['meth'])){
+	$meth = $_GET['meth'];
+}else{
+	$meth = "";
+}
+if(isset($_GET['cart1'])){
+	$cart1 = $_GET['cart1'];
+}else{
+	$cart1 = "";
+}
+if(isset($_GET['cart2'])){
+	$cart2 = $_GET['cart2'];
+}else{
+	$cart2 = "";
+}
+if(isset($_GET['cart3'])){
+	$cart3 = $_GET['cart3'];
+}else{
+	$cart3 = "";
+}
+if(isset($_GET['cart4'])){
+	$cart4 = $_GET['cart4'];
+}else{
+	$cart4 = "";
+}
+if(isset($_GET['crypt'])){
+	$crypt = $_GET['crypt'];
+}else{
+	$crypt = "";
+}
+if(isset($_GET['check'])){
+	$check = $_GET['check'];
+}else{
+	$check = "no";
+}
+if(isset($_GET['date'])){
+	$date = $_GET['date'];
+}else{
+	$date = "";
+}
 ?>

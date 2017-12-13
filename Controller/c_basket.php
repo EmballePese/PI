@@ -26,6 +26,12 @@ if(empty($_SESSION['basket']))
 	include('../View/v_basket_vide.php');
 }else{
 	$order = $_SESSION['basket'];
-include('../View/v_basket.php');
+	for($i=0;$i<count($order);$i++){
+		
+		$price_htc += $order[$i]['price_tot'];
+		
+	}
+		$price_ttc = $price_htc*1.2;
+	include('../View/v_basket.php');
 }
 ?>

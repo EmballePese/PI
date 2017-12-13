@@ -95,10 +95,11 @@ CREATE TABLE Cmd_vente(
   id_cmd_vente INT(11) NOT NULL AUTO_INCREMENT,
   Consommateur INT(11) NOT NULL,
   Paye ENUM('oui', 'non'),
-  Livre ENUM(',oui', 'non'),
+  Livre ENUM('Market', 'House'),
   Date_cmd DATE,
+  Date_livraison DATE,
   PRIMARY KEY (id_cmd_vente),
-  FOREIGN KEY (Consommateur)  REFERENCES User (Categorie)
+  FOREIGN KEY (Consommateur)  REFERENCES User (id_categorie)
 );
 
 DROP TABLE IF EXISTS Ligne_cmd_vente;

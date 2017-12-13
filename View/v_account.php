@@ -18,8 +18,8 @@
           <li><a href="../Controller/c_account.php">Mon compte</a></li>
         </ul>
       </div>
-    </div>
-  </div>
+	</div>
+</div>
   <div class="center_content">
 <?php
 	$user = $donnees['Prenom'];
@@ -37,12 +37,25 @@
 		<input type="Submit" value="Deconnexion">
 	</form> 
 	</br>
+	<h3>Voir vos commandes :</h3>
+	<form action="../Controller/c_history_order.php">
+		<input type="Submit" value="Mes commandes">
+	</form>
+	</br>
+	<h3>Modifier vos informations personelles :</h3>
+	<form action="../Controller/c_modification.php">
+        <tr><td>Adresse</td> <td>:</td> <td><input type="text" name="mail"></td></tr></br>
+		<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="mdp"></td></tr></br>
+		<tr><td>Ville</td> <td>:</td> <td><input type="text" name="mdp"></td></tr></br>
+        <input type="Submit" value="Modifier">
+	</form>
+	</br>
+    <h3>Supprimer votre compte</h3>
 	 <form action="../Controller/c_desinscription.php">
 		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr></br>
         <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr></br>
 		<input type="Submit" value="Se desinscrire">
 	</form> 
-
   </div>
 </div>
 </body>

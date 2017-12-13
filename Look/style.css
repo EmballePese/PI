@@ -70,5 +70,6 @@ background:url(images/menu_bg.png);
 text-align: center;
 color: #1f7755;
 width:900px;
-height:500px;
+height:auto;
+padding:20px;
 }

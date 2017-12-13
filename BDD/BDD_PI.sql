@@ -28,12 +28,13 @@ DROP TABLE IF EXISTS Cmd_vente;
 CREATE TABLE Cmd_vente(
   id_cmd_vente INT(11),
   Consommateur INT NULL,
-  Paye bool,
-  Livre bool,
+  Paye ENUM('oui','non'),
+  Livre ENUM('Market','House'),
   Date_cmd DATE,
+  Date_livraison DATE,
   PRIMARY KEY (id_cmd_vente),
   FOREIGN KEY (Consommateur)
-  REFERENCES User (Categorie)
+  REFERENCES User (id_categorie)
 );
 
 DROP TABLE IF EXISTS Ligne_cmd_vente;
@@ -42,7 +43,7 @@ CREATE TABLE Ligne_cmd_vente(
   cmd_vente INT,
   Produit INT,
   Qte INT,
-  Prix_facture INT,
+  Prix_facture FLOAT,
   PRIMARY KEY (id_ligne_cmd_vente),
   FOREIGN KEY (cmd_vente)
   REFERENCES Cmd_vente (id_cmd_vente),

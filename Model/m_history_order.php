@@ -18,10 +18,18 @@ $recov = $bdd->query("SELECT id_user
 
 $recov = $bdd->query("SELECT * 
 					  FROM Cmd_vente 
-					  WHERE Consommateur ='$id' AND Date_livraison >$date");
+					  WHERE Consommateur ='$id' AND Date_livraison >'$date'");
 					  
 	while ($donnees = $recov->fetch()){
 			$order_processing[$i]= $donnees['id_cmd_vente'];
+			$i++;
+	}
+	$recov = $bdd->query("SELECT * 
+					  FROM Cmd_vente 
+					  WHERE Consommateur ='$id' AND '$date' > Date_livraison");
+	$i=0;
+	while ($donnees = $recov->fetch()){
+			$order_pass[$i]= $donnees['id_cmd_vente'];
 			$i++;
 	}
 	

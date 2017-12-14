@@ -27,7 +27,7 @@ Commande en cours :
 <?php
 for($i=0;$i<count($order_processing);$i++){
 	
-	echo"Commande".$order_processing[$i];
+	echo"Commande n°".$order_processing[$i];
 	$a = $order_processing[$i];
 	echo"<form action=\"c_order_modify.php\" method=\"get\">
 		 <input type=\"hidden\" name=\"order\"value=\"$a\">
@@ -37,15 +37,26 @@ for($i=0;$i<count($order_processing);$i++){
 		 <input type=\"hidden\" name=\"order\"value=\"$a\">
 		 <button>Voir</button>
 		</form>";
-	
 }
 echo $message_processing;
 ?>
 </br>
 Commande passée :
 
+
+
 <?php
+for($i=0;$i<count($order_pass);$i++){
+	
+	echo"Commande n°".$order_pass[$i];
+	$a = $order_pass[$i];
+	echo"<form action=\"c_order_view.php\" method=\"get\">
+		 <input type=\"hidden\" name=\"order\"value=\"$a\">
+		 <button>Voir</button>
+		</form>";
+}
 echo $message_pass;
+var_dump($date);
 ?>
 	</br>
   </div>

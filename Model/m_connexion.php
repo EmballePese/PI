@@ -12,13 +12,21 @@ catch (Exception $e)
 $recov = $bdd->query('SELECT * FROM User');
 
 $exist = FALSE;
+$fermier = FALSE;
+$gerant = FALSE;
 
 while ($donnees = $recov->fetch()){
 	if($mail == $donnees['Mail']){
-    if(sha1($mdp) == $donnees['Mdp']){
+		if(sha1($mdp) == $donnees['Mdp']){
 			$message = "Bienvenue ".$mail;
 			$exist = TRUE;
-    }
+		}
+		if($donnees['Categorie'] == 1){
+			$fermier = TRUE;
+		}
+		if($donnees['Categorie'] == 3){
+			$gerant = TRUE;
+		}
 	}
 	// print_r($donnees['nom']."<br>");
 }

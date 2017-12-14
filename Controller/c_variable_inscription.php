@@ -126,4 +126,22 @@ if(!isset($message_processing)){
 }if(!isset($message_pass)){
 	$message_pass ="";
 }
+if(isset($_GET['change'])){
+	$change = $_GET['change'];
+}else{
+	$change =  "";
+}
+if(isset($_GET['verif'])){
+	$verif = $_GET['verif'];
+}else{
+	$verif =  "";
+}
+if(isset($_GET['modify'])){
+	$modify = $_GET['modify'];
+}else{
+	$modify =  "";
+}
+if(!isset($message_e)){
+	$message_e ="";
+}
 ?>

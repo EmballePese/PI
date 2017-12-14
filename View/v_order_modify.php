@@ -21,30 +21,24 @@
     </div>
   </div>
   <div class="center_content">
-    <h2>Historique Commande :</h2></br>
-Commande en cours : 
-</br>
-<?php
-echo"<form action=\"c_order_modify.php\" method=\"get\">";
-for($i=0;$i<count($order_processing);$i++){
+    <h2> Que voulez-vous changer ? :</h2></br>
 	
-	echo"Commande".$order_processing[$i];
-	$a = $i;
-	$a++;
-	echo"<input type=\"hidden\" name=\"order\"value=\"$a\">
-		 <button>Modifier</button>
-		 </br>
-		</form>";
-	
-}
-echo $message_processing;
-?>
-</br>
-Commande passée :
+	<form action="../Controller/c_order_modify.php" method="get">
+	<input type="hidden" name="change" value="adress">
+	<button>Modifier methode de livraison</button>
+	</form>
+	<form action="../Controller/c_order_modify.php" method="get">
+	<input type="hidden" name="change" value="cb">
+	<button>Modifier Coordonnes Bancaire</button>
+	</form>
+	</br>
+	</br>
+<?php 
 
-<?php
-echo $message_pass
+echo$message;
+echo$message_e;
 ?>
+
 	</br>
   </div>
 </div>

@@ -16,13 +16,12 @@ $recov = $bdd->query("SELECT id_user
 			$id = $donnees['id_user'];
     }
 
-$recov = $bdd->query("SELECT LC.* 
-					  FROM Ligne_cmd_vente LC JOIN Cmd_vente C
-					  ON LC.cmd_vente = C.id_cmd_vente
-					  WHERE C.consommateur ='$id' AND C.Date_livraison >$date");
+$recov = $bdd->query("SELECT * 
+					  FROM Cmd_vente 
+					  WHERE Consommateur ='$id' AND Date_livraison >$date");
 					  
 	while ($donnees = $recov->fetch()){
-			$order_processing[$i]= $donnees['id_ligne_cmd_vente'];
+			$order_processing[$i]= $donnees['id_cmd_vente'];
 			$i++;
 	}
 	

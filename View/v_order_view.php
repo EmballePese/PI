@@ -22,32 +22,40 @@
   </div>
   <div class="center_content">
     <h2>Historique Commande :</h2></br>
-Commande en cours : 
+Recapitulatif de la commande <?php echo$order ?> : 
 </br>
 <?php
-for($i=0;$i<count($order_processing);$i++){
-	
-	echo"Commande".$order_processing[$i];
-	$a = $order_processing[$i];
-	echo"<form action=\"c_order_modify.php\" method=\"get\">
-		 <input type=\"hidden\" name=\"order\"value=\"$a\">
-		 <button>Modifier</button>
-		</form>";
-	echo"<form action=\"c_order_view.php\" method=\"get\">
-		 <input type=\"hidden\" name=\"order\"value=\"$a\">
-		 <button>Voir</button>
-		</form>";
+echo("<table class=\"tab_center\">
+		<tr>
+		<th>Nom</th>
+		<th>Prix</th>
+		<th>Quantité</th>
+		</tr>
+		");
+for($i=0;$i<count($tab);$i++)
+{
+		echo("<tr><td>".$tab[$i]['name']."</td>");
+		echo("<td>".$tab[$i]['price_tot']."€</td>");
+		echo("<td>".$tab[$i]['quantity']."</td>");
 	
 }
-echo $message_processing;
 ?>
 </br>
-Commande passée :
-
+</table>
+<p>
+Moyen de Livraison :</br>
 <?php
-echo $message_pass;
+echo$message;
 ?>
-	</br>
+<p>
+</br>
+Moyen de paiement:</br>
+Carte Bancaire
+</br>
+<p>
+<form action="c_history_order.php" method="get">
+<button> Retour à mes commandes</button>
+</form>
   </div>
 </div>
 </body>

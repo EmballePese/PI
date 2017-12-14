@@ -8,6 +8,12 @@
     {
     	die('Erreur : '. $e->getMessage());
     }
-
-    $bdd->exec("UPDATE User SET Adresse='$adress', CP='$cp', Ville='$city' WHERE Mail ='$email'");
+	
+	var_dump($email,$adress,$cp,$city);
+	
+    $bdd->exec("UPDATE User
+				SET Adresse='$adress',
+				CP='$cp',
+				Ville='$city' 
+				WHERE Mail ='$email'");
 ?>

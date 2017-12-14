@@ -29,8 +29,7 @@ echo"<form action=\"c_order_modify.php\" method=\"get\">";
 for($i=0;$i<count($order_processing);$i++){
 	
 	echo"Commande".$order_processing[$i];
-	$a = $i;
-	$a++;
+	$a = $order_processing[$i];
 	echo"<input type=\"hidden\" name=\"order\"value=\"$a\">
 		 <button>Modifier</button>
 		 </br>

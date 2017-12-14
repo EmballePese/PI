@@ -43,7 +43,7 @@
 	</form>
 	</br>
 	<h3>Modifier vos informations personelles :</h3>
-	<form action="../Model/m_modification.php" method=GET>
+	<form action="../Controller/c_modification.php" method=GET>
 	<tr><td>Adresse</td> <td>:</td> <td><input type="text" name="adress" <?php echo("value=\"".$donnees['Adresse']."\"");?>></td></tr></br>
 	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="CP" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr></br>
 	<tr><td>Ville</td> <td>:</td> <td><input type="text" name="city" <?php echo("value=\"".$donnees['Ville']."\"");?>></td></tr></br>

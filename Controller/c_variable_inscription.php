@@ -144,4 +144,42 @@ if(isset($_GET['modify'])){
 if(!isset($message_e)){
 	$message_e ="";
 }
+if(isset($_GET['compo'])){
+	$compo = $_GET['compo'];
+}else{
+	$compo = "";
+}
+if(isset($_GET['DLC'])){
+	$dlc = $_GET['DLC'];
+}else{
+	$dlc = "";
+}if(isset($_GET['dc'])){
+	$dc = $_GET['dc'];
+}else{
+	$dc = "";
+}if(isset($_GET['qte'])){
+	$qte = $_GET['qte'];
+}else{
+	$qte = "";
+}if(isset($_GET['pa'])){
+	$pa = $_GET['pa'];
+}else{
+	$pa = "";
+}if(isset($_GET['marge'])){
+	$marge = $_GET['marge'];
+}else{
+	$marge = "";
+}if(isset($_GET['lab'])){
+	$lab = $_GET['lab'];
+}else{
+	$lab = "";
+}if(isset($_GET['farm'])){
+	$farm= $_GET['farm'];
+}else{
+	$farm= "";
+}if(isset($_GET['sm'])){
+	$sm= $_GET['sm'];
+}else{
+	$sm= "";
+}
 ?>

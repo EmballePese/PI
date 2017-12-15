@@ -24,7 +24,7 @@ while ($donnees = $recov->fetch()){
 	if($id_art == $donnees['Article']){
 		$exist = true;
 		break;
-}
+	}
 }
 
 if($exist==false){

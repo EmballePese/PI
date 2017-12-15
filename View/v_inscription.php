@@ -34,10 +34,10 @@
 			<tr><td>Mail*</td> <td>:</td> <td><input type=\"text\" name=\"mail\"value=\"$mail\"></td></tr><p>
 			<tr><td>Mot de passe*</td> <td>:</td> <td><input type=\"password\" name=\"mdp\"value=\"$mdp\"></td></tr><p>
 			<tr><td>Tel*</td> <td>:</td> <td><input type=\"text\" name=\"tel\"value=\"$tel\"></td></tr><p>
-      <tr><td>S'inscrire en tant que*</td> <td>:</td><td><input type=\"radio\" name=\"type\"value=\"1\"> Fermier </input></td></tr><p>
-                                                         <input type=\"radio\" name=\"type\"value=\"2\"> Client </input></td></tr><p>
-                                                         <input type=\"radio\" name=\"type\"value=\"3\"> Gérant </input></td></tr><p>
-			<p>
+      <tr><td>S'inscrire en tant que*</td> <td>:</td>
+      <td colspan=3><input type=\"radio\" name=\"type\"value=\"1\"> Fermier </input>
+      <input type=\"radio\" name=\"type\"value=\"2\"> Client </input>
+      <input type=\"radio\" name=\"type\"value=\"3\"> Gérant </input></td></tr>
 			<tr><td colspan=2></td><td style=\"text-align:center;\"><button>Inscription</button></td></tr>
 			Les champs * sont obligatoires
 			</form>";

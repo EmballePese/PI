@@ -19,11 +19,11 @@ if(empty($_GET['mail'])|| empty($_GET['mdp'])){
 		header('Location: ../Index_fermier.php');
 	} else if($gerant == TRUE){
 		session_start();
-		$_SESSION['User'] = $mail;
+		$_SESSION['user'] = $mail;
 		header('Location: ../Index_gerant.php');
 	} else {
 		session_start();
-		$_SESSION['User'] = $mail;
+		$_SESSION['user'] = $mail;
 		header('Location: ../Index.php');
 	}
 }

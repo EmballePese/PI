@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS emballe_pese;
-CREATE DATABASE emballe_pese;
-USE emballe_pese;
+DROP DATABASE IF EXISTS emballe_pese2;
+CREATE DATABASE emballe_pese2;
+USE emballe_pese2;
 
 DROP TABLE IF EXISTS Categorie;
 CREATE TABLE Categorie(

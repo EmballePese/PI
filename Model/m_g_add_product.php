@@ -1,7 +1,7 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
+	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese2;charset=utf8', 'root', 'MonMySQL');
 }
 catch (Exception $e)
 {
@@ -10,11 +10,11 @@ catch (Exception $e)
 
 $exist=false;
 
-$recov = $bdd->query("SELECT * 
+$recov = $bdd->query("SELECT *
 				      FROM Article
 					  WHERE Fermier ='$farm' AND Nom='$name'
 					  ");
-					  
+
 while ($donnees = $recov->fetch()){
 	$id_art = $donnees['id_article'];
 }
@@ -38,6 +38,6 @@ $req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stoc
 			"Marge" => $marge,
 			));
 }
-			
+
 $recov->closeCursor();
 ?>

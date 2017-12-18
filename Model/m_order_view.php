@@ -1,7 +1,7 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
+	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese2;charset=utf8', 'root', 'MonMySQL');
 }
 catch (Exception $e)
 {
@@ -14,7 +14,7 @@ $recov = $bdd->query("SELECT L.*,P.Nom,C.Livre
 					  JOIN Cmd_vente C
 					  ON C.id_cmd_vente = L.cmd_vente
 				      WHERE L.cmd_vente ='$order'");
-	
+
 while ($donnees = $recov->fetch()){
 	$tab[$i]['name'] = $donnees['Nom'];
 	$tab[$i]['quantity'] = $donnees['Qte'];
@@ -22,7 +22,7 @@ while ($donnees = $recov->fetch()){
 	$delivry = $donnees['Livre'];
 	$i++;
    }
-   
+
 $recov->closeCursor();
 
 ?>

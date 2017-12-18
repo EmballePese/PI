@@ -1,7 +1,7 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
+	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese2;charset=utf8', 'root', 'MonMySQL');
 }
 catch (Exception $e)
 {
@@ -28,6 +28,6 @@ $req = $bdd->prepare("INSERT INTO Article VALUES(0,:Composition,:Nom,:DLC,:Date_
 			"Fermier" => $farm
 			));
 }
-			
+
 $recov->closeCursor();
 ?>

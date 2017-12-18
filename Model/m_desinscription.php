@@ -13,6 +13,7 @@
 	    while ($donnees = $recov->fetch()){
     		if($mail == $donnees['Mail']&&$mdp==$donnees['Mdp']){
     			 $bdd->exec("DELETE FROM User WHERE Mail = '$mail' AND Mdp = '$mdp'");
+					 $exist = true;
     		}
     }
 

@@ -54,6 +54,7 @@
                 <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr>
         		 </table> <input type="Submit" value="Se desinscrire">
         	</form>
+          <?php echo $message; ?>
       </div>
     </div>
   </body>

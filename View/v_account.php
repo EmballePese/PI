@@ -40,23 +40,20 @@
         	</form>
         	</br>
         	<h3>Modifier vos informations personelles :</h3>
-          <table>
         	<form action="../Controller/c_modification.php" method=GET>
-        	<tr><td>Adresse</td> <td>:</td> <td><input type="text" name="adress" <?php echo("value=\"".$donnees['Adresse']."\"");?>></td></tr></br>
-        	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr></br>
-        	<tr><td>Ville</td> <td>:</td> <td><input type="text" name="city" <?php echo("value=\"".$donnees['Ville']."\"");?>></td></tr></br>
-                <input type="Submit" value="Modifier">
-        	</form>
-        </table>
-        	</br>
-            <h3>Supprimer votre compte</h3>
             <table>
-        	 <form action="../Controller/c_desinscription.php">
-        		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr></br>
-                <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr></br>
-        		<input type="Submit" value="Se desinscrire">
+        	<tr><td>Adresse</td> <td>:</td> <td><input type="text" name="adress" <?php echo("value=\"".$donnees['Adresse']."\"");?>></td></tr>
+        	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>
+        	<tr><td>Ville</td> <td>:</td> <td><input type="text" name="city" <?php echo("value=\"".$donnees['Ville']."\"");?>></td></tr>
+            </table> <input type="Submit" value="Modifier">
         	</form>
-          </table>
+            <h3>Supprimer votre compte</h3>
+        	 <form action="../Controller/c_desinscription.php">
+             <table>
+        		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr>
+                <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr>
+        		 </table> <input type="Submit" value="Se desinscrire">
+        	</form>
       </div>
     </div>
   </body>

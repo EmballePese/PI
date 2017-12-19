@@ -66,7 +66,7 @@ if($step == "1"){
 	$date_order =date("Y-m-d");
 	$date_delivry = date("Y-m-d",strtotime("$date_order +3 day"));
 	$user = $_SESSION['user'];
-	$paye="oui";
+	$paye="non";
 	$order = $_SESSION['basket'];
 	$delivry =$_SESSION['delivry'];
 	include('../Model/m_order.php');

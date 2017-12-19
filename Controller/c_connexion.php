@@ -13,6 +13,9 @@ if(empty($_GET['mail'])|| empty($_GET['mdp'])){
     if($exist == false){
 		$message = "<h3 align='center'>Mauvais mot de passe ou login</h3>";
 		include('../View/v_connexion.php');
+	} else if($status == false){	
+		$message = "<h3 align='center'>Votre compte a été ban ou suspendu Contacter le gerant pour en savoir plus</h3>";
+		include('../View/v_connexion.php');
 	} else if($fermier == TRUE){	
 		session_start();
 		$_SESSION['user'] = $mail;

@@ -182,4 +182,17 @@ if(isset($_GET['DLC'])){
 }else{
 	$sm= "";
 }
+if(isset($_GET['idc'])){
+	$idc= $_GET['idc'];
+}else{
+	$idc= "";
+}
+if(!isset($id_art)){
+	$id_art = "";
+}
+if(isset($_GET['action'])){
+	$action= $_GET['action'];
+}else{
+	$action= "";
+}
 ?>

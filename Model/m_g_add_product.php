@@ -19,6 +19,10 @@ while ($donnees = $recov->fetch()){
 	$id_art = $donnees['id_article'];
 }
 
+if(empty($id_art)){
+	$exist = true;
+}
+
 $recov = $bdd->query("SELECT * FROM Produit");
 while ($donnees = $recov->fetch()){
 	if($id_art == $donnees['Article']){

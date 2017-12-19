@@ -5,7 +5,7 @@ $tab=array();
 include('../Model/m_g_confirm_order.php');
 
 if(empty($tab)){
-	$message="Aucune Commande n'est en cours";
+	$message="Aucune Commande n'est à valider";
 }
 if($check=="check"){
 	include('../Model/m_g_confirm_order.php');

@@ -18,7 +18,7 @@
         </ul>
       </div>
       <div id="content">
-        <h2>Bienvenu sur Emballé-pesé !</h2>
+        <h2>Bienvenue sur Emballé-pesé !</h2>
       </div>
     </div>
   </body>

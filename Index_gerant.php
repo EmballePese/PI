@@ -12,7 +12,7 @@
         <ul>
           <li><a href="">Statut : Gérant</a></li>
           <li><a href="Index.php">Accueil</a></li>
-          <li><a href="./View/v_product.php">Articles</a></li>
+          <li><a href="./Controller/c_g_product.php">Articles</a></li>
           <li><a href="./Controller/c_basket.php">Mon panier</a></li>
           <li><a href="./Controller/c_account.php">Mon compte</a></li>
         </ul>

@@ -182,4 +182,9 @@ if(isset($_GET['DLC'])){
 }else{
 	$sm= "";
 }
+if(isset($_GET['idc'])){
+	$idc= $_GET['idc'];
+}else{
+	$idc= "";
+}
 ?>

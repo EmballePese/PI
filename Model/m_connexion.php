@@ -14,6 +14,7 @@ $recov = $bdd->query('SELECT * FROM User');
 $exist = FALSE;
 $fermier = FALSE;
 $gerant = FALSE;
+$status = TRUE;
 
 while ($donnees = $recov->fetch()){
 	if($mail == $donnees['Mail']){
@@ -26,6 +27,9 @@ while ($donnees = $recov->fetch()){
 		}
 		if($donnees['Categorie'] == 3){
 			$gerant = TRUE;
+		}
+		if($donnees['Status'] =="Ban"||$donnees['Status'] =="Suspendu"){
+			$status= false;
 		}
 	}
 	// print_r($donnees['nom']."<br>");

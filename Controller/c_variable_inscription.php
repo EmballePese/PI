@@ -190,4 +190,9 @@ if(isset($_GET['idc'])){
 if(!isset($id_art)){
 	$id_art = "";
 }
+if(isset($_GET['action'])){
+	$action= $_GET['action'];
+}else{
+	$action= "";
+}
 ?>

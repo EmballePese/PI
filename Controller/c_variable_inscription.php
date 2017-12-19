@@ -187,4 +187,7 @@ if(isset($_GET['idc'])){
 }else{
 	$idc= "";
 }
+if(!isset($id_art)){
+	$id_art = "";
+}
 ?>

@@ -8,7 +8,7 @@ catch (Exception $e)
 	die('Erreur : '. $e->getMessage());
 }
 if($check=="check"){
-	$bdd->exec("UPDATE cmd_vente
+	$bdd->exec("UPDATE Cmd_vente
 			SET Paye = 'oui'
 			WHERE id_cmd_vente = '$idc'");
 }

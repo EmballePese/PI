@@ -9,15 +9,15 @@ catch (Exception $e)
 }
 
 if($action=="ban"){
-	$bdd->exec("UPDATE user
+	$bdd->exec("UPDATE User
 			SET Status = 'Ban'
 			WHERE Mail = '$mail'");
 }else if($action=="suspendre"){
-		$bdd->exec("UPDATE user
+		$bdd->exec("UPDATE User
 			SET Status = 'Suspendu'
 			WHERE Mail = '$mail'");
 }else{
-	$bdd->exec("UPDATE user
+	$bdd->exec("UPDATE User
 			SET Status = 'Actif'
 			WHERE Mail = '$mail'");
 }

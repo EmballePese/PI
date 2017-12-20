@@ -28,6 +28,7 @@ if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty
 		$message="<h3 align='center'>Mail Incorrect</h3>";
 		include('../View/v_inscription.php');
 	}else{
+		$status ="Actif";
 		include('../Model/m_inscription.php');
 
 		if($exist == true){

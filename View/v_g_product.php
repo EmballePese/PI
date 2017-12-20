@@ -28,20 +28,20 @@
             <th>Prix vente</th></tr>
 
             <?php
-            for($i=0;$i<count($tab);$i++){
+for($i=0;$i<count($tab);$i++){
               echo"<tr><td>".$tab[$i]['Nom']."</td>";
               echo"<td>".$tab[$i]['Qte_stock']."</td>";
               echo"<td>".$tab[$i]['Composition']."</td>";
               echo"<td>".$tab[$i]['DLC']."</td>";
               echo"<td>".$tab[$i]['Marge']."</td>";
               $prix = $tab[$i]['Prix_achat']*$tab[$i]['Marge'];
-              echo"<td>".$prix."€</td></tr>";
+			  echo"<td>".$prix."€</td></tr>";
             }
             echo $message;
             ?>
           </table>
         </br>
-        <form action="../Controller/c_modify_product.php">
+        <form action="../Controller/c_g_modify_product.php">
           <button> Modifier vos produits </button>
         </form>
       </div>

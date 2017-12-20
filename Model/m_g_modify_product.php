@@ -1,6 +1,8 @@
 <?php
 include('../Controller/c_variable_inscription.php');
 $id = $_GET['id'];
+$nom = $_GET['Nom'];
+$marge = $_GET['Marge'];
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');

@@ -63,6 +63,17 @@ if($step == "1"){
 	include('../View/v_order3.php');
 
 }else if($step =="4"){
+	// $order = $_SESSION['basket'];
+	// for($i = 0; $i < count($order); $i++){
+	// 	if($order[$i]["name"] == $tab[$i]["Nom"]){
+	// 		$qty_stock = intval($tab[$i]["Qte_stock"]);
+	// 		$qty_basket = intval($order[$i]["quantity"]);
+  //
+	// 		$qty_stock -= $qty_basket;
+  //
+	// 		$tab[$i]["Qte_stock"] = $qty_stock;
+	// 	}
+	//}
 	$date_order =date("Y-m-d");
 	$date_delivry = date("Y-m-d",strtotime("$date_order + 3 day"));
 	$user = $_SESSION['user'];
@@ -70,8 +81,8 @@ if($step == "1"){
 	$order = $_SESSION['basket'];
 	$delivry =$_SESSION['delivry'];
 	include('../Model/m_order.php');
-	$_SESSION['basket'] ="";
-	$_SESSION['a'] =0;
+	 $_SESSION['basket'] ="";
+	 $_SESSION['a'] =0;
 	$message="<h2> Merci d'avoir choisit Emballé-pesé</h3></br>";
 	if($delivry =="House"){
 		$message2 = "Vous receverez au plus tard votre commande le ".$date_delivry;

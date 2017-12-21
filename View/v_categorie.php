@@ -38,6 +38,7 @@
         			 </br>";
         	}
         	echo $message;
+          var_dump($tab);
         	?>
         	</br>
         	<form action="../View/v_product.php">

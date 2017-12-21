@@ -25,7 +25,6 @@
           echo"<form action=\"../Index.php\" method=\"get\">
              <button>Retour à l'acceuil</button>
              </form>";
-			 var_dump($id);
         ?>
           </table>
       </div>

@@ -27,23 +27,32 @@
             <th>Marge</th>
             <th>Prix vente</th></tr>
 
-            <?php
+<?php
+$today = date("Y-m-d");
 for($i=0;$i<count($tab);$i++){
               echo"<tr><td>".$tab[$i]['Nom']."</td>";
               echo"<td>".$tab[$i]['Qte_stock']."</td>";
-              echo"<td>".$tab[$i]['Composition']."</td>";
-              echo"<td>".$tab[$i]['DLC']."</td>";
+			  echo"<td>".$tab[$i]['Composition']."</td>";
+			  if($today < $tab[$i]['DLC'])
+			  {
+				  echo"<td><b><font color=\"green\">".$tab[$i]['DLC']."</font></b></td>";
+			  }
+			  else
+			  {
+				  echo"<td><b><font color=\"red\">".$tab[$i]['DLC']."</font></b></td>";
+
+			  }
               echo"<td>".$tab[$i]['Marge']."</td>";
               $prix = $tab[$i]['Prix_achat']*$tab[$i]['Marge'];
 			  echo"<td>".$prix."€</td></tr>";
             }
             echo $message;
             ?>
-          </table>
+		  </table>
         </br>
         <form action="../Controller/c_g_modify_product.php">
           <button> Modifier vos produits </button>
-        </form>
+		</form>
       </div>
     </div>
   </body>

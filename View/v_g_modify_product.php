@@ -38,7 +38,11 @@ for($i=0;$i<count($tab);$i++){
 				    echo"<td>".$tab[$i]['Prix_achat']."</td>";
 				    echo"<td><input type=\"hidden\" name=\"id\" value=\"".$tab[$i]['id_produit']."\"></td>";
 					    echo"<td><button>Modifier</button></td>";
-					    echo"</form>";
+					echo"</form>";
+					echo"<form action=\"../Model/m_g_delete_product.php\">";
+					echo"<td><input type=\"hidden\" name=\"id\" value=\"".$tab[$i]['id_produit']."\"></td>";
+					echo"<td><button>Supprimer</button></td></form>";
+		
 						            }
             echo $message;
             ?>

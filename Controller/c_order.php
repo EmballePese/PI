@@ -2,7 +2,7 @@
 session_start();
 include('../Controller/c_variable_inscription.php');
 if($step == "1"){
-	
+
 	if($meth =="1"){
 		$message = "<h2>Veuillez indiquer vos coordonnées : </h2></br>
 					<form action=\"c_order.php\" method=\"get\">
@@ -13,7 +13,7 @@ if($step == "1"){
 					<input type=\"hidden\" name=\"meth\"value=\"1\">
 					<button> Valider </button>
 					<form>";
-					
+
 		$_SESSION['adresse'] = $adress.",".$cp.",".$city;
 		$_SESSION['delivry'] = "House";
 		if(!empty($adress)&&!empty($cp)&&!empty($city)&&is_numeric($cp)){
@@ -34,7 +34,7 @@ if($step == "1"){
 			Nous tenons à préciser que la livraison en magasin se fera au 74 bis Avenue Maurice Thorez, 94200 Ivry-sur-Seine";
 	}
 	include('../View/v_order1.php');
-	
+
 } else if($step == "2"){
 	if($check=="Check"){
 		if(empty($name)||empty($date||empty($cart1))||empty($cart2)||empty($cart3)||empty($cart4)||empty($crypt)){
@@ -50,21 +50,21 @@ if($step == "1"){
 		}
 	}
 	include('../View/v_order2.php');
-	
+
 }else if($step == "3"){
-	
+
 	$order = $_SESSION['basket'];
 	for($i=0;$i<count($order);$i++){
-		
+
 		$price_htc += $order[$i]['price_tot'];
-		
+
 	}
 	$price_ttc = $price_htc*1.2;
 	include('../View/v_order3.php');
-	
+
 }else if($step =="4"){
 	$date_order =date("Y-m-d");
-	$date_delivry = date("Y-m-d",strtotime("$date_order +3 day"));
+	$date_delivry = date("Y-m-d",strtotime("$date_order + 3 day"));
 	$user = $_SESSION['user'];
 	$paye="non";
 	$order = $_SESSION['basket'];
@@ -79,6 +79,6 @@ if($step == "1"){
 		$message2 = "Vous pourrez recuperer au plus tard votre commande le ".$date_delivry;
 	}
 	include('../View/v_order4.php');
-	
+
 }
 ?>

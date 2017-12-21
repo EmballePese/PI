@@ -50,9 +50,9 @@ if(is_numeric($quantity)){
 		$message ="<h3>Votre Article a bien été ajouté</h3></br>";
 		}
 		$_SESSION['basket'] = $basket;
-			
+
 		}else{
-			
+
 		$message = "Vous devez vous connecter pour ajouter un article dans votre panier </br>";
 		}
 	}else{

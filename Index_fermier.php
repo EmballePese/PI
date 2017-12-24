@@ -10,11 +10,12 @@
       <div id="header">
         <img id="logo" src="./Look/images/logo_accueil.png">
         <ul>
-          <li><a href="">Statut : Fermier</a></li>
-          <li><a href="Index.php">Accueil</a></li>
-          <li><a href="./View/v_product.php">Articles</a></li>
-          <li><a href="./Controller/c_basket.php">Mon panier</a></li>
-          <li><a href="./Controller/c_account.php">Mon compte</a></li>
+          <li><a href="">Statut : Gérant</a></li>
+         <li><a href="../Index_gerant.php">Accueil</a></li>
+          <li><a href="../Controller/c_g_product.php">Articles</a></li>
+          <li><a href="./Controller/c_g_ban.php">Bannir</a></li>
+		  <li><a href="../Controller/c_g_ban.php">Acheter produit fermier</a></li>
+          <li><a href="../Controller/c_account.php">Mon compte</a></li>
         </ul>
       </div>
       <div id="content">

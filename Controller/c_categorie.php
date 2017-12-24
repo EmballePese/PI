@@ -21,7 +21,7 @@ if(is_numeric($quantity)){
 				$basket = array();
 			}
 		$i = $_GET['i'];
-		$price_prod = $_GET["Price".$tab[$i]['Nom']];
+		$price_prod = $_GET["Price"];
 		$price_total = $quantity*$price_prod;
 		$exist=false;
 		for($b=0;$b<=$a;$b++){

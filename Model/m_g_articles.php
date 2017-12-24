@@ -8,7 +8,7 @@ catch (Exception $e)
 	die('Erreur : '. $e->getMessage());
 }
 $tab = array();
-$recov = $bdd->query("SELECT A.Nom, A.Composition, A.DLC, A.Date_crea,L.Label
+$recov = $bdd->query("SELECT A.Nom, A.Composition, A.DLC, A.Date_crea,A.Prix_achat,A.Fermier,L.Label
 					  FROM Article A JOIN Label L
 					  ON A.Label = L.id_label");
 while ($donnees = $recov->fetch()){

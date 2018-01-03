@@ -33,7 +33,7 @@
 				echo"Label :".$tab[$i]['Label']."</br>";
 				echo"Prix à l'unité:".$tab[$i]['Prix_achat']."€</br>";
 				echo"Vendu par :".$tab[$i]['Fermier']."</br>";
-				echo"Quantité souhaité : <input type=\"number\" name=\"quantity\" min=\"1\" value=\"1\">";
+				echo"Quantité souhaité : <input type=\"number\" name=\"quantity\" min=\"1\" max=\"200\" value=\"1\">";
         		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_achat']."\" name=\"Price\">";
         		echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
         		echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";

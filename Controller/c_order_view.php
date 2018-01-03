@@ -5,7 +5,7 @@ $tab = array();
 $i=0;
 $order = $_GET['order'];
 include('../Model/m_order_view.php');
-if($delivry='Market'){
+if($delivry=='Market'){
 	$message ="Magasin";
 }else{
 	$message ="A domicile";

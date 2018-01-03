@@ -42,7 +42,6 @@
         			 </br>";
         	}
         	echo $message;
-          var_dump($basket);
         	?>
         	</br>
       </div>

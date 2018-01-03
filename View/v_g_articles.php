@@ -16,7 +16,7 @@
      <li><a href="../Controller/c_g_ban.php">Bannir</a></li>
 	 <li><a href="../Controller/c_g_articles.php">Acheter produit fermier</a></li>
 	 <li><a href="../Controller/c_g_label.php">Ajouter un label</a></li>
-	 <li><a href="../Controller/c_basket.php">Mon panier</a></li>
+	 <li><a href="../Controller/c_g_basket.php">Mon panier</a></li>
      <li><a href="../Controller/c_g_account.php">Mon compte</a></li>
         </ul>
       </div>

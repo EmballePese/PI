@@ -11,7 +11,7 @@
         <img id="logo" src="../Look/images/logo_accueil.png">
         <ul>
           <li><a href="../Index_fermier.php">Accueil</a></li>
-         <li><a href="../Controller/c_f_ownp.php">Vos Ventes</a></li>
+          <li><a href="../Controller/c_f_ownp.php">Vos Ventes</a></li>
           <li><a href="../Controller/c_f_article.php">Ajouter produit fermier</a></li>
           <li><a href="../Controller/c_f_account.php">Mon compte</a></li>
         </ul>
@@ -46,7 +46,7 @@
         		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr></br>
                 <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr></br>
         		<input type="Submit" value="Se desinscrire">
-        	</form> 
+        	</form>
       </div>
     </div>
   </body>

@@ -27,6 +27,7 @@
 						echo"Date de creation : ".$tab[$i]['Date_crea']."</br>";
 						echo"Prix d'achat : ".$tab[$i]['Prix_achat']."€</br>";
 						echo"Label : ".$tab[$i]['Label']."</br>";
+						echo"Statut :".$tab[$i]['Statut']."</br>";
 						echo"<p>";
 					}
     			?>

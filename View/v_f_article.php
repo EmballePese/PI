@@ -10,9 +10,8 @@
       <div id="header">
         <img id="logo" src="../Look/images/logo_accueil.png">
         <ul>
-          <li><a href="">Statut : Fermier</a></li>
           <li><a href="../Index_fermier.php">Accueil</a></li>
-          <li><a href="./v_product.php">Articles</a></li>
+         <li><a href="../Controller/c_f_ownp.php">Vos Ventes</a></li>
           <li><a href="../Controller/c_f_article.php">Ajouter produit fermier</a></li>
           <li><a href="../Controller/c_f_account.php">Mon compte</a></li>
         </ul>
@@ -28,7 +27,7 @@
     			<tr><td>Date Limite de Consomation </td> <td>:</td> <td><input type=\"date\" name=\"DLC\" value=\"$dlc\"></td></tr><p>
     			<tr><td>Date de création</td> <td>:</td> <td><input type=\"date\"name=\"dc\" value=\"$dc\"></td></tr><p>
     			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"text\" name=\"pa\"value=\"$pa\"></td></tr><p>
-    			<tr><td>Fermier</td> <td>:</td> <td><input type=\"text\" name=\"farm\"value=\"$farm\"></td></tr><p>";
+    			";
 
     				echo"<tr><td>Label</td> <td>:</td></td><td><select name=\"lab\">";
 

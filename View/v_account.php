@@ -34,7 +34,7 @@
 			     <label for="icone">Avatar du profil (JPG, PNG ou GIF | max. 15 Ko) :</label><br />
 					  <input type="file" name="image" id="image" /><br />
 					  <input type="submit" name="submit" value="Envoyer" />
-			<form>
+			</form>
 <?php
         	echo("<br><br>Vos informations personelles <br><br>");
         	echo("Nom : ".$donnees['Nom']."<br>");

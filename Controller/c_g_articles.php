@@ -3,7 +3,10 @@ session_start();
 include('../Controller/c_variable_inscription.php');
 
 include('../Model/m_g_articles.php');
-
+if(empty($tab)){
+	
+	$message = "Aucune proposition en vente";
+}
 if($ajouter == true){
 if(is_numeric($quantity)){
 		if(isset($_SESSION['user'])){

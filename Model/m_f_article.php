@@ -17,7 +17,7 @@ while ($donnees = $recov->fetch()){
 	}
 }
 if($exist==false){
-$req = $bdd->prepare("INSERT INTO Article VALUES(0,:Composition,:Nom,:DLC,:Date_crea,:Prix_achat,:Label,:Fermier)");
+$req = $bdd->prepare("INSERT INTO Article VALUES(0,:Composition,:Nom,:DLC,:Date_crea,:Prix_achat,:Label,:Fermier,:Statut)");
          $req -> execute(array(
             "Composition" => $compo,
             "Nom" => $name,
@@ -26,6 +26,7 @@ $req = $bdd->prepare("INSERT INTO Article VALUES(0,:Composition,:Nom,:DLC,:Date_
 			"Prix_achat" => $pa,
 			"Label" => $lab,
 			"Fermier" => $farm
+			"Statut" => "A vendre"
 			));
 }
 

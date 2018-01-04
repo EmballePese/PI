@@ -18,10 +18,26 @@
         </ul>
       </div>
       <div id="content">
-        <?php
-        	$user = $donnees['Prenom'];
-        	echo "<h3>Vous êtes connecté(e) sous $user</h3>";
-        	echo("Vos informations personelles <br><br>");
+
+		<?php
+			$user = $donnees['Prenom'];
+			echo "<h3>Vous êtes connecté(e) sous $user</h3>";
+			if(!empty($donnees['Avatar']))
+			{
+				echo"<img src=".$donnees['Avatar']." class=\"avatar\" alt=\"Avatar\" />";
+			}
+
+		?>
+
+
+			<form method="post" action="../Model/m_avatar.php" enctype="multipart/form-data">
+
+			     <label for="icone">Avatar du profil (JPG, PNG ou GIF | max. 15 Ko) :</label><br />
+					  <input type="file" name="image" id="image" /><br />
+					  <input type="submit" name="submit" value="Envoyer" />
+			<form>
+<?php
+        	echo("<br><br>Vos informations personelles <br><br>");
         	echo("Nom : ".$donnees['Nom']."<br>");
         	echo("Prenom : ".$donnees['Prenom']."<br>");
         	echo("Adresse : ".$donnees['Adresse']."<br>");

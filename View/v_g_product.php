@@ -55,8 +55,9 @@ for($i=0;$i<count($tab);$i++){
         </br>
         <form action="../Controller/c_g_modify_product.php">
           <button> Modifier vos produits </button>
-		</form> <br><br>
-    <form action="../Controller/c_g_add_product.php">
+		</form>
+	<br>
+		<form action="../Controller/c_g_add_product.php">
           <button> Ajouter des produits </button>
         </form>
       </div>

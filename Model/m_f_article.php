@@ -25,7 +25,7 @@ $req = $bdd->prepare("INSERT INTO Article VALUES(0,:Composition,:Nom,:DLC,:Date_
             "Date_crea" => $dc,
 			"Prix_achat" => $pa,
 			"Label" => $lab,
-			"Fermier" => $farm
+			"Fermier" => $farm,
 			"Statut" => "A vendre"
 			));
 }

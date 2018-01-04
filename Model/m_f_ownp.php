@@ -10,8 +10,8 @@ catch (Exception $e)
 
 $exist=false;
 
-$recov = $bdd->query("SELECT A.Nom,A.Composition,A.DLC,A.Date_crea,A.Prix_achat,L.Label
-					  FROM Article A JOIN LABEL L
+$recov = $bdd->query("SELECT A.Nom,A.Composition,A.DLC,A.Date_crea,A.Prix_achat,L.Label,A.Statut
+					  FROM Article A JOIN Label L
 					  ON L.id_label = A.Label
 					  WHERE A.Fermier = '$farm'");
 while ($donnees = $recov->fetch()){

@@ -31,8 +31,8 @@
             <th>Prix vente</th></tr>
 
 <?php
-$today = date("Y-m-d");
-for($i=0;$i<count($tab);$i++){
+			$today = date("Y-m-d");
+			for($i=0;$i<count($tab);$i++){
               echo"<tr><td>".$tab[$i]['Nom']."</td>";
               echo"<td>".$tab[$i]['Qte_stock']."</td>";
 			  echo"<td>".$tab[$i]['Composition']."</td>";

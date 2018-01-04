@@ -50,7 +50,6 @@
       </form>";
     }
     echo $message_pass;
-    var_dump($date);
     ?>
   </br>
   </div>

@@ -45,7 +45,6 @@
           <tr><td colspan=2></td><td style=\"text-align:center;\"><button>Ajouter au site</button></td></tr>
           </form>";
           echo $message;
-          var_dump($farm,$name);
           ?>
         </table>
       </div>

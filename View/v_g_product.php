@@ -3,7 +3,7 @@
   <head>
     <title>Emballé-pesé</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="../Look/style.css" />
+    <link rel="stylesheet" type="text/css" href="../Look/style_gerant.css" />
   </head>
   <body>
     <div id="main">
@@ -55,7 +55,10 @@ for($i=0;$i<count($tab);$i++){
         </br>
         <form action="../Controller/c_g_modify_product.php">
           <button> Modifier vos produits </button>
-		</form>
+		</form> <br><br>
+    <form action="../Controller/c_g_add_product.php">
+          <button> Ajouter des produits </button>
+        </form>
       </div>
     </div>
   </body>

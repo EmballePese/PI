@@ -45,6 +45,9 @@
       		echo "Prix HTC : ".$price_htc."€</br>";
       		echo "Prix TTC : ".$price_ttc."€</br>";
       	?>
+		Methode de paiement :</br>
+		Carte Bancaire</br>
+		XXXXXXXXXXXX5784
 
       	<form action="../Controller/c_g_order.php" method="GET">
       	<input type="hidden" name="step" value="2">

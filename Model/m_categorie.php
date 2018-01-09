@@ -8,12 +8,89 @@ catch (Exception $e)
 	die('Erreur : '. $e->getMessage());
 }
 $tab =array();
-$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Marge, A.Composition, A.Prix_achat,A.DLC
-					  FROM Produit P JOIN Type T
-					  ON P.Type = T.id_type
-					  JOIN Article A
-					  ON P.Article = A.id_article
-					  WHERE T.Type ='$cat'");
+if(empty($search)){
+	if($trier =="prix_c"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat'
+							  ORDER BY P.Prix_total DESC");
+	}else if($trier =="prix_d"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat'
+							  ORDER BY P.Prix_total ASC");
+	}else if($trier =="name_c"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat'
+							  ORDER BY P.Nom ASC");
+	}else if($trier =="name_d"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat'
+							  ORDER BY P.Nom DESC");
+	}else{
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat'");
+	}
+}else{
+	if($trier =="prix_c"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat' AND P.nom='$search'
+							  ORDER BY P.Prix_total DESC");
+	}else if($trier =="prix_d"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat'AND P.nom='$search'
+							  ORDER BY P.Prix_total ASC");
+	}else if($trier =="name_c"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat' AND P.nom='$search'
+							  ORDER BY P.Nom ASC");
+	}else if($trier =="name_d"){
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat' AND P.nom='$search'
+							  ORDER BY P.Nom DESC");
+	}else{
+		$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Prix_total, A.Composition,A.DLC
+							  FROM Produit P JOIN Type T
+							  ON P.Type = T.id_type
+							  JOIN Article A
+							  ON P.Article = A.id_article
+							  WHERE T.Type ='$cat' AND P.nom='$search'");
+	}
+}
 while ($donnees = $recov->fetch()){
 array_push($tab,$donnees);
 }

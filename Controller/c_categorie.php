@@ -7,11 +7,6 @@ $cat = $_GET['cat'];
 include('../Model/m_categorie.php');
 $i=0;
 
-foreach($tab as $key => $value){
-	$tab[$i]['Prix_total'] = ($tab[$i]['Prix_achat']*$tab[$i]['Marge']) + $tab[$i]['Prix_achat'];
-	$i++;
-}
-
 if($ajouter == true){
 if(is_numeric($quantity)){
 		if(isset($_SESSION['user'])){

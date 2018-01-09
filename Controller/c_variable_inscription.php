@@ -195,4 +195,14 @@ if(isset($_GET['action'])){
 }else{
 	$action= "";
 }
+if(isset($_GET['search'])){
+	$search = $_GET['search'];
+}else{
+	$search = "";
+}
+if(isset($_GET['trier'])){
+	$trier = $_GET['trier'];
+}else{
+	$trier = "";
+}
 ?>

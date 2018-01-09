@@ -12,9 +12,9 @@ catch (Exception $e)
 	die('Erreur : '. $e->getMessage());
 }
 
-
+$prix_total = ($prix_achat*$marge) + $prix_achat;
 $bdd->exec("UPDATE Produit
-			SET Nom ='$nom',Marge='$marge'
+			SET Nom ='$nom',Marge='$marge',Prix='$prix_total'
 			WHERE id_produit='$id'");
 include('../Controller/c_g_product.php');
 

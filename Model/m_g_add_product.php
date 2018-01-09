@@ -17,6 +17,7 @@ $recov = $bdd->query("SELECT *
 
 while ($donnees = $recov->fetch()){
 	$id_art = $donnees['id_article'];
+	$prix_achat = $donnees['Prix_achat'];
 }
 
 if(empty($id_art)){
@@ -32,7 +33,8 @@ while ($donnees = $recov->fetch()){
 }
 
 if($exist==false){
-$req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stock,:Stock_mini,:Marge)");
+	$prix_total = ($prix_achat*$marge) + $prix_achat;
+$req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stock,:Stock_mini,:Marge,:Prix_total)");
        $req -> execute(array(
             "Type" => $type,
             "Article" => $id_art,
@@ -40,6 +42,7 @@ $req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stoc
             "Qte_stock" => $qte,
 			"Stock_mini" => $sm,
 			"Marge" => $marge,
+			"Prix_total" => $prix_total,
 			));
 }
 

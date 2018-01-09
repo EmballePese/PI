@@ -16,6 +16,7 @@ if(is_numeric($quantity)){
 				$basket = array();
 			}
 		$i = $_GET['i'];
+		$id_produit = $_GET['id_produit'];
 		$price_prod = $_GET["Price"];
 		$price_total = $quantity*$price_prod;
 		$exist=false;
@@ -40,7 +41,8 @@ if(is_numeric($quantity)){
 		}else{
 		$basket[$a]['price_tot'] = $price_total;
 		$basket[$a]['quantity'] = $quantity;
-		$basket[$a]['name'] = $tab[$i]['Nom'];
+		$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
+		$basket[$a]['id_produit'] = $id_produit;
 		$_SESSION['a']++;
 		$message ="<h3>Votre Article a bien été ajouté</h3></br>";
 		}

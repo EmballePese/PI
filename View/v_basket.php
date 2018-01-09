@@ -51,6 +51,7 @@
     		<input type=\"hidden\" name=\"step\" value=\"1\">
     		<button>Effectuer la commande</button>
     		</form>";
+			var_dump($order);
     	?>
       </div>
     </div>

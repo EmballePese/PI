@@ -22,6 +22,20 @@
       </div>
       <div id="content">
         <h2>Voici les Articles proposer par les differents fermier:</h2></br>
+			Trier par:<form action="c_g_articles.php" method="GET">
+				   <select name="trier">
+				   <option value="prix_d">Prix decroissant</option> 
+				   <option value="prix_c">Prix croissant</option> 
+				   <option value="name_c">Par nom A->Z</option>
+				   <option value="name_d">Par nom Z->A</option>
+				   </select>
+				   <p>
+				   <?php
+				   echo"Rechercher produit : <input type=\"text\" value=\"".$search."\" name=\"search\"></br>";
+				   echo"Rechercher fermier (Adresse E-mail) : <input type=\"text\" value=\"".$search_f."\" name=\"search_f\"></br>";
+				   ?>
+				   <button> Trier et rechercher</button></br><p>
+				   </form>
 
         <?php
         	for($i=0;$i<count($tab);$i++){

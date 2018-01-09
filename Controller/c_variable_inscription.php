@@ -205,4 +205,9 @@ if(isset($_GET['trier'])){
 }else{
 	$trier = "";
 }
+if(isset($_GET['search_f'])){
+	$search_f = $_GET['search_f'];
+}else{
+	$search_f = "";
+}
 ?>

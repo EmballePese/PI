@@ -17,7 +17,7 @@ $recov = $bdd->query("SELECT *
 					  ON P.Article = A.id_article
 					  WHERE P.id_produit='$id'");
 while ($donnees = $recov->fetch()){
-$prix_total = ($donnees['Prix_achat']*$marge) + $donnees['Prix_achat'];
+$prix_total = $donnees['Prix_achat']*$marge;
 }
 $bdd->exec("UPDATE Produit
 			SET Nom ='$nom',Marge='$marge',Prix_total='$prix_total'

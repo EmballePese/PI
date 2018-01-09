@@ -33,7 +33,7 @@ while ($donnees = $recov->fetch()){
 }
 
 if($exist==false){
-	$prix_total = ($prix_achat*$marge) + $prix_achat;
+	$prix_total = $prix_achat*$marge;
 $req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stock,:Stock_mini,:Marge,:Prix_total)");
        $req -> execute(array(
             "Type" => $type,

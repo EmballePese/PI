@@ -46,7 +46,7 @@
 
 			  }
               echo"<td>".$tab[$i]['Marge']."</td>";
-              $prix = $tab[$i]['Prix_achat']*$tab[$i]['Marge'];
+              $prix = $tab[$i]['Prix_total'];
 			  echo"<td>".$prix."€</td></tr>";
             }
             echo $message;

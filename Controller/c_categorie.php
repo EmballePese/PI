@@ -3,7 +3,6 @@ session_start();
 
 include('../Controller/c_variable_inscription.php');
 $cat = $_GET['cat'];
-
 include('../Model/m_categorie.php');
 $i=0;
 
@@ -17,12 +16,12 @@ if(is_numeric($quantity)){
 			}
 		$i = $_GET['i'];
 		$id_produit = $_GET['id_produit'];
-		$price_prod = $_GET["Price"];
+		$price_prod = $_GET['Price'];
 		$price_total = $quantity*$price_prod;
 		$exist=false;
 		for($b=0;$b<=$a;$b++){
 			if(isset($basket[$b])){
-				if($basket[$b]['name'] == $tab[$i]['Nom']){
+				if($basket[$b]['id_produit'] == $id_produit){
 					$a = $b;
 					$exist = true;
 					break;

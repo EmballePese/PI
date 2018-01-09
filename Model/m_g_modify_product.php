@@ -11,10 +11,16 @@ catch (Exception $e)
 {
 	die('Erreur : '. $e->getMessage());
 }
-
-$prix_total = ($prix_achat*$marge) + $prix_achat;
+$tab_m =array();
+$recov = $bdd->query("SELECT * 
+					  FROM Produit P JOIN Article A
+					  ON P.Article = A.id_article
+					  WHERE P.id_produit='$id'");
+while ($donnees = $recov->fetch()){
+$prix_total = ($donnees['Prix_achat']*$marge) + $donnees['Prix_achat'];
+}
 $bdd->exec("UPDATE Produit
-			SET Nom ='$nom',Marge='$marge',Prix='$prix_total'
+			SET Nom ='$nom',Marge='$marge',Prix_total='$prix_total'
 			WHERE id_produit='$id'");
 include('../Controller/c_g_product.php');
 

@@ -62,7 +62,7 @@ CREATE TABLE Article(
   Prix_achat FLOAT(6),
   Label INT(11) NOT NULL,
   Fermier VARCHAR(45),
-  Statut ENUM('A vendre', 'Vendu'),
+  Statut ENUM('En vente', 'Acheté', 'Vendu'),
   PRIMARY KEY (id_article),
   FOREIGN KEY (Label) REFERENCES Label (id_label)
 );

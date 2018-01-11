@@ -38,7 +38,7 @@ CREATE TABLE User(
   Status ENUM('Actif','Ban'),
   Avatar BLOB,
   PRIMARY KEY(id_user),
-  FOREIGN KEY (Categorie) REFERENCES Categorie (id_categorie)
+  FOREIGN KEY (Categorie) REFERENCES Categorie (id_categorie) on delete cascade
 );
 
 DROP TABLE IF EXISTS Cmd_achat;
@@ -49,7 +49,7 @@ CREATE TABLE Cmd_achat(
   Date_cmd DATE,
   Fermier INT(11) NOT NULL,
   PRIMARY KEY (id_cmd_achat),
-  FOREIGN KEY (Fermier) REFERENCES User (Categorie)
+  FOREIGN KEY (Fermier) REFERENCES User (Categorie) on delete cascade 
 );
 
 DROP TABLE IF EXISTS Article;
@@ -64,7 +64,7 @@ CREATE TABLE Article(
   Fermier VARCHAR(45),
   Statut ENUM('En vente', 'Acheté', 'Vendu'),
   PRIMARY KEY (id_article),
-  FOREIGN KEY (Label) REFERENCES Label (id_label)
+  FOREIGN KEY (Label) REFERENCES Label (id_label) on delete cascade
 );
 
 DROP TABLE IF EXISTS Ligne_cmd_achat;
@@ -75,8 +75,8 @@ CREATE TABLE Ligne_cmd_achat(
   Qte INT(4),
   Prix_facture FLOAT(6),
   PRIMARY KEY (id_ligne_cmd_achat),
-  FOREIGN KEY (Cmd_achat) REFERENCES Cmd_achat (id_cmd_achat),
-  FOREIGN KEY (Article) REFERENCES Article (id_article)
+  FOREIGN KEY (Cmd_achat) REFERENCES Cmd_achat (id_cmd_achat) on delete cascade,
+  FOREIGN KEY (Article) REFERENCES Article (id_article) on delete cascade
 );
 
 DROP TABLE IF EXISTS Produit;
@@ -90,8 +90,8 @@ CREATE TABLE Produit(
   Marge FLOAT(4),
   Prix_total FLOAT(6),
   PRIMARY KEY (id_produit),
-  FOREIGN KEY (Type)  REFERENCES Type (id_type),
-  FOREIGN KEY (Article) REFERENCES Article (id_article)
+  FOREIGN KEY (Type)  REFERENCES Type (id_type) on delete cascade,
+  FOREIGN KEY (Article) REFERENCES Article (id_article) on delete cascade
 );
 
 DROP TABLE IF EXISTS Cmd_vente;
@@ -103,7 +103,7 @@ CREATE TABLE Cmd_vente(
   Date_cmd DATE,
   Date_livraison DATE,
   PRIMARY KEY (id_cmd_vente),
-  FOREIGN KEY (Consommateur)  REFERENCES User (id_user)
+  FOREIGN KEY (Consommateur)  REFERENCES User (id_user) on delete cascade
 );
 
 DROP TABLE IF EXISTS Ligne_cmd_vente;
@@ -114,6 +114,6 @@ CREATE TABLE Ligne_cmd_vente(
   Qte INT(2),
   Prix_facture FLOAT(6),
   PRIMARY KEY (id_ligne_cmd_vente),
-  FOREIGN KEY (cmd_vente) REFERENCES Cmd_vente (id_cmd_vente),
-  FOREIGN KEY (Produit) REFERENCES Produit (id_produit)
+  FOREIGN KEY (cmd_vente) REFERENCES Cmd_vente (id_cmd_vente) on delete cascade,
+  FOREIGN KEY (Produit) REFERENCES Produit (id_produit) on delete cascade
 );

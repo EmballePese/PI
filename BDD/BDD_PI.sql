@@ -35,6 +35,8 @@ CREATE TABLE User(
   Tel VARCHAR(12),
   Mail VARCHAR(60),
   Mdp VARCHAR(45),
+  Status ENUM('Actif','Ban'),
+  Avatar BLOB,
   PRIMARY KEY(id_user),
   FOREIGN KEY (Categorie) REFERENCES Categorie (id_categorie)
 );
@@ -60,6 +62,7 @@ CREATE TABLE Article(
   Prix_achat FLOAT(6),
   Label INT(11) NOT NULL,
   Fermier VARCHAR(45),
+  Statut ENUM('A vendre', 'Vendu'),
   PRIMARY KEY (id_article),
   FOREIGN KEY (Label) REFERENCES Label (id_label)
 );
@@ -85,6 +88,7 @@ CREATE TABLE Produit(
   Qte_stock INT(4),
   Stock_mini INT(3),
   Marge FLOAT(4),
+  Prix_total FLOAT(6),
   PRIMARY KEY (id_produit),
   FOREIGN KEY (Type)  REFERENCES Type (id_type),
   FOREIGN KEY (Article) REFERENCES Article (id_article)

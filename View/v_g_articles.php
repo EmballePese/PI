@@ -39,6 +39,7 @@
 
         <?php
         	for($i=0;$i<count($tab);$i++){
+				$id_article = $tab[$i]['id_article'];
         		echo"<form action=\"./c_g_articles.php\" method=\"GET\">";
         		echo"Nom :".$tab[$i]['Nom']."</br>";
         		echo"Composition:".$tab[$i]['Composition']."</br>";
@@ -51,6 +52,7 @@
         		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_achat']."\" name=\"Price\">";
         		echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
         		echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
+				echo"<input type=\"hidden\" value=\"".$id_article."\" name=\"id_article\">";
         		echo"<button> Ajouter </button> </br>
         			 </form>
         			 </br>";

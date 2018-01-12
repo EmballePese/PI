@@ -20,14 +20,14 @@
         <?php
         	$user = $donnees['Prenom'];
         	echo "<h3>Vous êtes connecté(e) sous $user</h3>";
-        	echo("Vos informations personelles <br><br>");
+        	echo("Vos informations personelles :<br><br>");
         	echo("Nom : ".$donnees['Nom']."<br>");
-        	echo("Prenom : ".$donnees['Prenom']."<br>");
+        	echo("Prénom : ".$donnees['Prenom']."<br>");
         	echo("Adresse : ".$donnees['Adresse']."<br>");
-        	echo("Code Postal : ".$donnees['CP']."<br>");
+        	echo("Code postal : ".$donnees['CP']."<br>");
         	echo("Ville : ".$donnees['Ville']."<br>");
-        	echo("Tel : ".$donnees['Tel']."<br>");
-        	echo("Mail : ".$donnees['Mail']."<br>");
+        	echo("Téléphone : ".$donnees['Tel']."<br>");
+        	echo("Adresse e-mail : ".$donnees['Mail']."<br>");
         ?>
         	 <form action="../Controller/c_deconnexion.php">
         		<input type="Submit" value="Deconnexion">

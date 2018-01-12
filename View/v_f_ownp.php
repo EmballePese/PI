@@ -23,8 +23,8 @@
 					for($i=0;$i<count($tab);$i++){
 						echo"Nom : ".$tab[$i]['Nom']."</br>";
 						echo"Composition : ".$tab[$i]['Composition']."</br>";
-						echo"Date de Limite de Consomation : ".$tab[$i]['DLC']."</br>";
-						echo"Date de creation : ".$tab[$i]['Date_crea']."</br>";
+            echo"Date de création : ".$tab[$i]['Date_crea']."</br>";
+						echo"Date de limite de consommation : ".$tab[$i]['DLC']."</br>";
 						echo"Prix d'achat : ".$tab[$i]['Prix_achat']."€</br>";
 						echo"Label : ".$tab[$i]['Label']."</br>";
 						echo"Statut :".$tab[$i]['Statut']."</br>";

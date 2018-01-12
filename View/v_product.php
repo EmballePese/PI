@@ -17,24 +17,24 @@
         </ul>
       </div>
       <div id="content">
-        <h2>Voici les categories disponibles :</h2></br>
+        <h2>Voici les catégories disponibles :</h2></br>
 
       <form action="../Controller/c_categorie.php" method="GET">
       <input type="image" src="../Look/images/ratatouille.png" width="100" height="100"></br>
       <input type="hidden" value="Plat_Prepare" name="cat">
-      Plat préparé</br>
+      Plats préparés</br>
       </form>
 
       <form action="../Controller/c_categorie.php" method="GET">
       <input type="image" src="../Look/images/Pomme.png" width="100" height="100"></br>
       <input type="hidden" value="Fruit_Legume"name="cat">
-      Fruit/Legume</br>
+      Fruits/Légumes</br>
       </form>
 
       <form action="../Controller/c_categorie.php" method="GET">
       <input type="image" src="../Look/images/jus de pomme.png"  width="100" height="100"></br>
       <input type="hidden" value="Boisson"name="cat">
-      Boisson</br>
+      Boissons</br>
       </form>
       </div>
     </div>

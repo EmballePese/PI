@@ -20,7 +20,7 @@
         <table class="tab_center">
           <?php
         include('../Controller/c_variable_inscription.php');
-        echo"<br> <br>Vous êtes inscrit sur notre magnifique site de vrac ! Votre mdp est : ".$mdp_clair.". Ne l'oubliez pas ! ;)
+        echo"<br> <br>Vous êtes inscrit sur notre magnifique site de vrac !<br>Votre mdp est : ".$mdp_clair.", ne l'oubliez pas ! ;)
           <br><br>
 
           <form action=\"../View/v_connexion.php\">

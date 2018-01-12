@@ -20,11 +20,11 @@
     </div>
   </div>
   <div class="center_content">
-	<h2>Voici les Articles en vente sur votre site :</h2></br>
+	<h2>Voici les articles en vente sur votre site :</h2></br>
 <table class="tab_center" cellpadding="5">
 <tr><th>Nom</th>
 <th>Quantité stock</th>
-<th>Compositions</th>
+<th>Composition</th>
 <th>Date limite de consommation</th>
 <th>Marge</th>
 <th>Prix vente</th></tr>

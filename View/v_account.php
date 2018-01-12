@@ -20,7 +20,7 @@
 
 		<?php
 			$user = $donnees['Prenom'];
-			echo "<h3>Vous êtes connecté(e) sous $user</h3>";
+			echo "<h3>Vous êtes connecté(e) sous $user.</h3>";
 			if(!empty($donnees['Avatar']))
 			{
 				echo"<img src=".$donnees['Avatar']." class=\"avatar\" alt=\"Avatar\" />";
@@ -36,17 +36,17 @@
 					  <input type="submit" name="submit" value="Envoyer" />
 			</form>
 <?php
-        	echo("<br><br>Vos informations personelles <br><br>");
+        	echo("<br><br>Vos informations personelles :<br><br>");
         	echo("Nom : ".$donnees['Nom']."<br>");
-        	echo("Prenom : ".$donnees['Prenom']."<br>");
+        	echo("Prénom : ".$donnees['Prenom']."<br>");
         	echo("Adresse : ".$donnees['Adresse']."<br>");
-        	echo("Code Postal : ".$donnees['CP']."<br>");
+        	echo("Code postal : ".$donnees['CP']."<br>");
         	echo("Ville : ".$donnees['Ville']."<br>");
-        	echo("Tel : ".$donnees['Tel']."<br>");
-        	echo("Mail : ".$donnees['Mail']."<br>");
+        	echo("Téléphone : ".$donnees['Tel']."<br>");
+        	echo("Adresse e-mail : ".$donnees['Mail']."<br>");
         ?>
         	 <form action="../Controller/c_deconnexion.php">
-        		<input type="Submit" value="Deconnexion">
+        		<input type="Submit" value="Déconnexion">
         	</form>
         	</br>
         	<h3>Voir vos commandes :</h3>
@@ -67,7 +67,7 @@
              <table>
         		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr>
                 <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr>
-        		 </table> <input type="Submit" value="Se desinscrire">
+        		 </table> <input type="Submit" value="Se désinscrire">
         	</form>
           <?php echo $message; ?>
       </div>

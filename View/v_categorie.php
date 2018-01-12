@@ -18,10 +18,10 @@
       </div>
       <div id="content">
         <h2>Voici les categories disponibles :</h2></br>
-		Trier par:<form action="c_categorie.php" method="GET">
+		Trier par :<form action="c_categorie.php" method="GET">
 				   <select name="trier">
-				   <option value="prix_d">Prix decroissant</option> 
-				   <option value="prix_c">Prix croissant</option> 
+				   <option value="prix_d">Prix décroissant</option> 
+				   <option value="prix_c">Prix croissant</option>
 				   <option value="name_c">Par nom A->Z</option>
 				   <option value="name_d">Par nom Z->A</option>
 				   </select>

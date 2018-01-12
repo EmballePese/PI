@@ -24,9 +24,10 @@
     		echo"<form action=\"../Controller/c_f_article.php\" method=\"GET\">
     			<tr><td>Nom</td> <td>:</td> <td><input type=\"text\" name=\"name\" value=\"$name\"></td></tr><p>
     			<tr><td>Composition</td> <td>:</td> <td><input type=\"text\" name=\"compo\" value=\"$compo\"></td></tr><p>
-    			<tr><td>Date Limite de Consomation </td> <td>:</td> <td><input type=\"date\" name=\"DLC\" value=\"$dlc\"></td></tr><p>
-    			<tr><td>Date de création</td> <td>:</td> <td><input type=\"date\"name=\"dc\" value=\"$dc\"></td></tr><p>
-    			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"text\" name=\"pa\"value=\"$pa\"></td></tr><p>
+          <tr><td>Quantité</td><td>:</td> <td><input type=\"text\" name=\"qte\" value=\"$qte\"</td></tr><p>
+          <tr><td>Date de création</td> <td>:</td> <td><input type=\"date\"name=\"dc\" value=\"$dc\"></td></tr><p>
+    			<tr><td>Date Limite de consommation </td> <td>:</td> <td><input type=\"date\" name=\"DLC\" value=\"$dlc\"></td></tr><p>
+    			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"text\" size=\"4\" placeholder=\"4.20\" name=\"pa\"value=\"$pa\"></td><td>€</td></tr><p>
     			";
 
     				echo"<tr><td>Label</td> <td>:</td></td><td><select name=\"lab\">";
@@ -39,7 +40,7 @@
     			echo"</select>
     			<input type=\"hidden\" name=\"check\"value=\"check\">
     			<p>
-    			<tr><td colspan=2></td><td style=\"text-align:center;\"><button>Ajouter au site</button></td></tr>
+    			<tr><td colspan=2></td><td style=\"text-align:center;\"><button>Soumettre le produit</button></td></tr>
     			</form>";
     			echo $message;
     			?>

@@ -46,7 +46,7 @@
     <p>
     </br>
     Moyen de paiement:</br>
-    Carte Bancaire
+    Carte bancaire
     </br>
     <p>
     <form action="c_history_order.php" method="get">

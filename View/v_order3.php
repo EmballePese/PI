@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div id="content">
-        <h3> Recapitulatif de la commande </h3>
+        <h3> Récapitulatif de la commande </h3>
       	<?php
 
       		echo("<table class=\"tab_center\">
@@ -42,12 +42,12 @@
       		echo "Prix TTC : ".$price_ttc."€</br>";
 
       		echo"<p>";
-      		echo"Moyen De paiement: </br>";
+      		echo"Moyen de paiement: </br>";
       		echo"XXXXXXXXXXXX".$cart4."</br>";
       		echo$date."</br>";
 
       		echo"<p>";
-      		echo"Adresse de Livraison: </br>";
+      		echo"Adresse de livraison: </br>";
       		echo$_SESSION['adresse'];
       		echo"<p>";
       	?>

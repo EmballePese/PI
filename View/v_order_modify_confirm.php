@@ -19,7 +19,7 @@
       <div id="content">
         Vos paramètres de commande ont été mis à jour.
       	<form action="../Controller/c_history_order.php">
-      	<button>Retour aux Commandes</button>
+      	<button>Retour aux commandes</button>
       	</form>
       	</br>
       </div>

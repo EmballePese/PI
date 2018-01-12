@@ -7,7 +7,7 @@ if($step == "1"){
 		$message = "<h2>Veuillez indiquer vos coordonnées : </h2></br>
 					<form action=\"c_order.php\" method=\"get\">
 					<tr><td>Adresse</td> <td>:</td> <td><input type=\"text\" name=\"adress\" value=\"$adress\"></td></tr><p>
-					<tr><td>Code Postal</td>:<td>:</td><td><input type=\"text\"name=\"cp\" value=\"$cp\" maxlength=\"5\"></td></tr><p>
+					<tr><td>Code postal</td>:<td>:</td><td><input type=\"text\"name=\"cp\" value=\"$cp\" maxlength=\"5\"></td></tr><p>
 					<tr><td>Ville</td> <td>:</td> <td><input type=\"text\" name=\"city\"value=\"$city\"></td></tr><p>
 					<input type=\"hidden\" name=\"step\"value=\"1\">
 					<input type=\"hidden\" name=\"meth\"value=\"1\">
@@ -72,11 +72,11 @@ if($step == "1"){
 	include('../Model/m_order.php');
 	 $_SESSION['basket'] ="";
 	 $_SESSION['a'] =0;
-	$message="<h2> Merci d'avoir choisit Emballé-pesé</h3></br>";
+	$message="<h2> Merci d'avoir choisi Emballé-pesé !</h3></br>";
 	if($delivry =="House"){
-		$message2 = "Vous receverez au plus tard votre commande le ".$date_delivry;
+		$message2 = "Vous receverez au plus tard votre commande le ".$date_delivry.".";
 	}else{
-		$message2 = "Vous pourrez recuperer au plus tard votre commande le ".$date_delivry;
+		$message2 = "Vous pourrez récuperer au plus tard votre commande le ".$date_delivry".";
 	}
 	include('../View/v_order4.php');
 

@@ -18,10 +18,10 @@
       </div>
       <div id="content">
         <h3> 2ème étape : Paiement </h3></br>
-      Veuillez Entrez vos coordonnées bancaire ci dessous :
+      Veuillez entrer vos coordonnées bancaires ci-dessous :
       <p>
       <form action="c_order.php" method="get">
-      Votre Numéro de carte :
+      Votre numéro de carte :
       <input type="text" name="cart1" maxlength="4" size="4"/>/
       <input type="text" name="cart2" maxlength="4" size="4"/>/
       <input type="text" name="cart3" maxlength="4" size="4"/>/

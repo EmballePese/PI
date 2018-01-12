@@ -21,11 +21,11 @@
 
     	<form action="../Controller/c_order_modify.php" method="get">
     	<input type="hidden" name="change" value="adress">
-    	<button>Modifier methode de livraison</button>
+    	<button>Modifier méthode de livraison</button>
     	</form>
     	<form action="../Controller/c_order_modify.php" method="get">
     	<input type="hidden" name="change" value="cb">
-    	<button>Modifier Coordonnes Bancaire</button>
+    	<button>Modifier vos coordonnées bancaires</button>
     	</form>
     	</br>
     	</br>

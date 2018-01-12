@@ -26,7 +26,6 @@
 		<form action="../Controller/c_g_ban.php" method="GET">
 		Mail du client : <input type="text" name="mail">
 		<input type="submit" name="action" value="ban">
-		<input type="submit" name="action" value="suspendre">
 		<input type="submit" name="action" value="Lever la suspension/bannissement">
 		<input type="hidden" name="check" value="check">
 		</form>

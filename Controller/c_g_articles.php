@@ -16,12 +16,13 @@ if(is_numeric($quantity)){
 				$basket = array();
 			}
 		$i = $_GET['i'];
-		$price_prod = $_GET["Price"];
+		$id_article = $_GET['id_article'];
+		$price_prod = $_GET['Price'];
 		$price_total = $quantity*$price_prod;
 		$exist=false;
 		for($b=0;$b<=$a;$b++){
 			if(isset($basket[$b])){
-				if($basket[$b]['name'] == $tab[$i]['Nom']){
+				if($basket[$b]['id_article'] == $id_article){
 					$a = $b;
 					$exist = true;
 					break;
@@ -33,14 +34,15 @@ if(is_numeric($quantity)){
 			if($basket[$a]['quantity']> 200){
 				$basket[$a]['quantity'] = 200;
 				$basket[$a]['price_tot'] = 200*$price_prod;
-				$message = $message."Quantité maximum est de 200, Vous ne pouvez pas en commander plus</br>";
+				$message = $message."Quantité maximum est de 20, Vous ne pouvez pas en commander plus</br>";
 			}else{
 				$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
 			}
 		}else{
 		$basket[$a]['price_tot'] = $price_total;
 		$basket[$a]['quantity'] = $quantity;
-		$basket[$a]['name'] = $tab[$i]['Nom'];
+		$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
+		$basket[$a]['id_article'] = $id_article;
 		$_SESSION['a']++;
 		$message ="<h3>Votre Article a bien été ajouté</h3></br>";
 		}

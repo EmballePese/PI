@@ -3,7 +3,7 @@ INSERT INTO Categorie VALUES (2,"consommateur");
 INSERT INTO Categorie VALUES (3,"gerant");
 INSERT INTO User VALUES (0,1,"Follichon","Bernard","","","","0102030405","fermier@gmail.com","7110eda4d09e062aa5e4a390b0a572ac0d2c0220","Actif","");
 INSERT INTO User VALUES (0,2,"Fripiat","Jean","","","","0102030405","consommateur@gmail.com","7110eda4d09e062aa5e4a390b0a572ac0d2c0220","Actif","");
-INSERT INTO User VALUES (0,1,"Phillips","Dede","","","","0102030405","gerant@gmail.com","7110eda4d09e062aa5e4a390b0a572ac0d2c0220","Actif","");
+INSERT INTO User VALUES (0,3,"Phillips","Dede","","","","0102030405","gerant@gmail.com","7110eda4d09e062aa5e4a390b0a572ac0d2c0220","Actif","");
 INSERT INTO Type VALUES(1,'Plat_Prepare');
 INSERT INTO Type VALUES(2,'Fruit_Legume');
 INSERT INTO Type VALUES(3,'Boisson');

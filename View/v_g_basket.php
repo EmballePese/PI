@@ -36,10 +36,10 @@
     		echo("<tr><td>".$order[$i]['name']."</td>");
     		echo("<td>".$order[$i]['price_tot']."€</td>");
     		echo("<td>".$order[$i]['quantity']."</td>");
-    		echo("<td><form action=\"c_basket.php\" method=\"get\">
+    		echo("<td><form action=\"c_g_basket.php\" method=\"get\">
     			<input type=\"hidden\" name=\"line\" value=\"$i\">
     			<input type=\"submit\" name=\"op\" value=\"+\"></form></td>");
-    		echo("<td><form action=\"c_basket.php\" method=\"get\">
+    		echo("<td><form action=\"c_g_basket.php\" method=\"get\">
     			<input type=\"hidden\" name=\"line\" value=\"$i\">
     			<input type=\"submit\" name=\"op\" value=\"-\"></form></td></tr>");
     	}

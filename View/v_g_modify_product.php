@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div id="content">
-        <h2>Voici les Articles en vente sur votre site :</h2></br>
+        <h2>Voici les articles en vente sur votre site :</h2></br>
         <table class="tab_center" cellpadding="5">
           <tr><th>Nom</th>
             <th>Quantité stock</th>

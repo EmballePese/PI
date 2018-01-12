@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div id="content">
-        <h3> Recapitulatif de la commande </h3>
+        <h3> Récapitulatif de la commande </h3>
       	<?php
 
       		echo("<table class=\"tab_center\">

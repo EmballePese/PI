@@ -17,8 +17,8 @@
         </ul>
       </div>
       <div id="content">
-        <h2>Historique Commande :</h2></br>
-        Commande en cours :
+        <h2>Historique commande :</h2></br>
+        Commande(s) en cours :
       </br>
       <?php
       for($i=0;$i<count($order_processing);$i++){
@@ -37,7 +37,7 @@
       echo $message_processing;
       ?>
     </br>
-    Commande passée :
+    Commande(s) passée(s) :
 
     <?php
     for($i=0;$i<count($order_pass);$i++){

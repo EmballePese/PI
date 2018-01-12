@@ -43,6 +43,7 @@ if(isset($_POST['submit'])) {
 				));
 
 				echo 'L\'insertion s est bien déroulée !';
+				include("../Controller/c_account.php");
 			}
 		}
 	}

@@ -28,8 +28,8 @@ if(isset($_POST['submit'])) {
 				$uploads_dir = '../Look/images';
 				$tmp_name = $_FILES["image"]["tmp_name"];
 				$name = $_FILES["image"]["name"];
-				echo("name : ".$name);
-				echo("user :".$user);
+				//echo("name : ".$name);
+				//echo("user :".$user);
 				move_uploaded_file($tmp_name, "$uploads_dir/$name");
 
 				//connexion à la base de données
@@ -42,7 +42,7 @@ if(isset($_POST['submit'])) {
 					'image' => "$uploads_dir/$name"
 				));
 
-				echo 'L\'insertion s est bien déroulée !';
+				//echo 'L\'insertion s est bien déroulée !';
 				include("../Controller/c_account.php");
 			}
 		}

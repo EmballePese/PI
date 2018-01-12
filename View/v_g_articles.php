@@ -48,11 +48,13 @@
 				echo"Label :".$tab[$i]['Label']."</br>";
 				echo"Prix à l'unité:".$tab[$i]['Prix_achat']."€</br>";
 				echo"Vendu par :".$tab[$i]['Fermier']."</br>";
-				echo"Quantité souhaité : <input type=\"number\" name=\"quantity\" min=\"1\" max=\"200\" value=\"1\">";
+				echo"Quantité proposé par le fermier :".$tab[$i]['Qte_restantes']."</br>";
+				echo"Quantité souhaité : <input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$tab[$i]['Qte_restantes']."\" value=\"1\">";
         		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_achat']."\" name=\"Price\">";
         		echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
         		echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
 				echo"<input type=\"hidden\" value=\"".$id_article."\" name=\"id_article\">";
+				echo"<input type=\"hidden\" value=\"".$tab[$i]['Qte_restantes']."\" name=\"qte\">";
         		echo"<button> Ajouter </button> </br>
         			 </form>
         			 </br>";

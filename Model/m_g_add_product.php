@@ -9,35 +9,47 @@ catch (Exception $e)
 }
 
 $exist=false;
-
+$id_article = $_GET['id_article'];
 $recov = $bdd->query("SELECT *
-				      FROM Article
-					  WHERE Fermier ='$farm' AND Nom='$name'
+				      FROM Produit P JOIN Article A
+					  WHERE P.Article = '$id_article'
 					  ");
 
 while ($donnees = $recov->fetch()){
-	$id_art = $donnees['id_article'];
-	$prix_achat = $donnees['Prix_achat'];
-}
-
-if(empty($id_art)){
-	$exist = true;
-}
-
-$recov = $bdd->query("SELECT * FROM Produit");
-while ($donnees = $recov->fetch()){
-	if($id_art == $donnees['Article']){
+	if(!empty($donnees)){
 		$exist = true;
-		break;
 	}
 }
 
-if($exist==false){
+$recov = $bdd->query("SELECT *
+				      FROM Article 
+					  WHERE id_article = '$id_article'
+					  ");
+
+while ($donnees = $recov->fetch()){
+	$prix_achat = $donnees['Prix_achat'];
+	if($donnees['Qte_restantes'] == "0"){
+		$bdd->exec("UPDATE Article SET Statut='Vendu' WHERE id_article='$id_article'");
+	}else{
+		$bdd->exec("UPDATE Article SET Statut='Partiellement achete' WHERE id_article='$id_article'");
+	}	
+}
+
+if($exist == true){
+	$recov = $bdd->query("SELECT *
+				      FROM Produit P JOIN Article A
+					  WHERE P.Article = '$id_article'
+					  ");
+		 while ($donnees = $recov->fetch()){
+		$qte_new = intval($donnees['Qte_stock']) + $qte;
+		 }
+	$bdd->exec("UPDATE Produit SET Qte_stock='$qte_new' WHERE Article='$id_article'");
+}else{
 	$prix_total = $prix_achat*$marge;
 $req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stock,:Stock_mini,:Marge,:Prix_total)");
        $req -> execute(array(
             "Type" => $type,
-            "Article" => $id_art,
+            "Article" => $id_article,
             "Nom" => $name,
             "Qte_stock" => $qte,
 			"Stock_mini" => $sm,
@@ -45,6 +57,5 @@ $req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stoc
 			"Prix_total" => $prix_total,
 			));
 }
-
 $recov->closeCursor();
 ?>

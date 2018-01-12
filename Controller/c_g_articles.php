@@ -31,10 +31,10 @@ if(is_numeric($quantity)){
 		}
 		if($exist == true){
 			$basket[$a]['quantity'] = $quantity + $basket[$a]['quantity'];
-			if($basket[$a]['quantity']> 200){
-				$basket[$a]['quantity'] = 200;
-				$basket[$a]['price_tot'] = 200*$price_prod;
-				$message = $message."Quantité maximum est de 20, Vous ne pouvez pas en commander plus</br>";
+			if($basket[$a]['quantity']> $qte){
+				$basket[$a]['quantity'] = intval($qte);
+				$basket[$a]['price_tot'] = intval($qte)*$price_prod;
+				$message = $message."Quantité maximum est de ".$qte.", Vous ne pouvez pas en commander plus</br>";
 			}else{
 				$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
 			}
@@ -43,6 +43,7 @@ if(is_numeric($quantity)){
 		$basket[$a]['quantity'] = $quantity;
 		$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
 		$basket[$a]['id_article'] = $id_article;
+		$basket[$a]['qte_restantes'] = $tab[$i]['Qte_restantes'];
 		$_SESSION['a']++;
 		$message ="<h3>Votre Article a bien été ajouté</h3></br>";
 		}

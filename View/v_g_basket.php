@@ -56,7 +56,6 @@
     		<button>Effectuer la commande</button>
     		</form>";
 
-
     	?>
       </div>
     </div>

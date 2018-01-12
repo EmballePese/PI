@@ -16,5 +16,15 @@ while ($donnees = $recov->fetch()){
 	$tab_t[$i]['id'] = $donnees['id_type'];
 	$i++;
 }
+
+$recov = $bdd->query("SELECT * FROM Article A
+					  JOIN Produit P
+					  ON P.Article = A.id_article
+					  WHERE Statut ='Achete'");
+
+while ($donnees = $recov->fetch()){
+	array_push($tab_prod,$donnees);
+}
+
 $recov->closeCursor();
 ?>

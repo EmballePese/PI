@@ -27,6 +27,8 @@
 						echo"Date de limite de consommation : ".$tab[$i]['DLC']."</br>";
 						echo"Prix d'achat : ".$tab[$i]['Prix_achat']."€</br>";
 						echo"Label : ".$tab[$i]['Label']."</br>";
+						echo"Quantité Initiale :".$tab[$i]['Qte_article']."</br>";
+						echo"Quantité Restantes :".$tab[$i]['Qte_restantes']."</br>";
 						echo"Statut :".$tab[$i]['Statut']."</br>";
 						echo"<p>";
 					}

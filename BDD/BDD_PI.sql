@@ -62,7 +62,10 @@ CREATE TABLE Article(
   Prix_achat FLOAT(6),
   Label INT(11) NOT NULL,
   Fermier VARCHAR(45),
-  Statut ENUM('A vendre', 'Achete', 'Vendu'),
+  Statut ENUM('A vendre', 'Achete', 'Vendu','Partiellement achete'),
+  Qte_article INT(4),
+  Qte_restantes INT(4),
+  Qte_acheter INT(4),
   PRIMARY KEY (id_article),
   FOREIGN KEY (Label) REFERENCES Label (id_label) on delete cascade
 );

@@ -7,7 +7,7 @@ if(isset($_POST['submit'])) {
 
 	//Indique si le fichier a été téléchargé
 	if(!is_uploaded_file($_FILES['image']['tmp_name']))
-		echo 'Un problème est survenu durant l opération. Veuillez réessayer !';
+		$message = 'Un problème est survenu durant l opération. Veuillez réessayer !<br>';
 	else {
 		//liste des extensions possibles    
 		$extensions = array('/png', '/gif', '/jpg', '/jpeg');
@@ -17,12 +17,12 @@ if(isset($_POST['submit'])) {
 
 		//vérifie si l'extension est dans notre tableau            
 		if(!in_array($extension, $extensions))
-			echo 'Vous devez uploader un fichier de type png, gif, jpg, jpeg.';			
+			$message = 'Vous devez uploader un fichier de type png, gif, jpg, jpeg.<br>';			
 		else {         
 			//on définit la taille maximale
 			define('MAXSIZE', 300000);        
 			if($_FILES['image']['size'] > MAXSIZE)
-				echo 'Votre image est supérieure à la taille maximale de '.MAXSIZE.' octets';
+				$message = 'Votre image est supérieure à la taille maximale de '.MAXSIZE.' octets<br>';
 			else {
 				//enregistrement dans le dossier image
 				$uploads_dir = '../Look/images';
@@ -42,11 +42,12 @@ if(isset($_POST['submit'])) {
 					'image' => "$uploads_dir/$name"
 				));
 
-				//echo 'L\'insertion s est bien déroulée !';
-				include("../Controller/c_account.php");
+				$message = 'L\'insertion s est bien déroulée !<br>';
 			}
 		}
 	}
 }
+	
+				include("../Controller/c_account.php");
 
 ?>

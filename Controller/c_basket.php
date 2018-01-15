@@ -3,7 +3,7 @@ session_start();
 include('../Controller/c_variable_inscription.php');
 if(isset($line) && isset($op))
 {   
-	if($op == "+" && $_SESSION['basket'][$line]['quantity'] < 20)
+	if($op == "+" && $_SESSION['basket'][$line]['quantity'] < $_SESSION['basket'][$line]['qte_max'] && $_SESSION['basket'][$line]['quantity'] < 20)
 	{
 		$_SESSION['basket'][$line]['price_tot'] += ($_SESSION['basket'][$line]['price_tot'] / $_SESSION['basket'][$line]['quantity']);	
 		$_SESSION['basket'][$line]['quantity']++;

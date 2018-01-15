@@ -15,6 +15,7 @@ if(is_numeric($quantity)){
 				$basket = array();
 			}
 		$i = $_GET['i'];
+		$qte_max = $_GET['qte_max'];
 		$id_produit = $_GET['id_produit'];
 		$price_prod = $_GET['Price'];
 		$price_total = $quantity*$price_prod;
@@ -38,12 +39,31 @@ if(is_numeric($quantity)){
 				$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
 			}
 		}else{
-		$basket[$a]['price_tot'] = $price_total;
-		$basket[$a]['quantity'] = $quantity;
-		$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
-		$basket[$a]['id_produit'] = $id_produit;
-		$_SESSION['a']++;
-		$message ="<h3>Votre Article a bien été ajouté</h3></br>";
+			if($quantity > $qte_max){
+				$basket[$a]['quantity'] = $qte_max;
+				$basket[$a]['price_tot'] = $qte_max*$price_prod;
+				$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
+				$basket[$a]['id_produit'] = $id_produit;
+				$basket[$a]['qte_max'] = $qte_max;
+				$_SESSION['a']++;
+				$message ="<h3>Votre Article a bien été ajouté mais nous avons du restreindre votre stock vu que la quantité maximum sur les stocks a été atteint</h3></br>";
+			}else if($quantity > 20){
+				$basket[$a]['quantity'] = 20;
+				$basket[$a]['price_tot'] = 20*$price_prod;
+				$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
+				$basket[$a]['id_produit'] = $id_produit;
+				$basket[$a]['qte_max'] = $qte_max;
+				$_SESSION['a']++;
+				$message ="<h3>Votre Article a bien été ajouté mais nous avons du restreindre votre stock vu que la quantité maximum d'achat est de 20</h3></br>";
+			}else{
+				$basket[$a]['price_tot'] = $price_total;
+				$basket[$a]['quantity'] = $quantity;
+				$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
+				$basket[$a]['id_produit'] = $id_produit;
+				$basket[$a]['qte_max'] = $qte_max;
+				$_SESSION['a']++;
+				$message ="<h3>Votre Article a bien été ajouté</h3></br>";
+			}
 		}
 		$_SESSION['basket'] = $basket;
 

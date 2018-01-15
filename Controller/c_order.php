@@ -76,7 +76,7 @@ if($step == "1"){
 	if($delivry =="House"){
 		$message2 = "Vous receverez au plus tard votre commande le ".$date_delivry.".";
 	}else{
-		$message2 = "Vous pourrez récuperer au plus tard votre commande le ".$date_delivry".";
+		$message2 = "Vous pourrez récuperer au plus tard votre commande le ".$date_delivry.".";
 	}
 	include('../View/v_order4.php');
 

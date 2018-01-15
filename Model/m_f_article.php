@@ -9,10 +9,12 @@ catch (Exception $e)
 }
 
 $exist=false;
+$tab = array();
 
-$recov = $bdd->query('SELECT * FROM Article');
+$recov = $bdd->query("SELECT * FROM Article");
 while ($donnees = $recov->fetch()){
-	if($farm == $donnees['Fermier']&&$name==$donnees['Nom']){
+	array_push($tab,$donnees);
+	if($farm == $donnees['Fermier']&&stristr($name,$donnees['Nom']) != false){
 		$exist = true;
 	}
 }

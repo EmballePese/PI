@@ -27,7 +27,7 @@
 				<tr><td>Quantité</td><td>:</td> <td><input type=\"text\" name=\"qte\" value=\"$qte\"</td></tr><p>
 				<tr><td>Date de création</td> <td>:</td> <td><input type=\"date\"name=\"dc\" value=\"$dc\"></td></tr><p>
     			<tr><td>Date Limite de consommation </td> <td>:</td> <td><input type=\"date\" name=\"DLC\" value=\"$dlc\"></td></tr><p>
-    			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"text\" size=\"4\" placeholder=\"4.20\" name=\"pa\"value=\"$pa\"></td><td>€</td></tr><p>
+    			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"number\" size=\"4\" placeholder=\"4.20\" min=\"0.01\" name=\"pa\"value=\"$pa\"></td><td>€</td></tr><p>
     			";
 
     				echo"<tr><td>Label</td> <td>:</td></td><td><select name=\"lab\">";

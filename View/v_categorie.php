@@ -36,6 +36,7 @@
         <?php
         	for($i=0;$i<count($tab);$i++){
 				$id_produit = $tab[$i]['id_produit'];
+				$qte_max = $tab[$i]['Qte_stock'];
         		echo"<form action=\"./c_categorie.php\" method=\"GET\">";
         		echo"Nom :".$tab[$i]['Nom']."</br>";
         		echo"En stock :".$tab[$i]['Qte_stock']."</br>";
@@ -43,11 +44,12 @@
         		echo"Date Limite de Consomation :".$tab[$i]['DLC']."</br>";
         		echo"Prix :".$tab[$i]['Prix_total']."</br>";
 				echo"Vendu par le fermier :".$tab[$i]['Fermier']."</br>";
-        		echo"<input type=\"number\" name=\"quantity\" min=\"1\" max=\"20\" value=\"1\">";
+        		echo"<input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$qte_max."\" value=\"1\">";
         		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_total']."\" name=\"Price\">";
         		echo"<input type=\"hidden\" value=\"".$cat."\" name=\"cat\">";
         		echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
 				echo"<input type=\"hidden\" value=\"".$id_produit."\" name=\"id_produit\">";
+				echo"<input type=\"hidden\" value=\"".$qte_max."\" name=\"qte_max\">";
         		echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
         		echo"<button> Ajouter </button> </br>
         			 </form>

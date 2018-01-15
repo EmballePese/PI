@@ -17,10 +17,8 @@ while ($donnees = $recov->fetch()){
 	$i++;
 }
 
-$recov = $bdd->query("SELECT * FROM Article A
-					  JOIN Produit P
-					  ON P.Article = A.id_article
-					  WHERE Statut ='Achete'");
+$recov = $bdd->query("SELECT * FROM Article 
+					  WHERE Statut = 'Achete'");
 
 while ($donnees = $recov->fetch()){
 	array_push($tab_prod,$donnees);

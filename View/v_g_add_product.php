@@ -58,7 +58,7 @@
 		  </br>
 		  <p>";
           }
-		
+		  var_dump($tab_prod);
           echo $message;
           ?>
         </table>

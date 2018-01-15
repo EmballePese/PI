@@ -20,6 +20,7 @@ if($check =="check"){
 			$message="<h3 align='center'>Mauvaises dates, veuillez les verifier</h3>";
 			include('../View/v_f_article.php');
 		}else{
+			$name = strtolower($name);
 			include('../Model/m_f_article.php');
 			if($exist==true){
 				$message="Article deja mis en vente";

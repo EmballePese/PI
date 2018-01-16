@@ -9,11 +9,13 @@
     	die('Erreur : '. $e->getMessage());
     }
 
-	var_dump($email,$adress,$cp,$city);
 
     $bdd->exec("UPDATE User
 				SET Adresse='$adress',
 				CP='$cp',
-				Ville='$city'
+				Ville='$city',
+				Tel='$tel',
+				Mail='$new_mail'
 				WHERE Mail ='$email'");
+
 ?>

@@ -16,7 +16,9 @@
           <li><a href="../Controller/c_account.php">Mon compte</a></li>
         </ul>
       </div>
-      <div id="content">
+	  <div id="content">
+		
+          <?php echo $message; ?>
 
 		<?php
 			$user = $donnees['Prenom'];
@@ -58,18 +60,18 @@
         	<form action="../Controller/c_modification.php" method=GET>
             <table>
         	<tr><td>Adresse</td> <td>:</td> <td><input type="text" name="adress" <?php echo("value=\"".$donnees['Adresse']."\"");?>></td></tr>
-        	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>
+        	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" size="5" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>
         	<tr><td>Ville</td> <td>:</td> <td><input type="text" name="city" <?php echo("value=\"".$donnees['Ville']."\"");?>></td></tr>
+        	<tr><td>Tel</td> <td>:</td> <td><input type="text" name="tel" size="10" <?php echo("value=\"".$donnees['Tel']."\"");?>></td></tr>
+        	<tr><td>Adresse Mail</td> <td>:</td> <td><input type="text" name="new_mail" <?php echo("value=\"".$donnees['Mail']."\"");?>></td></tr>
             </table> <input type="Submit" value="Modifier">
         	</form>
             <h3>Supprimer votre compte</h3>
         	 <form action="../Controller/c_desinscription.php">
              <table>
-        		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr>
-                <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr>
+                <tr><td>Mot de passe</td> <td>:</td> <td><input type="password" name="mdp"></td></tr>
         		 </table> <input type="Submit" value="Se désinscrire">
         	</form>
-          <?php echo $message; ?>
       </div>
     </div>
   </body>

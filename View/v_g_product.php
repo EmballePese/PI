@@ -63,7 +63,7 @@
           <form action=\"../Controller/c_g_add_product.php\">
           <button> Ajouter des produits </button>
           </form>";
-
+          // var_dump($tab);
         ?>
       </div>
     </div>

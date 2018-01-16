@@ -38,7 +38,7 @@
 		  }
          echo"<tr><td>Nom</td> <td>:</td><td>".$name."<input type=\"hidden\" name=\"name\" value=\"$name\"></td></tr><p>
            <tr><td>Quantité stock</td> <td>:</td> <td>".$qte."<input type=\"hidden\" name=\"qte\"value=\"$qte\"></td></tr><p>
-		   <tr><td>Marge</td> <td>:</td> <td><input type=\"text\" name=\"marge\"value=\"$marge\"></td></tr><p>
+		   <tr><td>Marge</td> <td>:</td> <td><input type=\"text\" size =\"5\" name=\"marge\"value=\"$marge\" placeholder=\"coefficient multiplicateur\"></td></tr><p>
            <tr><td>Stock mini</td> <td>:</td> <td>".$sm."<input type=\"hidden\" name=\"sm\"value=\"$sm\"></td></tr><p>
            <tr><td>Fermier</td> <td>:</td> <td>".$farm."<input type=\"hidden\" name=\"farm\"value=\"$farm\"></td></tr><p>
 		   <input type=\"hidden\" name=\"id_article\"value=\"$id_article\"></td></tr>

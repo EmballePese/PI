@@ -26,7 +26,7 @@
           <?php
         include('../Controller/c_variable_inscription.php');
          echo"<form action=\"../Controller/c_g_add_product.php\" method=\"GET\">";
-		  
+
 		  for($i=0;$i<count($tab_prod);$i++){
 			  $name = $tab_prod[$i]['Nom'];
 			  $qte = $tab_prod[$i]['Qte_acheter'];
@@ -43,7 +43,7 @@
            <tr><td>Fermier</td> <td>:</td> <td>".$farm."<input type=\"hidden\" name=\"farm\"value=\"$farm\"></td></tr><p>
 		   <input type=\"hidden\" name=\"id_article\"value=\"$id_article\"></td></tr>
 		  <tr><td>Type de produit</td> <td>:</td> <td><select name=\"type\">";
-		  
+
           for($i=0;$i<count($tab_t);$i++){
             $namet = $tab_t[$i]['name'];
             $id = $tab_t[$i]['id'];
@@ -51,7 +51,7 @@
           }
           echo"</select>";
 		   echo"
-          <input type=\"hidden\" name=\"check\"value=\"check\">
+          <input type=\"hidden\" name=\"check\"value=\"check\"></td>
           <p>
           <tr><td colspan=2></td><td style=\"text-align:center;\"><button>Ajouter au site</button></td></tr>
           </form>

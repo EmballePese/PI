@@ -21,45 +21,50 @@
         </ul>
       </div>
       <div id="content">
-        <h2>Voici les articles en vente sur votre site :</h2></br>
-        <table class="tab_center" cellpadding="5">
+        <?php
+        if(empty($tab)){
+          echo "<h2>Vous n'avez pas d'article à vendre pour le moment</h2>";
+        } else {
+          echo "<h2>Voici les articles en vente sur votre site :</h2></br>
+          <table class=\"tab_center\" cellpadding=\"5\">
           <tr><th>Nom</th>
-            <th>Quantité stock</th>
-            <th>Compositions</th>
-            <th>Date limite de consommation</th>
-            <th>Marge</th>
-            <th>Prix vente</th></tr>
+          <th>Quantité stock</th>
+          <th>Composition</th>
+          <th>Date limite de consommation</th>
+          <th>Marge</th>
+          <th>Prix vente</th></tr>";
 
-<?php
-			$today = date("Y-m-d");
-			for($i=0;$i<count($tab);$i++){
-              echo"<tr><td>".$tab[$i]['Nom']."</td>";
-              echo"<td>".$tab[$i]['Qte_stock']."</td>";
-			  echo"<td>".$tab[$i]['Composition']."</td>";
-			  if($today < $tab[$i]['DLC'])
-			  {
-				  echo"<td><b><font color=\"green\">".$tab[$i]['DLC']."</font></b></td>";
-			  }
-			  else
-			  {
-				  echo"<td><b><font color=\"red\">".$tab[$i]['DLC']."</font></b></td>";
-
-			  }
-              echo"<td>".$tab[$i]['Marge']."</td>";
-              $prix = $tab[$i]['Prix_total'];
-			  echo"<td>".$prix."€</td></tr>";
+          $today = date("Y-m-d");
+          for($i=0;$i<count($tab);$i++){
+            echo"<tr><td>".$tab[$i]['Nom']."</td>";
+            echo"<td>".$tab[$i]['Qte_stock']."</td>";
+            echo"<td>".$tab[$i]['Composition']."</td>";
+            if($today < $tab[$i]['DLC'])
+            {
+              echo"<td><b><font color=\"green\">".$tab[$i]['DLC']."</font></b></td>";
             }
-            echo $message;
-            ?>
-		  </table>
-        </br>
-        <form action="../Controller/c_g_modify_product.php">
+            else
+            {
+              echo"<td><b><font color=\"red\">".$tab[$i]['DLC']."</font></b></td>";
+
+            }
+            echo"<td>".$tab[$i]['Marge']."</td>";
+            $prix = $tab[$i]['Prix_total'];
+            echo"<td>".$prix."€</td></tr>";
+          }
+          echo $message;
+        }
+          echo "</table>
+          </br>
+          <form action=\"../Controller/c_g_modify_product.php\">
           <button> Modifier vos produits </button>
-		</form>
-	<br>
-		<form action="../Controller/c_g_add_product.php">
+          </form>
+          <br>
+          <form action=\"../Controller/c_g_add_product.php\">
           <button> Ajouter des produits </button>
-        </form>
+          </form>";
+
+        ?>
       </div>
     </div>
   </body>

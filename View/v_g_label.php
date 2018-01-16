@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Emball�-pes�</title>
+    <title>Emballé-pesé</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="../Look/style_gerant.css" />
   </head>
@@ -21,18 +21,17 @@
         </ul>
       </div>
       <div id="content">
-        <h1> Rajoutez un nouveau label</h1>
+        <h1> Ajoutez un nouveau label</h1>
         <table class="tab_center">
 
 				<form action="../Controller/c_g_label.php" method="GET">
 				Label: <input type="text" name="lab">
 				<input type="hidden" name="check" value="Check">
-				</br>
+
 				<button> Valider </button>
 				</form>
 				<p>
     			<?php
-
     			echo $message;
     			?>
         </table>

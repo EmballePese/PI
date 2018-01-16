@@ -22,47 +22,47 @@
       </div>
       <div id="content">
         <h2>Voici les articles proposés par les différents fermiers:</h2></br>
-			Trier par:<form action="c_g_articles.php" method="GET">
-				   <select name="trier">
-				   <option value="prix_d">Prix decroissant</option>
-				   <option value="prix_c">Prix croissant</option>
-				   <option value="name_c">Par nom A->Z</option>
-				   <option value="name_d">Par nom Z->A</option>
-				   </select>
-				   <p>
-				   <?php
-				   echo"Rechercher produit : <input type=\"text\" value=\"".$search."\" name=\"search\"></br>";
-				   echo"Rechercher fermier (Adresse E-mail) : <input type=\"text\" value=\"".$search_f."\" name=\"search_f\"></br>";
-				   ?>
-				   <button> Trier et rechercher</button></br><p>
-				   </form>
-
-        <?php
-        	for($i=0;$i<count($tab);$i++){
-				$id_article = $tab[$i]['id_article'];
-        		echo"<form action=\"./c_g_articles.php\" method=\"GET\">";
-        		echo"Nom :".$tab[$i]['Nom']."</br>";
-        		echo"Composition:".$tab[$i]['Composition']."</br>";
-        		echo"Date Limite de Consomation :".$tab[$i]['DLC']."</br>";
-        		echo"Date de Création :".$tab[$i]['Date_crea']."</br>";
-				echo"Label :".$tab[$i]['Label']."</br>";
-				echo"Prix à l'unité:".$tab[$i]['Prix_achat']."€</br>";
-				echo"Vendu par :".$tab[$i]['Fermier']."</br>";
-				echo"Quantité proposé par le fermier :".$tab[$i]['Qte_restantes']."</br>";
-				echo"Quantité souhaité : <input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$tab[$i]['Qte_restantes']."\" value=\"1\">";
-        		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_achat']."\" name=\"Price\">";
-        		echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
-        		echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
-				echo"<input type=\"hidden\" value=\"".$id_article."\" name=\"id_article\">";
-				echo"<input type=\"hidden\" value=\"".$tab[$i]['Qte_restantes']."\" name=\"qte\">";
-        		echo"<button> Ajouter </button> </br>
-        			 </form>
-        			 </br>";
-        	}
-        	echo $message;
-        	?>
-        	</br>
-      </div>
+        Trier par: <form action="c_g_articles.php" method="GET">
+          <select name="trier">
+            <option value="prix_d">Prix decroissant</option>
+            <option value="prix_c">Prix croissant</option>
+            <option value="name_c">Par nom A->Z</option>
+            <option value="name_d">Par nom Z->A</option>
+          </select> <br>
+            <?php
+            echo"Rechercher produit : <input type=\"text\" value=\"".$search."\" name=\"search\"></br>";
+            echo"Rechercher fermier (Adresse e-mail) : <input type=\"text\" value=\"".$search_f."\" name=\"search_f\"></br>";
+            ?>
+            <button> Trier et rechercher</button></br><p>
+            </form>
+            <?php
+            for($i=0;$i<count($tab);$i++){
+              $id_article = $tab[$i]['id_article'];
+              echo "<table>";
+              echo"<form action=\"./c_g_articles.php\" method=\"GET\">";
+              echo"<tr><td>Nom</td><td> : </td><td>".$tab[$i]['Nom']."</td></tr>";
+              echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
+              echo"<tr><td>Date Limite de consommation</td><td> : </td><td>".$tab[$i]['DLC']."</td></tr>";
+              echo"<tr><td>Date de création</td><td> : </td><td>".$tab[$i]['Date_crea']."</td></tr>";
+              echo"<tr><td>Label</td><td> : </td><td>".$tab[$i]['Label']."</td></tr>";
+              echo"<tr><td>Prix à l'unité</td><td> : </td><td>".$tab[$i]['Prix_achat']."€</td></tr>";
+              echo"<tr><td>Vendu par</td><td> : </td><td>".$tab[$i]['Fermier']."</td></tr>";
+              echo"<tr><td>Quantité proposée</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td></tr>";
+              echo"<tr><td>Quantité souhaitée</td><td> : </td><td><input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$tab[$i]['Qte_restantes']."\" value=\"1\"></td></tr>";
+              echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_achat']."\" name=\"Price\">";
+              echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
+              echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
+              echo"<input type=\"hidden\" value=\"".$id_article."\" name=\"id_article\">";
+              echo"<input type=\"hidden\" value=\"".$tab[$i]['Qte_restantes']."\" name=\"qte\">";
+              echo"<tr><td colspan=\"4\"><button> Ajouter </button></td></tr></br>
+                      </form>
+                    </table>
+                  </br>";
+            }
+            echo $message;
+            ?>
+          </br>
+        </div>
     </div>
   </body>
 </html>

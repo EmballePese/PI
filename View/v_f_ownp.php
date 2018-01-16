@@ -20,18 +20,27 @@
         <h1> Vos ventes</h1>
         <table class="tab_center">
     			<?php
-					for($i=0;$i<count($tab);$i++){
-						echo"Nom : ".$tab[$i]['Nom']."</br>";
-						echo"Composition : ".$tab[$i]['Composition']."</br>";
-            echo"Date de création : ".$tab[$i]['Date_crea']."</br>";
-						echo"Date de limite de consommation : ".$tab[$i]['DLC']."</br>";
-						echo"Prix d'achat : ".$tab[$i]['Prix_achat']."€</br>";
-						echo"Label : ".$tab[$i]['Label']."</br>";
-						echo"Quantité Initiale :".$tab[$i]['Qte_article']."</br>";
-						echo"Quantité Restantes :".$tab[$i]['Qte_restantes']."</br>";
-						echo"Statut :".$tab[$i]['Statut']."</br>";
-						echo"<p>";
-					}
+          if(empty($tab)){
+            echo "Vous n'avez pas de commande.";
+          } else {
+  					for($i=0;$i<count($tab);$i++){
+              echo "<table>";
+  						echo"<tr><td>Nom</td><td> : </td><td>".$tab[$i]['Nom']."</td></tr>";
+  						echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
+              echo"<tr><td>Date de création</td><td> : </td><td>".$tab[$i]['Date_crea']."</td></tr>";
+  						echo"<tr><td>Date limite de consommation</td><td> : </td><td>".$tab[$i]['DLC']."</td></tr>";
+  						echo"<tr><td>Prix d'achat</td><td> : </td><td>".$tab[$i]['Prix_achat']."€</td></tr>";
+  						echo"<tr><td>Label</td><td> : </td><td>".$tab[$i]['Label']."</tr>";
+  						echo"<tr><td>Quantité initiale</td><td> : </td><td>".$tab[$i]['Qte_article']."</td></tr>";
+  						echo"<tr><td>Quantité restante</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td><td>
+                                                                                                    <form action = \"\" method=\"GET\">
+                                                                                                      <input type=\"submit\" name\"modifier_qte\" value=\"Modifier la quantité\">
+                                                                                                    </form>
+                                                                                                   </td></tr>";
+  						echo"<tr><td>Statut</td><td> : </td><td>".$tab[$i]['Statut']."</td></tr>";
+              echo "</table><br><br>";
+  					}
+          }
     			?>
         </table>
       </div>

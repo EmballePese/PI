@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div id="content">
-        <h1> Ajoutez vos proposition de ventes</h1>
+        <h1> Ajoutez vos proposition de vente</h1>
         <table class="tab_center">
     			<?php
     		include('../Controller/c_variable_inscription.php');
@@ -27,7 +27,7 @@
 				<tr><td>Quantité</td><td>:</td> <td><input type=\"text\" name=\"qte\" value=\"$qte\"</td></tr><p>
 				<tr><td>Date de création</td> <td>:</td> <td><input type=\"date\"name=\"dc\" value=\"$dc\"></td></tr><p>
     			<tr><td>Date Limite de consommation </td> <td>:</td> <td><input type=\"date\" name=\"DLC\" value=\"$dlc\"></td></tr><p>
-    			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"number\" size=\"4\" placeholder=\"4.20\" min=\"0.01\" name=\"pa\"value=\"$pa\"></td><td>€</td></tr><p>
+    			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"number\" size=\"4\" placeholder=\"4.20\" min=\"0.1\" step=\"0.01\" name=\"pa\"value=\"$pa\"> €</td></tr><p>
     			";
 
     				echo"<tr><td>Label</td> <td>:</td></td><td><select name=\"lab\">";

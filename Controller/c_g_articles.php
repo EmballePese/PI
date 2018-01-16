@@ -4,7 +4,7 @@ include('../Controller/c_variable_inscription.php');
 
 include('../Model/m_g_articles.php');
 if(empty($tab)){
-	
+
 	$message = "Aucune proposition en vente";
 }
 if($ajouter == true){
@@ -34,7 +34,7 @@ if(is_numeric($quantity)){
 			if($basket[$a]['quantity']> $qte){
 				$basket[$a]['quantity'] = intval($qte);
 				$basket[$a]['price_tot'] = intval($qte)*$price_prod;
-				$message = $message."Quantité maximum est de ".$qte.", Vous ne pouvez pas en commander plus</br>";
+				$message = $message."QuantitÃ© maximum est de ".$qte.", Vous ne pouvez pas en commander plus</br>";
 			}else{
 				$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
 			}
@@ -45,18 +45,18 @@ if(is_numeric($quantity)){
 		$basket[$a]['id_article'] = $id_article;
 		$basket[$a]['qte_restantes'] = $tab[$i]['Qte_restantes'];
 		$_SESSION['a']++;
-		$message ="<h3>Votre Article a bien été ajouté</h3></br>";
+		$message ="<h3>Votre Article a bien Ã©tÃ© ajoutÃ© </h3></br>";
 		}
 		$_SESSION['basket'] = $basket;
 
 		}else{
 
-		$message = "Vous devez vous connecter pour ajouter un article dans votre panier </br>";
+		$message = "Vous devez vous connecter pour ajouter un article dans votre panier. </br>";
 		}
 	}else{
-		$message="Vous n'ajoutez rien";
+		$message="Vous n'avez rien ajoutÃ©.";
 	}
 }
 include('../View/v_g_articles.php');
 
-?>	
+?>

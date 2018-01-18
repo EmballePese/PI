@@ -66,12 +66,14 @@
         	<tr><td>Adresse Mail</td> <td>:</td> <td><input type="text" name="new_mail" <?php echo("value=\"".$donnees['Mail']."\"");?>></td></tr>
             </table> <input type="Submit" value="Modifier">
         	</form>
+					
             <h3>Supprimer votre compte</h3>
         	 <form action="../Controller/c_desinscription.php">
              <table>
                 <tr><td>Mot de passe</td> <td>:</td> <td><input type="password" name="mdp"></td></tr>
         		 </table> <input type="Submit" value="Se désinscrire">
         	</form>
+					
       </div>
     </div>
   </body>

@@ -21,6 +21,10 @@
         </ul>
       </div>
       <div id="content">
+
+          <?php echo $message; ?>
+
+
         <?php
         	$user = $donnees['Prenom'];
         	echo "<h3>Vous êtes connecté(e) sous $user.</h3>";
@@ -38,14 +42,15 @@
         	</form>
         	</br>
         	<h3>Modifier vos informations personelles :</h3>
-        	<form action="../Controller/c_modification.php" method=GET>
+        	<form action="../Controller/c_g_modification.php" method=GET>
             <table>
         	<tr><td>Adresse</td> <td>:</td> <td><input type="text" name="adress" <?php echo("value=\"".$donnees['Adresse']."\"");?>></td></tr>
-        	<tr><td>Code postal</td> <td>:</td> <td><input type="text" name="cp" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>
+        	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" size="5" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>
         	<tr><td>Ville</td> <td>:</td> <td><input type="text" name="city" <?php echo("value=\"".$donnees['Ville']."\"");?>></td></tr>
+        	<tr><td>Tel</td> <td>:</td> <td><input type="text" name="tel" size="10" <?php echo("value=\"".$donnees['Tel']."\"");?>></td></tr>
+        	<tr><td>Adresse Mail</td> <td>:</td> <td><input type="text" name="new_mail" <?php echo("value=\"".$donnees['Mail']."\"");?>></td></tr>
             </table> <input type="Submit" value="Modifier">
         	</form>
-          <?php echo $message; ?>
       </div>
     </div>
   </body>

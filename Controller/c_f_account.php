@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('c_variable_inscription.php');
 
 if(empty($_SESSION['user']))
 {

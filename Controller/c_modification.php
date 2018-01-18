@@ -7,9 +7,11 @@ $new_mail = $_GET['new_mail'];
 
 if(!is_numeric($cp) || strlen($cp)!== 5)
 {
-
+	if(!empty($cp))
+	{
 	$erreur = TRUE;
 	$message = "<h3>Le code postal doit être composé de 5 chiffres !</h3><br>";
+	}
 }
 else if(!is_numeric($tel) || strlen($tel)!== 10)
 {

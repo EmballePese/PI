@@ -24,11 +24,14 @@
             echo "Vous n'avez pas de commande.";
           } else {
   					for($i=0;$i<count($tab);$i++){
-              echo "<table>";
+						echo "<table>";
+						$date_cre = strftime('%d-%m-%Y',strtotime($tab[$i]['Date_crea']));
+						$dlc = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
+
   						echo"<tr><td>Nom</td><td> : </td><td>".$tab[$i]['Nom']."</td></tr>";
   						echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
-              echo"<tr><td>Date de création</td><td> : </td><td>".$tab[$i]['Date_crea']."</td></tr>";
-  						echo"<tr><td>Date limite de consommation</td><td> : </td><td>".$tab[$i]['DLC']."</td></tr>";
+						echo"<tr><td>Date de création</td><td> : </td><td>".$date_cre."</td></tr>";
+  						echo"<tr><td>Date limite de consommation</td><td> : </td><td>".$dlc."</td></tr>";
   						echo"<tr><td>Prix d'achat</td><td> : </td><td>".$tab[$i]['Prix_achat']."€</td></tr>";
   						echo"<tr><td>Label</td><td> : </td><td>".$tab[$i]['Label']."</tr>";
   						echo"<tr><td>Quantité initiale</td><td> : </td><td>".$tab[$i]['Qte_article']."</td></tr>";

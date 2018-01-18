@@ -34,18 +34,19 @@
           <th>Marge</th>
           <th>Prix vente</th></tr>";
 
-          $today = date("Y-m-d");
+          $today = date("d-m-Y");
           for($i=0;$i<count($tab);$i++){
             echo"<tr><td>".$tab[$i]['Nom']."</td>";
             echo"<td>".$tab[$i]['Qte_stock']."</td>";
-            echo"<td>".$tab[$i]['Composition']."</td>";
-            if($today < $tab[$i]['DLC'])
-            {
-              echo"<td><b><font color=\"green\">".$tab[$i]['DLC']."</font></b></td>";
+			echo"<td>".$tab[$i]['Composition']."</td>";
+			$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
+            if($today < $date_fr)
+			{
+              echo"<td><b><font color=\"green\">".$date_fr."</font></b></td>";
             }
             else
             {
-              echo"<td><b><font color=\"red\">".$tab[$i]['DLC']."</font></b></td>";
+              echo"<td><b><font color=\"red\">".$date_fr."</font></b></td>";
 
             }
             echo"<td>".$tab[$i]['Marge']."</td>";

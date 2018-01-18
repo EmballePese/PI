@@ -37,11 +37,12 @@
         	for($i=0;$i<count($tab);$i++){
 				$id_produit = $tab[$i]['id_produit'];
 				$qte_max = $tab[$i]['Qte_stock'];
+				$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
         		echo"<form action=\"./c_categorie.php\" method=\"GET\">";
         		echo"Nom :".$tab[$i]['Nom']."</br>";
         		echo"En stock :".$tab[$i]['Qte_stock']."</br>";
         		echo"Composition :".$tab[$i]['Composition']."</br>";
-        		echo"Date Limite de Consomation :".$tab[$i]['DLC']."</br>";
+        		echo"Date Limite de Consomation :".$date_fr."</br>";
         		echo"Prix :".$tab[$i]['Prix_total']."</br>";
 				echo"Vendu par le fermier :".$tab[$i]['Fermier']."</br>";
         		echo"<input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$qte_max."\" value=\"1\">";

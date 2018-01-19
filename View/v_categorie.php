@@ -38,12 +38,13 @@
 				$id_produit = $tab[$i]['id_produit'];
 				$qte_max = $tab[$i]['Qte_stock'];
 				$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
-        		echo"<form action=\"./c_categorie.php\" method=\"GET\">";
+				echo"<form action=\"./c_categorie.php\" method=\"GET\">";
+				echo"<img src=\"".$tab[$i]['Photo']."\"class=\"avatar\" alt=\"Avatar\"/><br>";
         		echo"Nom : ".$tab[$i]['Nom']."</br>";
         		echo"En stock : ".$tab[$i]['Qte_stock']."</br>";
         		echo"Composition : ".$tab[$i]['Composition']."</br>";
-        		echo"Date limite de consomation : ".$date_fr."</br>";
-        		echo"Prix : ".$tab[$i]['Prix_total']."</br>";
+				echo"Date limite de consomation : ".$date_fr."</br>";
+				echo"Prix : ".$tab[$i]['Prix_total']."</br>";
 				echo"Vendu par le fermier : ".$tab[$i]['Fermier']."</br>";
         		echo"<input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$qte_max."\" value=\"1\">";
         		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_total']."\" name=\"Price\">";
@@ -57,7 +58,6 @@
         			 </br>";
         	}
         	echo $message;
-			var_dump($tab);
         	?>
         	</br>
         	<form action="../View/v_product.php">

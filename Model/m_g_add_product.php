@@ -8,8 +8,10 @@ catch (Exception $e)
 	die('Erreur : '. $e->getMessage());
 }
 
+move_uploaded_file($img_tmp_name, "$uploads_dir/$img_name");
+
 $exist=false;
-$id_article = $_GET['id_article'];
+$id_article = $_POST['id_article'];
 $recov = $bdd->query("SELECT *
 				      FROM Produit P JOIN Article A
 					  WHERE P.Article = '$id_article'
@@ -46,7 +48,7 @@ if($exist == true){
 	$bdd->exec("UPDATE Produit SET Qte_stock='$qte_new' WHERE Article='$id_article'");
 }else{
 	$prix_total = $prix_achat*$marge;
-$req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stock,:Stock_mini,:Marge,:Prix_total)");
+$req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stock,:Stock_mini,:Marge,:Prix_total,:Photo)");
        $req -> execute(array(
             "Type" => $type,
             "Article" => $id_article,
@@ -55,6 +57,7 @@ $req = $bdd->prepare("INSERT INTO Produit VALUES(0,:Type,:Article,:Nom,:Qte_stoc
 			"Stock_mini" => $sm,
 			"Marge" => $marge,
 			"Prix_total" => $prix_total,
+			"Photo" => "$uploads_dir/$img_name"
 			));
 }
 $recov->closeCursor();

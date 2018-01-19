@@ -25,7 +25,7 @@
         <table class="tab_center">
           <?php
         include('../Controller/c_variable_inscription.php');
-         echo"<form action=\"../Controller/c_g_add_product.php\" method=\"GET\">";
+         echo"<form action=\"../Controller/c_g_add_product.php\" method=\"POST\" enctype=\"multipart/form-data\">";
 
 		  for($i=0;$i<count($tab_prod);$i++){
 			  $name = $tab_prod[$i]['Nom'];
@@ -50,7 +50,8 @@
             echo"<option value=\"$id\">$namet</option>";
           }
           echo"</select>";
-		   echo"
+		  echo"
+		  <br><tr><td>Photo</td> <td>:</td><td><input type=\"file\" name=\"image\" id=\"image\"/></td></tr><br>
           <input type=\"hidden\" name=\"check\"value=\"check\"></td>
           <p>
           <tr><td colspan=2></td><td style=\"text-align:center;\"><button>Ajouter au site</button></td></tr>

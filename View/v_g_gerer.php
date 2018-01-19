@@ -14,7 +14,7 @@
          <li><a href="../Controller/c_g_product.php">Articles</a></li>
          <li><a href="../Controller/c_g_ban.php">Bannir</a></li>
       	 <li><a href="../Controller/c_g_articles.php">Acheter produit fermier</a></li>
-      	 <li><a href="../Controller/c_g_label.php">Ajouter un label</a></li>
+		 <li><a href="./View/v_g_gerer.php">Gerer son site</a></li>
       	 <li><a href="../Controller/c_g_basket.php">Mon panier</a></li>
       	 <li><a href="../Controller/c_g_confirm_order.php">Commandes des clients</a></li>
          <li><a href="../Controller/c_g_account.php">Mon compte</a></li>
@@ -47,7 +47,6 @@
 					$message="";
 				}
     			echo $message;
-				var_dump($cat,$image,$check);
     			?>
         </table>
       </div>

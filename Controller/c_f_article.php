@@ -24,7 +24,7 @@ if($check =="check"){
 			$unite = $_GET["unite"];
 			include('../Model/m_f_article.php');
 			if($exist==true){
-				$message="Article deja mis en vente";
+				$message="Article déjà mis en vente";
 				include('../View/v_f_article.php');
 			}else{
 			$message="Nouvel article ajouté !";

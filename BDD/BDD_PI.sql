@@ -61,7 +61,7 @@ CREATE TABLE Article(
   DLC DATE,
   Date_crea DATE,
   Prix_achat FLOAT(6),
-  Unite ENUM('gramme','litre','piece'),
+  Unite ENUM('kilogramme','litre','piece'),
   Label INT(11) NOT NULL,
   Fermier VARCHAR(45),
   Statut ENUM('A vendre', 'Achete', 'Vendu','Partiellement achete'),

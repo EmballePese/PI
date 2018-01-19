@@ -5,6 +5,7 @@ INSERT INTO User VALUES (0,1,"Follichon","Bernard","","","","0102030405","fermie
 INSERT INTO User VALUES (0,2,"Fripiat","Jean","","","","0102030405","consommateur@gmail.com","7110eda4d09e062aa5e4a390b0a572ac0d2c0220","Actif","");
 INSERT INTO User VALUES (0,3,"Phillips","Dede","","","","0102030405","gerant@gmail.com","7110eda4d09e062aa5e4a390b0a572ac0d2c0220","Actif","");
 INSERT INTO Type VALUES(1,'Plat_Prepare','../Look/images/ratatouille.png');
-INSERT INTO Type VALUES(2,'Fruit_Legume','../Look/images/Pomme.png');
-INSERT INTO Type VALUES(3,'Boisson','../Look/images/jus de pomme.png');
+INSERT INTO Type VALUES(2,'Fruit','../Look/images/Pomme.png');
+INSERT INTO Type VALUES(3,'Legume','../Look/images/Legume.png');
+INSERT INTO Type VALUES(4,'Boisson','../Look/images/jus de pomme.png');
 INSERT INTO Label VALUES(1,'BIO');

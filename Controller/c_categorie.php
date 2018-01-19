@@ -2,7 +2,7 @@
 session_start();
 
 include('../Controller/c_variable_inscription.php');
-$cat = $_GET['cat'];
+$cat = $_POST['cat'];
 include('../Model/m_categorie.php');
 $i=0;
 
@@ -14,10 +14,10 @@ if(is_numeric($quantity)){
 			}else{
 				$basket = array();
 			}
-		$i = $_GET['i'];
-		$qte_max = $_GET['qte_max'];
-		$id_produit = $_GET['id_produit'];
-		$price_prod = $_GET['Price'];
+		$i = $_POST['i'];
+		$qte_max = $_POST['qte_max'];
+		$id_produit = $_POST['id_produit'];
+		$price_prod = $_POST['Price'];
 		$price_total = $quantity*$price_prod;
 		$exist=false;
 		for($b=0;$b<=$a;$b++){

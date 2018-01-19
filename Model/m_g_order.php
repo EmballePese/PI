@@ -5,7 +5,7 @@ try
 }
 catch (Exception $e)
 {
-	die('Erreur : '. $e->getMessage());
+	die('Erreur : '. $e->POSTMessage());
 }
 
 for($i=0;$i<count($order);$i++){

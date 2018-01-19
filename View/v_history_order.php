@@ -25,11 +25,11 @@
 
         echo"Commande n°".$order_processing[$i];
         $a = $order_processing[$i];
-        echo"<form action=\"c_order_modify.php\" method=\"get\">
+        echo"<form action=\"c_order_modify.php\" method=\"POST\">
         <input type=\"hidden\" name=\"order\"value=\"$a\">
         <button>Modifier</button>
         </form>";
-        echo"<form action=\"c_order_view.php\" method=\"get\">
+        echo"<form action=\"c_order_view.php\" method=\"POST\">
         <input type=\"hidden\" name=\"order\"value=\"$a\">
         <button>Voir</button>
         </form>";
@@ -44,7 +44,7 @@
 
       echo"Commande n°".$order_pass[$i];
       $a = $order_pass[$i];
-      echo"<form action=\"c_order_view.php\" method=\"get\">
+      echo"<form action=\"c_order_view.php\" method=\"POST\">
       <input type=\"hidden\" name=\"order\"value=\"$a\">
       <button>Voir</button>
       </form>";

@@ -49,7 +49,7 @@
     Carte bancaire
     </br>
     <p>
-    <form action="c_history_order.php" method="get">
+    <form action="c_history_order.php" method="POST">
     <button> Retour à mes commandes</button>
     </form>
       </div>

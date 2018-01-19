@@ -22,7 +22,7 @@
       </div>
       <div id="content">
         <h2>Voici les articles proposés par les différents fermiers:</h2></br>
-        Trier par: <form action="c_g_articles.php" method="GET">
+        Trier par: <form action="c_g_articles.php" method="POST">
           <select name="trier">
             <option value="prix_d">Prix decroissant</option>
             <option value="prix_c">Prix croissant</option>
@@ -39,7 +39,7 @@
             for($i=0;$i<count($tab);$i++){
               $id_article = $tab[$i]['id_article'];
               echo "<table>";
-              echo"<form action=\"./c_g_articles.php\" method=\"GET\">";
+              echo"<form action=\"./c_g_articles.php\" method=\"POST\">";
               echo"<tr><td>Nom</td><td> : </td><td>".$tab[$i]['Nom']."</td></tr>";
               echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
               echo"<tr><td>Date Limite de consommation</td><td> : </td><td>".$tab[$i]['DLC']."</td></tr>";

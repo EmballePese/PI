@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `article` (
 --
 
 INSERT INTO `article` (`id_article`, `Composition`, `Nom`, `DLC`, `Date_crea`, `Prix_achat`, `Label`, `Fermier`) VALUES
-(1, 'Tomate,Courgette,Poivron', 'Ratatouille', '2017-06-15', '2017-06-01', 3, 1, 'Jean-Mi'),
+(1, 'Tomate,CourPOSTte,Poivron', 'Ratatouille', '2017-06-15', '2017-06-01', 3, 1, 'Jean-Mi'),
 (2, 'Pomme,Eau', 'Jus de Pomme', '2017-06-15', '2017-06-01', 4, 1, 'Jean-Mi'),
 (3, 'Riz,Eau', 'Jus de Riz', '2020-07-15', '2020-06-15', 2.5, 1, 'Michel'),
 (4, 'Riz,Eau', 'Jus de Riz', '2020-07-15', '2020-06-15', 2.5, 1, 'Jean-Paul'),

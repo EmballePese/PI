@@ -36,7 +36,7 @@ if(isset($_POST['submit'])) {
 				try {
 					$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
 				} catch (Exception $e) {
-					exit('Erreur : ' . $e->getMessage());																																																		}
+					exit('Erreur : ' . $e->POSTMessage());																																																		}
 				$req = $bdd->prepare("UPDATE User SET Avatar = :image WHERE Mail = '$user';");
 				$req->execute(array(
 					'image' => "$uploads_dir/$name"

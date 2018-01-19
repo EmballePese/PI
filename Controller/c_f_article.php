@@ -5,7 +5,7 @@ $tab_l = array();
 include('../Model/m_f_article_v.php');
 $farm = $_SESSION['user'];
 if($check =="check"){
-	if(empty($_GET['name'])&& empty($_GET['compo'])&& empty($_GET['DLC'])&& empty($_GET['dc'])&& empty($_GET['qte'])&& empty($_GET['pa'])&& empty($_GET['lab'])&& empty($_GET['qte'])){
+	if(empty($_POST['name'])&& empty($_POST['compo'])&& empty($_POST['DLC'])&& empty($_POST['dc'])&& empty($_POST['qte'])&& empty($_POST['pa'])&& empty($_POST['lab'])&& empty($_POST['qte'])){
 
 		$message="<h3 align='center'>Il manque des informations !</h3>";
 		include('../View/v_f_article.php');
@@ -21,7 +21,7 @@ if($check =="check"){
 			include('../View/v_f_article.php');
 		}else{
 			$name = strtolower($name);
-			$unite = $_GET["unite"];
+			$unite = $_POST["unite"];
 			include('../Model/m_f_article.php');
 			if($exist==true){
 				$message="Article déjà mis en vente";

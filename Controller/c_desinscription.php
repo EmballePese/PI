@@ -1,7 +1,7 @@
 <?php
 session_start();
 $mail = $_SESSION['user'];
-$mdp = sha1($_GET['mdp']);
+$mdp = sha1($_POST['mdp']);
 $exist = false;
 include('../Model/m_desinscription.php');
 if($exist == true){

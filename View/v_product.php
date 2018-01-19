@@ -25,7 +25,7 @@
 	$image = $tab[$i]['Image'];
 	$cat = $tab[$i]['Type'];
 	echo"
-      <form action=\"../Controller/c_categorie.php\" method=\"GET\">
+      <form action=\"../Controller/c_categorie.php\" method=\"POST\">
       <input type=\"image\" src=\"$image\" width=\"100\" height=\"100\"></br>
       <input type=\"hidden\" value=\"$cat\" name=\"cat\">
       $cat</br>

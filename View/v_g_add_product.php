@@ -24,7 +24,7 @@
         <h1>Ajoutez les produits de vos stocks </h1>
         <table class="tab_center">
           <?php
-        include('../Controller/c_variable_inscription.php');
+         include('../Controller/c_variable_inscription.php');
          echo"<form action=\"../Controller/c_g_add_product.php\" method=\"POST\" enctype=\"multipart/form-data\">";
 
 		  for($i=0;$i<count($tab_prod);$i++){
@@ -36,30 +36,27 @@
 		  if(!empty($tab_prod[$i]['Marge'])){
 			$marge = $tab_prod[$i]['Marge'];
 		  }
-         echo"<tr><td>Nom</td> <td>:</td><td>".$name."<input type=\"hidden\" name=\"name\" value=\"$name\"></td></tr><p>
-           <tr><td>Quantité stock</td> <td>:</td> <td>".$qte."<input type=\"hidden\" name=\"qte\"value=\"$qte\"></td></tr><p>
-		   <tr><td>Marge</td> <td>:</td> <td><input type=\"text\" size =\"5\" name=\"marge\"value=\"$marge\" placeholder=\"coefficient multiplicateur\"></td></tr><p>
-           <tr><td>Stock mini</td> <td>:</td> <td>".$sm."<input type=\"hidden\" name=\"sm\"value=\"$sm\"></td></tr><p>
-           <tr><td>Fermier</td> <td>:</td> <td>".$farm."<input type=\"hidden\" name=\"farm\"value=\"$farm\"></td></tr><p>
+         echo"<tr><td>Nom</td> <td>:</td><td>".$name."<input type=\"hidden\" name=\"name\" value=\"$name\"></td></tr>
+           <tr><td>Quantité stock</td> <td>:</td> <td>".$qte."<input type=\"hidden\" name=\"qte\"value=\"$qte\"></td></tr>
+		   <tr><td>Marge</td> <td>:</td> <td><input type=\"text\" size =\"5\" name=\"marge\"value=\"$marge\" placeholder=\"coefficient multiplicateur\"></td></tr>
+           <tr><td>Stock mini</td> <td>:</td> <td>".$sm."<input type=\"hidden\" name=\"sm\"value=\"$sm\"></td></tr>
+           <tr><td>Fermier</td> <td>:</td> <td>".$farm."<input type=\"hidden\" name=\"farm\"value=\"$farm\"></td></tr>
 		   <input type=\"hidden\" name=\"id_article\"value=\"$id_article\"></td></tr>
 		  <tr><td>Type de produit</td> <td>:</td> <td><select name=\"type\">";
 
-          for($i=0;$i<count($tab_t);$i++){
-            $namet = $tab_t[$i]['name'];
-            $id = $tab_t[$i]['id'];
+          for($z=0;$z<count($tab_t);$z++){
+            $namet = $tab_t[$z]['name'];
+            $id = $tab_t[$z]['id'];
             echo"<option value=\"$id\">$namet</option>";
           }
           echo"</select>";
 		  echo"
 		  <br><tr><td>Photo</td> <td>:</td><td><input type=\"file\" name=\"image\" id=\"image\"/></td></tr><br>
           <input type=\"hidden\" name=\"check\"value=\"check\"></td>
-          <p>
           <tr><td colspan=2></td><td style=\"text-align:center;\"><button>Ajouter au site</button></td></tr>
-          </form>
 		  </br>
-		  <p>";
+          </form>";
           }
-		  // var_dump($tab_prod);
           echo $message;
           ?>
         </table>

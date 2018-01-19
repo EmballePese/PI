@@ -3,7 +3,7 @@ session_start();
 include('../Controller/c_variable_inscription.php');
 $tab = array();
 $i=0;
-$order = $_GET['order'];
+$order = $_POST['order'];
 include('../Model/m_order_view.php');
 if($delivry=='Market'){
 	$message ="Magasin";

@@ -36,7 +36,7 @@
   						echo"<tr><td>Label</td><td> : </td><td>".$tab[$i]['Label']."</tr>";
   						echo"<tr><td>Quantité initiale</td><td> : </td><td>".$tab[$i]['Qte_article']."</td></tr>";
   						echo"<tr><td>Quantité restante</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td><td>
-                                                                                                    <form action = \"\" method=\"GET\">
+                                                                                                    <form action = \"\" method=\"POST\">
                                                                                                       <input type=\"submit\" name\"modifier_qte\" value=\"Modifier la quantité\">
                                                                                                     </form>
                                                                                                    </td></tr>";

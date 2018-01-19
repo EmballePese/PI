@@ -24,7 +24,7 @@
         <h1> Ajoutez un nouveau label</h1>
         <table class="tab_center">
 
-				<form action="../Controller/c_g_label.php" method="GET">
+				<form action="../Controller/c_g_label.php" method="POST">
 				Label: <input type="text" name="lab">
 				<input type="hidden" name="check" value="Check">
 

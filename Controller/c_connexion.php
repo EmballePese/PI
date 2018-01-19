@@ -1,9 +1,9 @@
 <?php
 
-$mail = $_GET['mail'];
-$mdp = $_GET['mdp'];
+$mail = $_POST['mail'];
+$mdp = $_POST['mdp'];
 
-if(empty($_GET['mail'])|| empty($_GET['mdp'])){
+if(empty($_POST['mail'])|| empty($_POST['mdp'])){
 	$message = "<h3 align='center'>Mauvais mot de passe ou login</h3>";
 	include('../View/v_connexion.php');
 

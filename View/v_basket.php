@@ -32,10 +32,10 @@
     		echo("<tr><td>".$order[$i]['name']."</td>");
     		echo("<td>".$order[$i]['price_tot']."€</td>");
     		echo("<td>".$order[$i]['quantity']."</td>");
-    		echo("<td><form action=\"c_basket.php\" method=\"get\">
+    		echo("<td><form action=\"c_basket.php\" method=\"POST\">
     			<input type=\"hidden\" name=\"line\" value=\"$i\">
     			<input type=\"submit\" name=\"op\" value=\"+\"></form></td>");
-    		echo("<td><form action=\"c_basket.php\" method=\"get\">
+    		echo("<td><form action=\"c_basket.php\" method=\"POST\">
     			<input type=\"hidden\" name=\"line\" value=\"$i\">
     			<input type=\"submit\" name=\"op\" value=\"-\"></form></td></tr>");
     	}
@@ -47,7 +47,7 @@
     		echo"</br>";
     		echo "Prix HTC : ".$price_htc."€</br>";
     		echo "Prix TTC : ".$price_ttc."€</br>";
-    		echo"<form action=\"c_order.php\" method=\"get\">
+    		echo"<form action=\"c_order.php\" method=\"POST\">
     		<input type=\"hidden\" name=\"step\" value=\"1\">
     		<button>Effectuer la commande</button>
     		</form>";

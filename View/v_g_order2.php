@@ -23,7 +23,7 @@
       <div id="content">
         <?php
           echo$message;
-          echo"<form action=\"../Index_gerant.php\" method=\"get\">
+          echo"<form action=\"../Index_gerant.php\" method=\"POST\">
              <button>Retour à l'acceuil</button>
              </form>";
         ?>

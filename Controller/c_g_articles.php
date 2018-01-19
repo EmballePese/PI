@@ -15,9 +15,9 @@ if(is_numeric($quantity)){
 			}else{
 				$basket = array();
 			}
-		$i = $_GET['i'];
-		$id_article = $_GET['id_article'];
-		$price_prod = $_GET['Price'];
+		$i = $_POST['i'];
+		$id_article = $_POST['id_article'];
+		$price_prod = $_POST['Price'];
 		$price_total = $quantity*$price_prod;
 		$exist=false;
 		for($b=0;$b<=$a;$b++){

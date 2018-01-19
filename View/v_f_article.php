@@ -21,7 +21,7 @@
         <table class="tab_center">
     			<?php
     		include('../Controller/c_variable_inscription.php');
-    		echo"<form action=\"../Controller/c_f_article.php\" method=\"GET\">
+    		echo"<form action=\"../Controller/c_f_article.php\" method=\"POST\">
     			<tr><td>Nom</td> <td>:</td> <td><input type=\"text\" name=\"name\" placeholder=\"Nom de l'article\" value=\"$name\"></td></tr><p>
     			<tr><td>Composition</td> <td>:</td> <td><input type=\"text\" name=\"compo\" value=\"$compo\"></td></tr><p>
 				<tr><td>Quantité</td><td>:</td> <td><input type=\"number\" min=\"1\" name=\"qte\" value=\"$qte\"> unité : <select name=\"unite\"><option value=\"kilogramme\">kilogramme</option><option value=\"litre\">litre</option><option value=\"piece\">pièce</option></select></td></tr><p>

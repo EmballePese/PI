@@ -48,7 +48,7 @@
 		Methode de paiement : Carte bancaire</br>
 		XXXXXXXXXXXX5784
 
-      	<form action="../Controller/c_g_order.php" method="GET">
+      	<form action="../Controller/c_g_order.php" method="POST">
       	<input type="hidden" name="step" value="2">
       	<button>Confirmer la commande</button>
       	</form>

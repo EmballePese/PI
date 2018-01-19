@@ -1,13 +1,13 @@
 <?php
 include('../Controller/c_variable_inscription.php');
-$id = $_GET['id'];
+$id = $_POST['id'];
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
 }
 catch (Exception $e)
 {
-	die('Erreur : '. $e->getMessage());
+	die('Erreur : '. $e->POSTMessage());
 }
 
 

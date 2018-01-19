@@ -1,7 +1,7 @@
 <?php
 
 include('c_variable_inscription.php');
-if(empty($_GET['mdp'])|| empty($_GET['name'])|| empty($_GET['forename'])|| empty($_GET['tel'])|| empty($_GET['mail'])|| empty($_GET["type"])){
+if(empty($_POST['mdp'])|| empty($_POST['name'])|| empty($_POST['forename'])|| empty($_POST['tel'])|| empty($_POST['mail'])|| empty($_POST["type"])){
 
 	$message="<h3 align='center'>Il manque des informations !</h3>";
 	include('../View/v_inscription.php');

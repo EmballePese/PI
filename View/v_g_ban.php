@@ -23,7 +23,7 @@
       <div id="content">
         <h2>Donnez votre sentences :</h2></br>
 
-		<form action="../Controller/c_g_ban.php" method="GET">
+		<form action="../Controller/c_g_ban.php" method="POST">
 		Mail du client : <input type="text" name="mail">
 		<input type="submit" name="action" value="ban">
 		<input type="submit" name="action" value="Lever la suspension/bannissement">

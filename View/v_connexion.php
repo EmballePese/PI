@@ -19,7 +19,7 @@
       <div id="content">
         <h2> Veuillez vous connecter </h2>
         <table class="tab_center">
-          <form action="../Controller/c_connexion.php" method="GET">
+          <form action="../Controller/c_connexion.php" method="POST">
             <tr><td>Adresse e-mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr>
             <tr><td>Mot de passe</td> <td>:</td> <td><input type="password" name="mdp"></td></tr>
             <tr><td colspan=2></td><td style="text-align:center;"><button>Connexion</button></td></tr>

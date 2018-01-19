@@ -1,15 +1,15 @@
 <?php
 include('../Controller/c_variable_inscription.php');
-$id = $_GET['id'];
-$nom = $_GET['Nom'];
-$marge = $_GET['Marge'];
+$id = $_POST['id'];
+$nom = $_POST['Nom'];
+$marge = $_POST['Marge'];
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=emballe_pese;charset=utf8', 'root', 'MonMySQL');
 }
 catch (Exception $e)
 {
-	die('Erreur : '. $e->getMessage());
+	die('Erreur : '. $e->POSTMessage());
 }
 $tab_m =array();
 $recov = $bdd->query("SELECT * 

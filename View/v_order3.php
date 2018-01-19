@@ -52,7 +52,7 @@
       		echo"<p>";
       	?>
 
-      	<form action="../Controller/c_order.php" method="GET">
+      	<form action="../Controller/c_order.php" method="POST">
       	<input type="hidden" name="step" value="4">
       	<button>Confirmer la commande</button>
       	</form>

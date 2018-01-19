@@ -5,7 +5,7 @@
     }
     catch (Exception $e)
     {
-    	die('Erreur : '. $e->getMessage());
+    	die('Erreur : '. $e->POSTMessage());
     }
 
 	$recov = $bdd->query('SELECT * FROM User');

@@ -28,7 +28,7 @@
     			<?php
 				for($i=0;$i<count($tab);$i++){
 					$id = $tab[$i]['id_cmd_vente'];
-					echo"<form action=\"../Controller/c_g_confirm_order.php\" method=\"GET\">";
+					echo"<form action=\"../Controller/c_g_confirm_order.php\" method=\"POST\">";
 					echo"Commande n° ".$tab[$i]['id_cmd_vente']." du client ".$tab[$i]['Consommateur'];
 					echo"<input type=\"hidden\" name=\"check\" value=\"check\">";
 					echo"<input type=\"hidden\" name=\"idc\" value=\"$id\">

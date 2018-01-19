@@ -3,7 +3,7 @@ session_start();
 $erreur = FALSE;
 include('../Controller/c_variable_inscription.php');
 $email = $_SESSION['user'];
-$new_mail = $_GET['new_mail'];
+$new_mail = $_POST['new_mail'];
 
 if(!is_numeric($cp) || strlen($cp)!== 5)
 {

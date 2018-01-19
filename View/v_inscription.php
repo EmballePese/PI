@@ -21,7 +21,7 @@
         <table class="tab_center">
     			<?php
     		include('../Controller/c_variable_inscription.php');
-    		echo"<form action=\"../Controller/c_inscription.php\" method=\"GET\">
+    		echo"<form action=\"../Controller/c_inscription.php\" method=\"POST\">
     			<tr><td>Nom*</td> <td>:</td> <td><input type=\"text\" name=\"name\" value=\"$name\"></td></tr><p>
     			<tr><td>Prénom*</td> <td>:</td> <td><input type=\"text\" name=\"forename\" value=\"$forename\"></td></tr><p>
     			<tr><td>Adresse</td> <td>:</td> <td><input type=\"text\" name=\"adress\" value=\"$adress\"></td></tr><p>

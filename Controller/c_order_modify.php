@@ -1,13 +1,13 @@
 <?php
 session_start();
 include('../Controller/c_variable_inscription.php');
-if(isset($_GET['order'])){
-$_SESSION['order'] = $_GET['order'];
+if(isset($_POST['order'])){
+$_SESSION['order'] = $_POST['order'];
 }
 if($change == "adress"){
 	
 	if($meth==1){
-		$message ="<form action=\"c_order_modify.php\" method=\"get\">
+		$message ="<form action=\"c_order_modify.php\" method=\"POST\">
 				<tr><td>Adresse</td><td>:</td> <td><input type=\"text\" name=\"adress\" value=\"$adress\"></td></tr><p>
 				<tr><td>Code Postal</td> <td>:</td> <td><input type=\"text\"name=\"cp\" value=\"$cp\"></td></tr><p>
 				<tr><td>Ville</td> <td>:</td> <td><input type=\"text\" name=\"city\"value=\"$city\"></td></tr><p>
@@ -54,7 +54,7 @@ if($change == "adress"){
 	}
 	$message="Veuillez Entrez vos coordonnées bancaire ci dessous :
 	<p>
-	<form action=\"c_order.php\" method=\"get\">
+	<form action=\"c_order.php\" method=\"POST\">
 	Votre Numero de carte : <input type=\"text\" name=\"cart1\" maxlength=\"4\" size=\"4\"/>/
 	<input type=\"text\" name=\"cart2\" maxlength=\"4\" size=\"4\"/>/
 	<input type=\"text\" name=\"cart3\" maxlength=\"4\" size=\"4\"/>/

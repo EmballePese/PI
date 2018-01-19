@@ -18,7 +18,7 @@
       </div>
       <div id="content">
         <h2>Voici les categories disponibles :</h2></br>
-		Trier par :<form action="c_categorie.php" method="GET">
+		Trier par :<form action="c_categorie.php" method="POST">
 				   <select name="trier">
 				   <option value="prix_d">Prix décroissant</option> 
 				   <option value="prix_c">Prix croissant</option>
@@ -38,7 +38,7 @@
 				$id_produit = $tab[$i]['id_produit'];
 				$qte_max = $tab[$i]['Qte_stock'];
 				$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
-				echo"<form action=\"./c_categorie.php\" method=\"GET\">";
+				echo"<form action=\"./c_categorie.php\" method=\"POST\">";
 				echo"<h3>".$tab[$i]['Nom']."</h3>";
 				echo"<img src=\"".$tab[$i]['Photo']."\"class=\"photo\" alt=\"photo\"/><br>";
         		echo"En stock : ".$tab[$i]['Qte_stock']."</br>";

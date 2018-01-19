@@ -42,7 +42,7 @@
         	</form>
         	</br>
         	<h3>Modifier vos informations personelles :</h3>
-        	<form action="../Controller/c_g_modification.php" method=GET>
+        	<form action="../Controller/c_g_modification.php" method=POST>
             <table>
         	<tr><td>Adresse</td> <td>:</td> <td><input type="text" name="adress" <?php echo("value=\"".$donnees['Adresse']."\"");?>></td></tr>
         	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" size="5" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>

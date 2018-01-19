@@ -5,7 +5,7 @@ try
 }
 catch (Exception $e)
 {
-	die('Erreur : '. $e->getMessage());
+	die('Erreur : '. $e->POSTMessage());
 }
 
 move_uploaded_file($img_tmp_name, "$uploads_dir/$img_name");

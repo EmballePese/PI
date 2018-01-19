@@ -24,10 +24,10 @@
     		echo"<form action=\"../Controller/c_f_article.php\" method=\"GET\">
     			<tr><td>Nom</td> <td>:</td> <td><input type=\"text\" name=\"name\" placeholder=\"Nom de l'article\" value=\"$name\"></td></tr><p>
     			<tr><td>Composition</td> <td>:</td> <td><input type=\"text\" name=\"compo\" value=\"$compo\"></td></tr><p>
-				<tr><td>Quantité</td><td>:</td> <td><input type=\"text\" size=\"1\" name=\"qte\" value=\"$qte\"> par : <select name=\"unite\"><option value=\"\" selected disabled>choisissez</option><option value=\"kilo\">kilogramme</option><option value=\"litre\">litre</option><option value=\"piece\">pièce</option></select></td></tr><p>
+				<tr><td>Quantité</td><td>:</td> <td><input type=\"number\" min=\"1\" name=\"qte\" value=\"$qte\"> unité : <select name=\"unite\"><option value=\"gramme\" selected>gramme</option><option value=\"litre\">litre</option><option value=\"piece\">pièce</option></select></td></tr><p>
 				<tr><td>Date de création</td> <td>:</td> <td><input type=\"date\"name=\"dc\" value=\"$dc\"></td></tr><p>
     			<tr><td>Date limite de consommation </td> <td>:</td> <td><input type=\"date\" name=\"DLC\" value=\"$dlc\"></td></tr><p>
-    			<tr><td>Prix achat</td> <td>:</td> <td><input type=\"number\" size=\"3\"  placeholder=\"4.20\" min=\"0.1\" step=\"0.01\" name=\"pa\"value=\"$pa\"></td></tr><p>
+    			<tr><td>Prix achat (par unité)</td> <td>:</td> <td><input type=\"number\" size=\"3\"  placeholder=\"4.20\" min=\"0.1\" step=\"0.01\" name=\"pa\"value=\"$pa\"> €</td></tr><p>
     			";
 
     				echo"<tr><td>Label</td> <td>:</td></td><td><select name=\"lab\">";

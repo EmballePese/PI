@@ -21,6 +21,7 @@ if($check =="check"){
 			include('../View/v_f_article.php');
 		}else{
 			$name = strtolower($name);
+			$unite = $_GET["unite"];
 			include('../Model/m_f_article.php');
 			if($exist==true){
 				$message="Article deja mis en vente";

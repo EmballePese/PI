@@ -49,7 +49,7 @@ CREATE TABLE Cmd_achat(
   Date_cmd DATE,
   Fermier INT(11) NOT NULL,
   PRIMARY KEY (id_cmd_achat),
-  FOREIGN KEY (Fermier) REFERENCES User (Categorie) on delete cascade 
+  FOREIGN KEY (Fermier) REFERENCES User (Categorie) on delete cascade
 );
 
 DROP TABLE IF EXISTS Article;
@@ -60,6 +60,7 @@ CREATE TABLE Article(
   DLC DATE,
   Date_crea DATE,
   Prix_achat FLOAT(6),
+  Unite ENUM('gramme','litre','piece'),
   Label INT(11) NOT NULL,
   Fermier VARCHAR(45),
   Statut ENUM('A vendre', 'Achete', 'Vendu','Partiellement achete'),

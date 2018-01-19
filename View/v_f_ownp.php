@@ -32,7 +32,7 @@
   						echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
 						echo"<tr><td>Date de création</td><td> : </td><td>".$date_cre."</td></tr>";
   						echo"<tr><td>Date limite de consommation</td><td> : </td><td>".$dlc."</td></tr>";
-  						echo"<tr><td>Prix d'achat</td><td> : </td><td>".$tab[$i]['Prix_achat']."€</td></tr>";
+              echo"<tr><td>Prix d'achat</td><td> : </td><td>".$tab[$i]['Prix_achat']."€ par ".$tab[$i]['Unite']."</td></tr>";
   						echo"<tr><td>Label</td><td> : </td><td>".$tab[$i]['Label']."</tr>";
   						echo"<tr><td>Quantité initiale</td><td> : </td><td>".$tab[$i]['Qte_article']."</td></tr>";
   						echo"<tr><td>Quantité restante</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td><td>

@@ -45,7 +45,7 @@
               echo"<tr><td>Date Limite de consommation</td><td> : </td><td>".$tab[$i]['DLC']."</td></tr>";
               echo"<tr><td>Date de création</td><td> : </td><td>".$tab[$i]['Date_crea']."</td></tr>";
               echo"<tr><td>Label</td><td> : </td><td>".$tab[$i]['Label']."</td></tr>";
-              echo"<tr><td>Prix à l'unité</td><td> : </td><td>".$tab[$i]['Prix_achat']."€</td></tr>";
+              echo"<tr><td>Prix à l'unité</td><td> : </td><td>".$tab[$i]['Prix_achat']."€ par ".$tab[$i]['Unite']."</td></tr>";
               echo"<tr><td>Vendu par</td><td> : </td><td>".$tab[$i]['Fermier']."</td></tr>";
               echo"<tr><td>Quantité proposée</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td></tr>";
               echo"<tr><td>Quantité souhaitée</td><td> : </td><td><input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$tab[$i]['Qte_restantes']."\" value=\"1\"></td></tr>";

@@ -39,8 +39,8 @@
 				$qte_max = $tab[$i]['Qte_stock'];
 				$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
 				echo"<form action=\"./c_categorie.php\" method=\"GET\">";
-				echo"<img src=\"".$tab[$i]['Photo']."\"class=\"avatar\" alt=\"Avatar\"/><br>";
-        		echo"Nom : ".$tab[$i]['Nom']."</br>";
+				echo"<h3>".$tab[$i]['Nom']."</h3>";
+				echo"<img src=\"".$tab[$i]['Photo']."\"class=\"photo\" alt=\"photo\"/><br>";
         		echo"En stock : ".$tab[$i]['Qte_stock']."</br>";
         		echo"Composition : ".$tab[$i]['Composition']."</br>";
 				echo"Date limite de consomation : ".$date_fr."</br>";

@@ -47,7 +47,7 @@
     		echo"</br>";
     		echo "Prix HTC : ".$price_htc."€</br>";
     		echo "Prix TTC : ".$price_ttc."€</br>";
-    		echo"<form action=\"c_order.php\" method=\"POST\">
+    		echo"<form action=\"c_order.php\" method=\"GET\">
     		<input type=\"hidden\" name=\"step\" value=\"1\">
     		<button>Effectuer la commande</button>
     		</form>";

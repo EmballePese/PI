@@ -44,7 +44,7 @@
       		echo"<p>";
       		echo"Moyen de paiement: </br>";
       		echo"XXXXXXXXXXXX".$cart4."</br>";
-      		echo$date."</br>";
+      		echo$date_card."</br>";
 
       		echo"<p>";
       		echo"Adresse de livraison: </br>";
@@ -52,7 +52,7 @@
       		echo"<p>";
       	?>
 
-      	<form action="../Controller/c_order.php" method="POST">
+      	<form action="../Controller/c_order.php" method="GET">
       	<input type="hidden" name="step" value="4">
       	<button>Confirmer la commande</button>
       	</form>

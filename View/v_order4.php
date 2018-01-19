@@ -21,7 +21,7 @@
         <?php
           echo$message;
           echo$message2;
-          echo"<form action=\"../Index.php\" method=\"POST\">
+          echo"<form action=\"../Index.php\" method=\"GET\">
              <button>Retour à l'acceuil</button>
              </form>";
         ?>

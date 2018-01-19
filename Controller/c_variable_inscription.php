@@ -76,38 +76,38 @@ if(isset($_POST['op'])){
 if(!isset($price_htc)){
 	$price_htc = "";
 }
-if(isset($_POST['step'])){
-	$step = $_POST['step'];
+if(isset($_GET['step'])){
+	$step = $_GET['step'];
 }else{
 	$step = "";
 }
-if(isset($_POST['meth'])){
-	$meth = $_POST['meth'];
+if(isset($_GET['meth'])){
+	$meth = $_GET['meth'];
 }else{
 	$meth = "";
 }
-if(isset($_POST['cart1'])){
-	$cart1 = $_POST['cart1'];
+if(isset($_GET['cart1'])){
+	$cart1 = $_GET['cart1'];
 }else{
 	$cart1 = "";
 }
-if(isset($_POST['cart2'])){
-	$cart2 = $_POST['cart2'];
+if(isset($_GET['cart2'])){
+	$cart2 = $_GET['cart2'];
 }else{
 	$cart2 = "";
 }
-if(isset($_POST['cart3'])){
-	$cart3 = $_POST['cart3'];
+if(isset($_GET['cart3'])){
+	$cart3 = $_GET['cart3'];
 }else{
 	$cart3 = "";
 }
-if(isset($_POST['cart4'])){
-	$cart4 = $_POST['cart4'];
+if(isset($_GET['cart4'])){
+	$cart4 = $_GET['cart4'];
 }else{
 	$cart4 = "";
 }
-if(isset($_POST['crypt'])){
-	$crypt = $_POST['crypt'];
+if(isset($_GET['crypt'])){
+	$crypt = $_GET['crypt'];
 }else{
 	$crypt = "";
 }
@@ -116,10 +116,40 @@ if(isset($_POST['check'])){
 }else{
 	$check = "no";
 }
+if(isset($_GET['check_p'])){
+	$check_p= $_GET['check_p'];
+}else{
+	$check_p= "no";
+}
 if(isset($_POST['date'])){
 	$date = $_POST['date'];
 }else{
 	$date = "";
+}
+if(isset($_GET['date_card'])){
+	$date_card= $_GET['date_card'];
+}else{
+	$date_card= "";
+}
+if(isset($_GET['adress_p'])){
+	$adress_p= $_GET['adress_p'];
+}else{
+	$adress_p= "";
+}
+if(isset($_GET['name_p'])){
+	$name_p= $_GET['name_p'];
+}else{
+	$name_p= "";
+}
+if(isset($_GET['cp_p'])){
+	$cp_p= $_GET['cp_p'];
+}else{
+	$cp_p= "";
+}
+if(isset($_GET['city_p'])){
+	$city_p= $_GET['city_p'];
+}else{
+	$city_p= "";
 }
 if(!isset($message_processing)){
 	$message_processing ="";

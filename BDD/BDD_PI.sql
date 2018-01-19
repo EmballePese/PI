@@ -20,6 +20,7 @@ DROP TABLE IF EXISTS Type;
 CREATE TABLE Type(
   id_type INT(11) NOT NULL AUTO_INCREMENT,
   Type VARCHAR(45),
+  Image BLOB,
   PRIMARY KEY (id_type)
 );
 
@@ -93,6 +94,7 @@ CREATE TABLE Produit(
   Stock_mini INT(3),
   Marge FLOAT(4),
   Prix_total FLOAT(6),
+  Photo BLOB,
   PRIMARY KEY (id_produit),
   FOREIGN KEY (Type)  REFERENCES Type (id_type) on delete cascade,
   FOREIGN KEY (Article) REFERENCES Article (id_article) on delete cascade

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../Controller/c_variable_inscription.php');
+$step=$_POST['step'];
 $order = $_SESSION['basket'];
 for($i=0;$i<count($order);$i++){
 

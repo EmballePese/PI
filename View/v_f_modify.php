@@ -36,7 +36,11 @@
   						echo"<tr><td>Composition</td><td> <td>:</td><td><input type=\"text\" name=\"compo\" value=\"$compo\">";
 						echo"<tr><td>Date de création</td><td> <td>:</td> <td><input type=\"date\" name=\"dc\" value=\"$dc\">";
   						echo"<tr><td>Date limite de consommation</td><td> <td>:</td><td><input type=\"date\" name=\"DLC\" value=\"$dlc\">";
-                        echo"<tr><td>Prix d'achat</td><td> <td>:</td> <td><input type=\"number\" size=\"3\" min=\"0.1\" step=\"0.01\" name=\"pa\"value=\"$pa\"</br> € par <select name=\"unite\"><option value=\"kilogramme\">kilogramme</option><option value=\"litre\">litre</option><option value=\"piece\">pièce</option></select><p>";
+                        echo"<tr><td>Prix d'achat</td><td> <td>:</td> <td><input type=\"number\" size=\"3\" min=\"0.1\" step=\"0.01\" name=\"pa\"value=\"$pa\"</br> € par
+						<select name=\"unite\">
+						<option value=\"kilogramme\">kilogramme</option>
+						<option value=\"litre\">litre</option>
+						<option value=\"piece\">pièce</option></select><p>";
   						echo"<tr><td>Label</td><td> <td>:</td> <td><select name=\"lab\">";
 
 					for($z=0;$z<count($tab_l);$z++){

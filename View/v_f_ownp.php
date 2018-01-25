@@ -47,9 +47,8 @@
 							<input type=\"hidden\" name=\"id_article\" value=\"$id_article\">
 						    <tr><td><button>Supprimer</button></td></tr>
 							</form>";
-							echo"<form action = \"\" method=\"POST\">
-							<input type=\"hidden\" name=\"qte_initiales\" value=\"$qte_initiales\">
-							<input type=\"hidden\" name=\"qte_restantes\" value=\"$qte_restantes\">
+							echo"<form action = \"c_f_modify.php\" method=\"POST\">
+							<input type=\"hidden\" name=\"id_article\" value=\"$id_article\">
 						    <tr><td><button>Modifier</button></td></tr>
 							</form>";
 						}

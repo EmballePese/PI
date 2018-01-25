@@ -24,6 +24,9 @@
             echo "Vous n'avez pas de commande.";
           } else {
   					for($i=0;$i<count($tab);$i++){
+						$qte_initiales = $tab[$i]['Qte_article'];
+						$qte_restantes = $tab[$i]['Qte_restantes'];
+						$id_article = $tab[$i]['id_article'];
 						echo "<table>";
 						$date_cre = strftime('%d-%m-%Y',strtotime($tab[$i]['Date_crea']));
 						$dlc = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
@@ -35,15 +38,25 @@
               echo"<tr><td>Prix d'achat</td><td> : </td><td>".$tab[$i]['Prix_achat']."€ par ".$tab[$i]['Unite']."</td></tr>";
   						echo"<tr><td>Label</td><td> : </td><td>".$tab[$i]['Label']."</tr>";
   						echo"<tr><td>Quantité initiale</td><td> : </td><td>".$tab[$i]['Qte_article']."</td></tr>";
-  						echo"<tr><td>Quantité restante</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td><td>
-                                                                                                    <form action = \"\" method=\"POST\">
-                                                                                                      <input type=\"submit\" name\"modifier_qte\" value=\"Modifier la quantité\">
-                                                                                                    </form>
-                                                                                                   </td></tr>";
+  						echo"<tr><td>Quantité restante</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td><td>";
   						echo"<tr><td>Statut</td><td> : </td><td>".$tab[$i]['Statut']."</td></tr>";
+						if($qte_initiales == $qte_restantes){
+							echo"<form action = \"c_f_delete.php\" method=\"POST\">
+							<input type=\"hidden\" name=\"qte_initiales\" value=\"$qte_initiales\">
+							<input type=\"hidden\" name=\"qte_restantes\" value=\"$qte_restantes\">
+							<input type=\"hidden\" name=\"id_article\" value=\"$id_article\">
+						    <tr><td><button>Supprimer</button></td></tr>
+							</form>";
+							echo"<form action = \"\" method=\"POST\">
+							<input type=\"hidden\" name=\"qte_initiales\" value=\"$qte_initiales\">
+							<input type=\"hidden\" name=\"qte_restantes\" value=\"$qte_restantes\">
+						    <tr><td><button>Modifier</button></td></tr>
+							</form>";
+						}
               echo "</table><br><br>";
   					}
-          }
+				}
+				echo$message;
     			?>
         </table>
       </div>

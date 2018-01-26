@@ -3,6 +3,7 @@ session_start();
 include('../Controller/c_variable_inscription.php');
 $step=$_POST['step'];
 $order = $_SESSION['basket'];
+$step = $_POST['step'];
 for($i=0;$i<count($order);$i++){
 
 	$price_htc += $order[$i]['price_tot'];

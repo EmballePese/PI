@@ -34,7 +34,7 @@ if(is_numeric($quantity)){
 			$basket[$a]['quantity'] = $quantity + $basket[$a]['quantity'];
 			if($basket[$a]['quantity'] > $qte_max){
 				$basket[$a]['quantity'] = $qte_max;
-				$basket[$a]['price_tot'] = $qtemax*$price_prod;
+				$basket[$a]['price_tot'] = $qte_max*$price_prod;
 				$message = $message."Quantité maximum est de".$qte_max.", Vous ne pouvez pas en commander plus</br>";
 			}else if($basket[$a]['quantity']> 20&&$unite=="piece"){
 				$basket[$a]['quantity'] = 20;

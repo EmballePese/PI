@@ -37,6 +37,7 @@
         	for($i=0;$i<count($tab);$i++){
 				$id_produit = $tab[$i]['id_produit'];
 				$qte_max = $tab[$i]['Qte_stock'];
+				$unite = $tab[$i]['Unite'];
 				$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
 				echo"<form action=\"./c_categorie.php\" method=\"POST\">";
 				echo"<h3>".$tab[$i]['Nom']."</h3>";
@@ -46,9 +47,17 @@
 				echo"Date limite de consomation : ".$date_fr."</br>";
 				echo"Prix : ".$tab[$i]['Prix_total']."</br>";
 				echo"Vendu par le fermier : ".$tab[$i]['Fermier']."</br>";
-        		echo"<input type=\"number\" name=\"quantity\" min=\"1\" step=\"0.01\" max=\"".$qte_max."\" value=\"1\">";
+				if($unite == "piece"){
+					$min =1;
+					$step= 1;
+				}else{
+					$min = 0.1;
+					$step= 0.1;
+				}
+        		echo"<input type=\"number\" name=\"quantity\" min=\"$min\" step=\"$step\" max=\"".$qte_max."\" value=\"1\">";
         		echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_total']."\" name=\"Price\">";
         		echo"<input type=\"hidden\" value=\"".$cat."\" name=\"cat\">";
+				echo"<input type=\"hidden\" value=\"$unite\" name=\"Unite\">";
         		echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
 				echo"<input type=\"hidden\" value=\"".$id_produit."\" name=\"id_produit\">";
 				echo"<input type=\"hidden\" value=\"".$qte_max."\" name=\"qte_max\">";

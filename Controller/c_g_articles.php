@@ -18,6 +18,7 @@ if(is_numeric($quantity)){
 		$i = $_POST['i'];
 		$id_article = $_POST['id_article'];
 		$price_prod = $_POST['Price'];
+		$unite = $_POST['Unite'];
 		$price_total = $quantity*$price_prod;
 		$exist=false;
 		for($b=0;$b<=$a;$b++){
@@ -44,6 +45,7 @@ if(is_numeric($quantity)){
 		$basket[$a]['name'] = $tab[$i]['Nom']." de ".$tab[$i]['Fermier'];
 		$basket[$a]['id_article'] = $id_article;
 		$basket[$a]['qte_restantes'] = $tab[$i]['Qte_restantes'];
+		$basket[$a]['unite'] = $unite;
 		$_SESSION['a']++;
 		$message ="<h3>Votre Article a bien été ajouté </h3></br>";
 		}

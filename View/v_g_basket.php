@@ -33,20 +33,29 @@
     		");
     	for($i=0;$i<count($order);$i++)
     	{
+			$qte = $order[$i]['quantity'];
+			$max = $order[$i]['qte_restantes'];
+			$unite = $order[$i]['unite'];
+			if($unite == "piece"){
+				$min =1;
+				$step= 1;
+			}else{
+				$min = 0.1;
+				$step= 0.1;
+			}
     		echo("<tr><td>".$order[$i]['name']."</td>");
     		echo("<td>".$order[$i]['price_tot']."€</td>");
-    		echo("<td>".$order[$i]['quantity']."</td>");
-    		echo("<td><form action=\"c_g_basket.php\" method=\"POST\">
+			echo "<td><form action=\"c_g_basket.php\" method=\"POST\">";
+			echo"<input type=\"number\" name=\"qte\" min=\"$min\" step=\"$step\" max=\"".$max."\" value=\"$qte\">
     			<input type=\"hidden\" name=\"line\" value=\"$i\">
-    			<input type=\"submit\" name=\"op\" value=\"+\"></form></td>");
-    		echo("<td><form action=\"c_g_basket.php\" method=\"POST\">
-    			<input type=\"hidden\" name=\"line\" value=\"$i\">
-    			<input type=\"submit\" name=\"op\" value=\"-\"></form></td></tr>");
+    			<input type=\"submit\" name=\"modify\" value=\"modifier\">
+				</form>";
     	}
     			?>
         </table>
 
     	<?php
+		var_dump($order);
     	echo $message;
     		echo"</br>";
     		echo "Prix HTC : ".$price_htc."€</br>";

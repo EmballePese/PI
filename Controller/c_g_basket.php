@@ -1,24 +1,14 @@
 <?php
 session_start();
 include('../Controller/c_variable_inscription.php');
-if(isset($line) && isset($op))
-{   
-	if($op == "+" && $_SESSION['basket'][$line]['quantity'] < $_SESSION['basket'][$line]['qte_restantes'])
-	{
-		$_SESSION['basket'][$line]['price_tot'] += ($_SESSION['basket'][$line]['price_tot'] / $_SESSION['basket'][$line]['quantity']);	
-		$_SESSION['basket'][$line]['quantity']++;
-	}
-	else if($op == "-" && $_SESSION['basket'][$line]['quantity'] > 0)
-	{
-		$_SESSION['basket'][$line]['price_tot'] -= ($_SESSION['basket'][$line]['price_tot'] / $_SESSION['basket'][$line]['quantity']);          
-		$_SESSION['basket'][$line]['quantity']--;
-		if($_SESSION['basket'][$line]['quantity'] == 0)
-		{
-			unset($_SESSION['basket'][$line]);
-			$_SESSION['basket'] = array_values($_SESSION['basket']);
-			$_SESSION['a']--;
-		}
-	}	
+
+if(isset($_POST['modify'])){
+	$qte = $_POST['qte'];
+	$line = $_POST['line'];
+	$price = ($_SESSION['basket'][$line]['price_tot'] / $_SESSION['basket'][$line]['quantity']);
+	$_SESSION['basket'][$line]['price_tot'] = $price*$qte;
+	$_SESSION['basket'][$line]['quantity'] = $qte;
+	
 }
 if(empty($_SESSION['basket']))
 {	

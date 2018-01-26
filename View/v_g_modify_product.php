@@ -34,7 +34,7 @@
 for($i=0;$i<count($tab);$i++){
 	    echo"<form action=\"../Model/m_g_modify_product.php\">";
 		    echo"<tr><td><input type=\"text\" name=\"Nom\" value=\"".$tab[$i]['Nom']."\"></td>";
-		    echo"<td>".$tab[$i]['Qte_stock']."</td>";
+		    echo"<td>".$tab[$i]['Qte_stock']." ".$tab[$i]['Unite']."</td>";
 			    echo"<td>".$tab[$i]['Composition']."</td>";
 			    echo"<td>".$tab[$i]['DLC']."</td>";
 				    echo"<td><input size=\"5\" type=\"text\" name=\"Marge\" value=\"".$tab[$i]['Marge']."\"></td>";

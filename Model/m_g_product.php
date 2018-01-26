@@ -11,7 +11,7 @@ catch (Exception $e)
 $tab =array();
 
 
-$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Marge, A.Composition, A.Prix_achat,A.DLC, P.id_produit,P.Prix_total
+$recov = $bdd->query("SELECT P.Nom, P.Qte_stock, P.Stock_mini, P.Marge, A.Composition, A.Prix_achat,A.DLC, P.id_produit,P.Prix_total, A.Unite
 	FROM Produit P JOIN Type T 
 	ON P.Type = T.id_type 
 	JOIN Article A

@@ -48,7 +48,7 @@
               echo"<tr><td>Prix à l'unité</td><td> : </td><td>".$tab[$i]['Prix_achat']."€ par ".$tab[$i]['Unite']."</td></tr>";
               echo"<tr><td>Vendu par</td><td> : </td><td>".$tab[$i]['Fermier']."</td></tr>";
               echo"<tr><td>Quantité proposée</td><td> : </td><td>".$tab[$i]['Qte_restantes']."</td></tr>";
-              echo"<tr><td>Quantité souhaitée</td><td> : </td><td><input type=\"number\" name=\"quantity\" min=\"1\" max=\"".$tab[$i]['Qte_restantes']."\" value=\"1\"></td></tr>";
+              echo"<tr><td>Quantité souhaitée</td><td> : </td><td><input type=\"number\" name=\"quantity\" min=\"0.1\" step=\"0.01\" max=\"".$tab[$i]['Qte_restantes']."\" value=\"1\"></td></tr>";
               echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_achat']."\" name=\"Price\">";
               echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
               echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";

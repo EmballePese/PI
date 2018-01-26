@@ -90,7 +90,7 @@ CREATE TABLE Produit(
   Type INT(11) NOT NULL,
   Article INT(11) NOT NULL,
   Nom VARCHAR(45),
-  Qte_stock INT(4),
+  Qte_stock FLOAT,
   Stock_mini INT(3),
   Marge FLOAT(4),
   Prix_total FLOAT(6),

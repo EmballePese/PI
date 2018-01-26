@@ -20,7 +20,7 @@ if(isset($_POST['submit'])) {
 			$message = 'Vous devez uploader un fichier de type png, gif, jpg, jpeg.<br>';			
 		else {         
 			//on définit la taille maximale
-			define('MAXSIZE', 300000);        
+			define('MAXSIZE', 256000000);        
 			if($_FILES['image']['size'] > MAXSIZE)
 				$message = 'Votre image est supérieure à la taille maximale de '.MAXSIZE.' octets<br>';
 			else {
@@ -42,7 +42,7 @@ if(isset($_POST['submit'])) {
 					'image' => "$uploads_dir/$name"
 				));
 
-				$message = 'L\'insertion s est bien déroulée !<br>';
+				$message = 'L\'insertion s\'est bien déroulée !<br>';
 			}
 		}
 	}

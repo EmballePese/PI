@@ -8,7 +8,11 @@ if(isset($_POST['modify'])){
 	$price = ($_SESSION['basket'][$line]['price_tot'] / $_SESSION['basket'][$line]['quantity']);
 	$_SESSION['basket'][$line]['price_tot'] = $price*$qte;
 	$_SESSION['basket'][$line]['quantity'] = $qte;
-	
+}
+if(isset($_POST['delete'])){
+	unset($_SESSION['basket'][$line]);
+	$_SESSION['basket'] = array_values($_SESSION['basket']);
+	$_SESSION['a']--;
 }
 if(empty($_SESSION['basket']))
 {	

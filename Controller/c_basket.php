@@ -10,6 +10,11 @@ if(isset($_POST['modify'])){
 	$_SESSION['basket'][$line]['quantity'] = $qte;
 	
 }
+if(isset($_POST['delete'])){
+	unset($_SESSION['basket'][$line]);
+	$_SESSION['basket'] = array_values($_SESSION['basket']);
+	$_SESSION['a']--;
+}
 if(empty($_SESSION['basket']))
 {	
 	$message = "<h3>Votre panier est vide ;(</h3>";

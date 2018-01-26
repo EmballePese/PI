@@ -51,6 +51,7 @@
 			echo"<input type=\"number\" name=\"qte\" min=\"$min\" step=\"$step\" max=\"".$max."\" value=\"$qte\">
     			<input type=\"hidden\" name=\"line\" value=\"$i\">
     			<input type=\"submit\" name=\"modify\" value=\"modifier\">
+				<input type=\"submit\" name=\"delete\" value=\"supprimer\">
 				</form>";
     	}
     			?>

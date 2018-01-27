@@ -13,8 +13,7 @@ $tab = array();
 
 $recov = $bdd->query("SELECT * FROM Article");
 while ($donnees = $recov->fetch()){
-	array_push($tab,$donnees);
-	if($farm == $donnees['Fermier']&&stristr($name,$donnees['Nom']) != false){
+	if($farm == $donnees['Fermier'] && $name == $donnees['Nom']){
 		$exist = true;
 	}
 }

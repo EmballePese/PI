@@ -5,7 +5,7 @@ $tab_l = array();
 include('../Model/m_f_article_v.php');
 $farm = $_SESSION['user'];
 if($check =="check"){
-	if(empty($_POST['name'])&& empty($_POST['compo'])&& empty($_POST['DLC'])&& empty($_POST['dc'])&& empty($_POST['qte'])&& empty($_POST['pa'])&& empty($_POST['lab'])&& empty($_POST['qte'])){
+	if(empty($_POST['name']) || empty($_POST['compo']) || empty($_POST['DLC']) || empty($_POST['dc']) || empty($_POST['qte']) || empty($_POST['pa']) || empty($_POST['lab']) || empty($_POST['qte'])){
 
 		$message="<h3 align='center'>Il manque des informations !</h3>";
 		include('../View/v_f_article.php');
@@ -13,10 +13,10 @@ if($check =="check"){
 
 	}else{
 
-		if(!is_numeric($pa)||!is_numeric($qte)|| strpos($pa, ' ') !== false|| strpos($qte, ' ') !== false||strpos($marge, ' ') !== false||$name[0] ==" "||$compo[0] ==" "){
+		if(is_numeric($name) || is_numeric($compo) || !is_numeric($pa)||!is_numeric($qte)|| strpos($pa, ' ') !== false|| strpos($qte, ' ') !== false||strpos($marge, ' ') !== false||$name[0] ==" "||$compo[0] ==" "){
 			$message="<h3 align='center'>L'un des champs est incorrect</h3>";
 			include('../View/v_f_article.php');
-		}else if($dc > $dlc){
+		}else if($dc > $dlc || $dlc < date("Y-m-d")){
 			$message="<h3 align='center'>Mauvaises dates, veuillez les verifier</h3>";
 			include('../View/v_f_article.php');
 		}else{
@@ -24,10 +24,10 @@ if($check =="check"){
 			$unite = $_POST["unite"];
 			include('../Model/m_f_article.php');
 			if($exist==true){
-				$message="Article déjà mis en vente";
+				$message="<h3 align='center'>Article déjà mis en vente</h3>";
 				include('../View/v_f_article.php');
 			}else{
-			$message="Nouvel article ajouté !";
+			$message="<h3 align='center'>Nouvel article ajouté !</h3>";
 			include('../View/v_f_article.php');
 			}
 

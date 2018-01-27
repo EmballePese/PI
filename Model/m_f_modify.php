@@ -21,6 +21,10 @@ $tab = array();
 // }
 if($exist==false){
 	
+=======
+
+
+>>>>>>> Stashed changes
 $bdd->exec("UPDATE Article SET Composition='$compo', Nom='$name', DLC='$dlc', Date_crea='$dc', Prix_achat='$pa', Unite='$unite', Label='$lab', Qte_article='$qte',Qte_restantes='$qte' WHERE id_article='$id'");
 }
 

@@ -1,4 +1,5 @@
 <?php
+session_write_close();
 session_start();
 $erreur = FALSE;
 include('../Controller/c_variable_inscription.php');
@@ -35,5 +36,6 @@ if($erreur == FALSE)
 	$_SESSION['user'] = $new_mail;
 }
 include('../Controller/c_f_account.php');
+session_write_close();
 //header('Location: ../Controller/c_account.php');
 ?>

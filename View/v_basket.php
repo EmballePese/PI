@@ -24,7 +24,8 @@
     		<tr>
     		<th>Nom</th>
     		<th>Prix</th>
-    		<th>Quantité</th>
+			<th>Quantité</th>
+			<th> </th>
     		</tr>
     		");
     	for($i=0;$i<count($order);$i++)
@@ -49,9 +50,10 @@
     		echo("<td>".$order[$i]['price_tot']."€</td>");
 			echo "<td><form action=\"c_basket.php\" method=\"POST\">";
 			echo"<input type=\"number\" name=\"qte\" min=\"$min\" step=\"$step\" max=\"".$max."\" value=\"$qte\">
-    			<input type=\"hidden\" name=\"line\" value=\"$i\">
+				".$order[$i]['unite']."</td>
+    			<td><input type=\"hidden\" name=\"line\" value=\"$i\">
     			<input type=\"submit\" name=\"modify\" value=\"modifier\">
-				<input type=\"submit\" name=\"delete\" value=\"supprimer\">
+				<input type=\"submit\" name=\"delete\" value=\"supprimer\"></td>
 				</form>";
     	}
     			?>

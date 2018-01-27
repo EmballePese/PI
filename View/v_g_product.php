@@ -36,8 +36,16 @@
 
 		    $today = date("Y-m-d");
           for($i=0;$i<count($tab);$i++){
-            echo"<tr><td>".$tab[$i]['Nom']."</td>";
-            echo"<td>".$tab[$i]['Qte_stock']."</td>";
+			echo"<tr><td>".$tab[$i]['Nom']."</td>";
+			  if($tab[$i]['Unite'] == "kilogramme")
+			  {
+				$unite = "kg";
+			  }  
+			  else
+			  {
+				$unite = $tab[$i]['Unite'];
+			  }
+            echo"<td>".$tab[$i]['Qte_stock']." ".$unite."</td>";
 			echo"<td>".$tab[$i]['Composition']."</td>";
 			$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
 			if($tab[$i]['DLC'] > $today)

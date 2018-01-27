@@ -6,13 +6,13 @@ include('../Controller/c_variable_inscription.php');
 $email = $_SESSION['user'];
 $new_mail = $_POST['new_mail'];
 
-if(!is_numeric($cp))
+if(!empty($cp) && (!is_numeric($cp) || strlen($cp) !== 5))
 {
 	$erreur = TRUE;
 	$message = "<h3>Le code postal doit être composé de 5 chiffres !</h3><br>";
 }
 
-if(!is_numeric($tel))
+if(!empty($cp) && (!is_numeric($tel) || strlen($tel) !== 10))
 {
 	$erreur = TRUE;
 	$message = "<h3>Le telephone doit être composé de 10 chiffres !</h3>";

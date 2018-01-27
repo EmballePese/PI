@@ -21,21 +21,21 @@
         </ul>
       </div>
       <div id="content">
-        <h3> Ajoutez un nouveau label</h3>
+        <h3> Ajouter un nouveau label</h3>
         <table class="tab_center">
 
 				<form action="../Controller/c_g_label.php" method="POST">
 				Label: <input type="text" name="lab">
 				<input type="hidden" name="check" value="Check">
-
+        <br><br>
 				<button> Valider </button>
 				</form>
 
-    		<h3> Ajoutez une nouvelle Categorie</h3>
+    		<h3> Ajouter une nouvelle catégorie</h3>
         <table class="tab_center">
 
 				<form action="../Controller/c_g_categorie.php" method="POST" enctype="multipart/form-data">
-				Categorie: <input type="text" name="n_cat"></br>
+				Catégorie: <input type="text" name="n_cat"></br><br>
 				Image : <input type="file" name="image"></br>
 				<input type="hidden" name="check" value="Check">
 				</br>

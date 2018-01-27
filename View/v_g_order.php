@@ -40,13 +40,13 @@
       	}
 
       	?>
-          </table>
+      </table><br><br>
       	<?php
       		echo "Prix HTC : ".$price_htc."€</br>";
       		echo "Prix TTC : ".$price_ttc."€</br>";
       	?>
-		Methode de paiement : Carte bancaire</br>
-		XXXXXXXXXXXX5784
+		Méthode de paiement : Carte bancaire</br>
+		XXXXXXXXXXXX5784 <br><br>
 
       	<form action="../Controller/c_g_order.php" method="POST">
       	<input type="hidden" name="step" value="2">

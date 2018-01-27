@@ -16,7 +16,7 @@ if(isset($_POST['delete'])){
 }
 if(empty($_SESSION['basket']))
 {
-	$message = "<h3>Votre panier est vide ;(</h3>";
+	$message = "<h3>Votre panier est vide</h3>";
 	include('../View/v_g_basket_vide.php');
 }else{
 	$order = $_SESSION['basket'];

@@ -28,7 +28,7 @@ if($check =="check"){
 			include('../View/v_g_add_product.php');
 		}else{
 			include('../Model/m_g_add_product.php');
-			$message="Article ajouté !";
+			$message="<h3>Article ajouté !</h3>";
 			include('../Model/m_g_add_product_v.php');
 			include('../View/v_g_add_product.php');
 			}

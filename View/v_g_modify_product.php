@@ -22,7 +22,7 @@
       </div>
       <div id="content">
         <h2>Voici les articles en vente sur votre site :</h2></br>
-        <table class="tab_center" cellpadding="5">
+        <table class="tab_center">
           <tr><th>Nom</th>
             <th>Quantité stock</th>
             <th>Compositions</th>
@@ -35,11 +35,11 @@
 for($i=0;$i<count($tab);$i++){
 	    echo"<form action=\"../Model/m_g_modify_product.php\"method=\"POST\">";
 			$cat_p = $tab[$i]['Type'];
-		    echo"<tr><td><input type=\"text\" name=\"Nom\" value=\"".$tab[$i]['Nom']."\"></td>";
+		    echo"<tr><td><input type=\"text\" size=\"5\" name=\"Nom\" value=\"".$tab[$i]['Nom']."\"></td>";
 		    echo"<td>".$tab[$i]['Qte_stock']." ".$tab[$i]['Unite']."</td>";
 			    echo"<td>".$tab[$i]['Composition']."</td>";
 			    echo"<td>".$tab[$i]['DLC']."</td>";
-				    echo"<td><input size=\"5\" type=\"number\" min=\"0.01\" step=\"0.01\" name=\"Marge\" value=\"".$tab[$i]['Marge']."\"></td>";
+				    echo"<td><input type=\"number\" style=\"width: 3em;\" min=\"0.01\" step=\"0.01\" name=\"Marge\" value=\"".$tab[$i]['Marge']."\"></td>";
 				    echo"<td>".$tab[$i]['Prix_achat']."</td>";
 					echo"<td><select name=\"cat\">";
 					for($z=0;$z<count($tab_c);$z++){
@@ -52,7 +52,7 @@ for($i=0;$i<count($tab);$i++){
 						}
 					}
 					echo"</select>";
-						
+
 				    echo"<td><input type=\"hidden\" name=\"id\" value=\"".$tab[$i]['id_produit']."\"></td>";
 					    echo"<td><button>Modifier</button></td>";
 					echo"</form>";

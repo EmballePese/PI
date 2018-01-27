@@ -24,10 +24,12 @@
         <h1>Ajoutez les produits de vos stocks </h1>
         <table class="tab_center">
           <?php
-         include('../Controller/c_variable_inscription.php'); 
+         include('../Controller/c_variable_inscription.php');
+         echo $message;
 		  for($i=0;$i<count($tab_prod);$i++){
 			  echo"<form action=\"../Controller/c_g_add_product.php\" method=\"POST\" enctype=\"multipart/form-data\">";
 			  $name = $tab_prod[$i]['Nom'];
+        $name[0] = strtoupper($name[0]);
 			  $qte = $tab_prod[$i]['Qte_acheter'];
 			  $sm = 1;
 			  $farm = $tab_prod[$i]['Fermier'];
@@ -38,7 +40,7 @@
          echo"<tr><td>&nbsp;</td></tr><tr><td>Nom</td> <td>:</td><td>".$name."<input type=\"hidden\" name=\"name\" value=\"$name\"></td></tr>
            <tr><td>Quantité stock</td> <td>:</td> <td>".$qte."<input type=\"hidden\" name=\"qte\"value=\"$qte\"></td></tr>
 		   <tr><td>Marge</td> <td>:</td> <td><input type=\"text\" size =\"5\" name=\"marge\"value=\"$marge\" placeholder=\"coefficient multiplicateur\"></td></tr>
-           <tr><td>Stock mini</td> <td>:</td> <td>".$sm."<input type=\"hidden\" name=\"sm\"value=\"$sm\"></td></tr>
+           <tr><td>Stock minimum</td> <td>:</td> <td>".$sm."<input type=\"hidden\" name=\"sm\"value=\"$sm\"></td></tr>
            <tr><td>Fermier</td> <td>:</td> <td>".$farm."<input type=\"hidden\" name=\"farm\"value=\"$farm\"></td></tr>
 		   <input type=\"hidden\" name=\"id_article\"value=\"$id_article\"></td></tr>
 		  <tr><td>Type de produit</td> <td>:</td> <td><select name=\"type\">";
@@ -50,14 +52,12 @@
           }
           echo"</select>";
 		  echo"
-		  <br><tr><td>Photo</td> <td>:</td><td><input type=\"file\" name=\"image\" id=\"image\"/></td></tr><br>
+		  <tr><td>Photo</td> <td>:</td><td><input type=\"file\" name=\"image\" id=\"image\"/></td></tr>
           <input type=\"hidden\" name=\"check\"value=\"check\"></td>
           <tr><td colspan=2></td><td style=\"text-align:center;\"><button>Ajouter au site</button></td></tr>
-		  </br>
           </form>
-		  </br>";
+		";
           }
-          echo $message;
           ?>
         </table>
       </div>

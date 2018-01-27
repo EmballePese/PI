@@ -35,7 +35,8 @@ if($erreur == FALSE)
 	session_start();
 	$_SESSION['user'] = $new_mail;
 }
-include('../Controller/c_f_account.php');
 session_write_close();
+include('../Controller/c_f_account.php');
+
 //header('Location: ../Controller/c_account.php');
 ?>

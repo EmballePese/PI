@@ -37,7 +37,7 @@ if($step == "1"){
 
 } else if($step == "2"){
 	if($check_p=="Check"){
-		if(empty($name_p)||empty($date_card||empty($cart1))||empty($cart2)||empty($cart3)||empty($cart4)||empty($crypt)){
+		if(empty($name_p)||empty($date_card)||empty($cart1)||empty($cart2)||empty($cart3)||empty($cart4)||empty($crypt)){
 			$message ="L'un des champs est vide";
 		}else if(strpos($name_p,' ') !== false){
 			$message ="Le nom est incorrect";
@@ -46,6 +46,7 @@ if($step == "1"){
 		}else if(strlen($cart1)!=4||strlen($cart2)!=4||strlen($cart3)!=4||strlen($cart4)!=4||strlen($crypt)!=3){
 			$message ="Le cryptogramme ou la carte ne contiennent pas assez de chiffre";
 		}else{
+			$_SESSION['cart4'] = $cart4;
 			header("Location:../Controller/c_order.php?step=3&cart4=".$cart4."&date=".$date_card);
 		}
 	}

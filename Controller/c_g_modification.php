@@ -6,16 +6,22 @@ include('../Controller/c_variable_inscription.php');
 $email = $_SESSION['user'];
 $new_mail = $_POST['new_mail'];
 
-if(!is_numeric($cp) || strlen($cp)!== 5)
+if(isset($cp) && !is_numeric($cp))
 {
-
 	$erreur = TRUE;
 	$message = "<h3>Le code postal doit être composé de 5 chiffres !</h3><br>";
 }
-else if(!is_numeric($tel) || strlen($tel)!== 10)
+
+if(!is_numeric($tel))
 {
 	$erreur = TRUE;
-	$message = "<h3>Le telephone doit être composé de 10 chiffres !</h3>";
+	$message = "<h3>Le numéro de téléphone doit être composé de 10 chiffres !</h3>";
+}
+
+if(is_numeric($city))
+{
+	$erreur = TRUE;
+	$message = "<h3>Le nom de la ville doit être composé de lettres !</h3>";
 }
 else if(filter_var($new_mail, FILTER_VALIDATE_EMAIL))
 {
@@ -24,13 +30,13 @@ else if(filter_var($new_mail, FILTER_VALIDATE_EMAIL))
 else
 {
 	$erreur = TRUE;
-	$message = "<h3>Le mail n'est pas au bon format</h3>";
+	$message = "<h3>Le mail n'est pas au bon format !</h3>";
 }
 
 if($erreur == FALSE)
 {
 	include('../Model/m_modification.php');
-	$message = "<h3>Modification réalisée avec succès</h3><br>";
+	$message = "<h3>Informations personnelles modifiées</h3><br>";
 	session_destroy();
 	session_start();
 	$_SESSION['user'] = $new_mail;

@@ -42,7 +42,7 @@
 					$a++;
 				}
     			echo $message;
-				var_dump($tab,count($tab));
+				// var_dump($tab,count($tab));
     			?>
         </table>
       </div>

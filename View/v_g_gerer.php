@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div id="content">
-        <h1> Ajoutez un nouveau label</h1>
+        <h3> Ajoutez un nouveau label</h3>
         <table class="tab_center">
 
 				<form action="../Controller/c_g_label.php" method="POST">
@@ -30,8 +30,8 @@
 
 				<button> Valider </button>
 				</form>
-				
-		<h1> Ajoutez une nouvelle Categorie</h1>
+
+    		<h3> Ajoutez une nouvelle Categorie</h3>
         <table class="tab_center">
 
 				<form action="../Controller/c_g_categorie.php" method="POST" enctype="multipart/form-data">

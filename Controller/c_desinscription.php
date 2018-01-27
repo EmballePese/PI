@@ -9,7 +9,7 @@ if($exist == true){
   session_destroy();
   header('Location: ../View/v_desinscription.php');
 } else{
-  $message = "Mauvais mot de passe";
+  $message = "<h3>Mauvais mot de passe</h3>";
   session_write_close();
   if(empty($droit))
   {

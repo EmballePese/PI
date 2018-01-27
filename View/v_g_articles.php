@@ -36,12 +36,15 @@
             <button> Trier et rechercher</button></br><p>
             </form>
             <?php
+            echo $message;
             for($i=0;$i<count($tab);$i++){
               $id_article = $tab[$i]['id_article'];
+              $name = $tab[$i]['Nom'];
+              $name[0] = strtoupper($name[0]);
 			  $unite = $tab[$i]['Unite'];
               echo "<table>";
               echo"<form action=\"./c_g_articles.php\" method=\"POST\">";
-              echo"<tr><td>Nom</td><td> : </td><td>".$tab[$i]['Nom']."</td></tr>";
+              echo"<tr><td>Nom</td><td> : </td><td>".$name."</td></tr>";
               echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
               echo"<tr><td>Date Limite de consommation</td><td> : </td><td>".$tab[$i]['DLC']."</td></tr>";
               echo"<tr><td>Date de création</td><td> : </td><td>".$tab[$i]['Date_crea']."</td></tr>";
@@ -58,7 +61,7 @@
 				}
               echo"<tr><td>Quantité souhaitée</td><td> : </td><td><input type=\"number\" name=\"quantity\" min=\"$min\" step=\"$step\" max=\"".$tab[$i]['Qte_restantes']."\" value=\"1\"></td></tr>";
               echo"<input type=\"hidden\" value=\"".$tab[$i]['Prix_achat']."\" name=\"Price\">";
-			   echo"<input type=\"hidden\" value=\"$unite\" name=\"Unite\">";
+			           echo"<input type=\"hidden\" value=\"$unite\" name=\"Unite\">";
               echo"<input type=\"hidden\" value=\"true\" name=\"ajouter\">";
               echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
               echo"<input type=\"hidden\" value=\"".$id_article."\" name=\"id_article\">";
@@ -68,7 +71,6 @@
                     </table>
                   </br>";
             }
-            echo $message;
             ?>
           </br>
         </div>

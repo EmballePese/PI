@@ -7,6 +7,8 @@ if(empty($tab)){
 
 	$message = "Aucune proposition en vente";
 }
+
+
 if($ajouter == true){
 if(is_numeric($quantity)){
 		if(isset($_SESSION['user'])){
@@ -35,7 +37,7 @@ if(is_numeric($quantity)){
 			if($basket[$a]['quantity']> $qte){
 				$basket[$a]['quantity'] = intval($qte);
 				$basket[$a]['price_tot'] = intval($qte)*$price_prod;
-				$message = $message."Quantité maximum est de ".$qte.", Vous ne pouvez pas en commander plus</br>";
+				$message = $message."Quantité maximum est de ".$qte.", vous ne pouvez pas en commander plus</br>";
 			}else{
 				$basket[$a]['price_tot'] = $price_total + $basket[$a]['price_tot'];
 			}
@@ -47,16 +49,16 @@ if(is_numeric($quantity)){
 		$basket[$a]['qte_restantes'] = $tab[$i]['Qte_restantes'];
 		$basket[$a]['unite'] = $unite;
 		$_SESSION['a']++;
-		$message ="<h3>Votre Article a bien été ajouté </h3></br>";
+		$message ="<h3>Votre article a bien été ajouté</h3></br>";
 		}
 		$_SESSION['basket'] = $basket;
 
 		}else{
 
-		$message = "Vous devez vous connecter pour ajouter un article dans votre panier. </br>";
+		$message = "Vous devez vous connecter pour ajouter un article dans votre panier </br>";
 		}
 	}else{
-		$message="Vous n'avez rien ajouté.";
+		$message="Vous n'avez rien ajouté";
 	}
 }
 include('../View/v_g_articles.php');

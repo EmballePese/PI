@@ -20,6 +20,7 @@
         <h1> Vos ventes</h1>
         <table class="tab_center">
     			<?php
+          echo $message;
           if(empty($tab)){
             echo "Vous n'avez pas de commande.";
           } else {
@@ -32,7 +33,7 @@
 						echo "<table>";
 						$date_cre = strftime('%d-%m-%Y',strtotime($tab[$i]['Date_crea']));
 						$dlc = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
-						
+
   						echo"<tr><td>Nom</td><td> : </td><td>".$name."</td></tr>";
   						echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
 						echo"<tr><td>Date de création</td><td> : </td><td>".$date_cre."</td></tr>";
@@ -57,7 +58,6 @@
               echo "</table><br><br>";
   					}
 				}
-				echo$message;
     			?>
         </table>
       </div>

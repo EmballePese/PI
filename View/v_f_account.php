@@ -40,10 +40,10 @@
         	<form action="../Controller/c_f_modification.php" method=POST>
             <table>
         	<tr><td>Adresse</td> <td>:</td> <td><input type="text" name="adress" <?php echo("value=\"".$donnees['Adresse']."\"");?>></td></tr>
-        	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" size="5" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>
+        	<tr><td>Code Postal</td> <td>:</td> <td><input type="text" name="cp" maxlength="5" size="5" <?php echo("value=\"".$donnees['CP']."\"");?>></td></tr>
         	<tr><td>Ville</td> <td>:</td> <td><input type="text" name="city" <?php echo("value=\"".$donnees['Ville']."\"");?>></td></tr>
-        	<tr><td>Tel</td> <td>:</td> <td><input type="text" name="tel" size="10" <?php echo("value=\"".$donnees['Tel']."\"");?>></td></tr>
-        	<tr><td>Adresse Mail</td> <td>:</td> <td><input type="text" name="new_mail" <?php echo("value=\"".$donnees['Mail']."\"");?>></td></tr>
+        	<tr><td>Téléphone</td> <td>:</td> <td><input type="text" name="tel" maxlength="10" size="10" <?php echo("value=\"".$donnees['Tel']."\"");?>></td></tr>
+        	<tr><td>Adresse e-mail</td> <td>:</td> <td><input type="text" name="new_mail" <?php echo("value=\"".$donnees['Mail']."\"");?>></td></tr>
             </table> <input type="Submit" value="Modifier">
         	</form>
         	</br>

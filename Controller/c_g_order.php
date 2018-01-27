@@ -15,7 +15,7 @@ if($step == 2){
 	include('../Model/m_g_order.php');
 	 $_SESSION['basket'] ="";
 	 $_SESSION['a'] =0;
-	$message="<h2> Votre demande d'achat auprès du ou des fermiers est confirmé</h3></br>";
+	$message="<h2> Votre demande d'achat auprès du/des fermier(s) est confirmée</h3></br>";
 	include('../View/v_g_order2.php');
 }else{
 	include('../View/v_g_order.php');

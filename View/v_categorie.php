@@ -20,8 +20,8 @@
 		<h2>Voici les categories disponibles :</h2></br>
 		Trier par :<form action="c_categorie.php" method="POST">
 				   <select name="trier">
-				   <option value="prix_d">Prix décroissant</option>
-				   <option value="prix_c">Prix croissant</option>
+				   <option value="prix_c">Prix décroissant</option>
+				   <option value="prix_d">Prix croissant</option>
 				   <option value="name_c">Par nom A->Z</option>
 				   <option value="name_d">Par nom Z->A</option>
 				   </select>
@@ -78,7 +78,7 @@ for($i=0;$i<count($tab);$i++){
 echo $message;
 ?>
 			</br>
-			<form action="../View/v_product.php">
+			<form action="../Controller/c_product.php">
 			<button> Retour aux rubriques </button>
 			</form>
 	  </div>

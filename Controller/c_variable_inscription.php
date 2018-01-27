@@ -161,13 +161,28 @@ if(isset($_POST['change'])){
 }else{
 	$change =  "";
 }
+if(isset($_GET['change'])){
+	$change = $_GET['change'];
+}else{
+	$change =  "";
+}
 if(isset($_POST['verif'])){
 	$verif = $_POST['verif'];
 }else{
 	$verif =  "";
 }
+if(isset($_GET['verif'])){
+	$verif = $_GET['verif'];
+}else{
+	$verif =  "";
+}
 if(isset($_POST['modify'])){
 	$modify = $_POST['modify'];
+}else{
+	$modify =  "";
+}
+if(isset($_GET['modify'])){
+	$modify = $_GET['modify'];
 }else{
 	$modify =  "";
 }

@@ -19,11 +19,11 @@
       <div id="content">
         <h2> Que voulez-vous changer ? :</h2></br>
 
-    	<form action="../Controller/c_order_modify.php" method="POST">
+    	<form action="../Controller/c_order_modify.php" method="GET">
     	<input type="hidden" name="change" value="adress">
     	<button>Modifier méthode de livraison</button>
     	</form>
-    	<form action="../Controller/c_order_modify.php" method="POST">
+    	<form action="../Controller/c_order_modify.php" method="GET">
     	<input type="hidden" name="change" value="cb">
     	<button>Modifier vos coordonnées bancaires</button>
     	</form>

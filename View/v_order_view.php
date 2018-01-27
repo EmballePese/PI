@@ -47,6 +47,7 @@
     </br>
     Moyen de paiement:</br>
     Carte bancaire
+	XXXXXXXXXXXX<?php echo$_SESSION['cart4'];?>
     </br>
     <p>
     <form action="c_history_order.php" method="POST">

@@ -24,6 +24,8 @@
             echo "Vous n'avez pas de commande.";
           } else {
   					for($i=0;$i<count($tab);$i++){
+						$name = $tab[$i]['Nom'];
+						$name[0] = strtoupper($name[0]);
 						$qte_initiales = $tab[$i]['Qte_article'];
 						$qte_restantes = $tab[$i]['Qte_restantes'];
 						$id_article = $tab[$i]['id_article'];
@@ -31,7 +33,7 @@
 						$date_cre = strftime('%d-%m-%Y',strtotime($tab[$i]['Date_crea']));
 						$dlc = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
 
-  						echo"<tr><td>Nom</td><td> : </td><td>".$tab[$i]['Nom']."</td></tr>";
+  						echo"<tr><td>Nom</td><td> : </td><td>".$name."</td></tr>";
   						echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
 						echo"<tr><td>Date de création</td><td> : </td><td>".$date_cre."</td></tr>";
   						echo"<tr><td>Date limite de consommation</td><td> : </td><td>".$dlc."</td></tr>";

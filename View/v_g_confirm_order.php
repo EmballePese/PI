@@ -29,7 +29,8 @@
 				for($i=0;$i<count($tab);$i++){
 					$id = $tab[$i]['id_cmd_vente'];
 					echo"<form action=\"../Controller/c_g_confirm_order.php\" method=\"POST\">";
-					echo"Commande n° ".$tab[$i]['id_cmd_vente']." du client ".$tab[$i]['Consommateur'];
+					echo"<br>Commande n° ".$tab[$i]['id_cmd_vente']." du client ".$tab[$i]['Consommateur']." : <br>";
+					echo"<br> - ".$tab[$i]['Qte']." ".$tab[$i]['Unite']." de ".$tab[$i]['Nom']." de ".$tab[$i]['Fermier']."<br>";
 					echo"<input type=\"hidden\" name=\"check\" value=\"check\">";
 					echo"<input type=\"hidden\" name=\"idc\" value=\"$id\">
 						<button>Valider la commande</button>

@@ -14,9 +14,8 @@ if($check=="check"){
 }
 
 
-$recov = $bdd->query('SELECT * 
-					  FROM Cmd_vente
-					  WHERE Paye="non"');
+$recov = $bdd->query('SELECT P.Nom, A.Fermier, L.Qte, A.Unite, C.Consommateur, C.id_cmd_vente FROM Cmd_vente as C JOIN Ligne_cmd_vente as L ON L.cmd_vente = C.id_cmd_vente JOIN Produit as P ON L.Produit = P.id_produit JOIN Article as A ON P.Article = A.id_article WHERE C.Paye = "non"');
+
 while ($donnees = $recov->fetch()){
 	array_push($tab,$donnees);
 }

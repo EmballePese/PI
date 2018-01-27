@@ -14,10 +14,31 @@ if($check=="check"){
 }
 
 
-$recov = $bdd->query('SELECT P.Nom, A.Fermier, L.Qte, A.Unite, C.Consommateur, C.id_cmd_vente FROM Cmd_vente as C JOIN Ligne_cmd_vente as L ON L.cmd_vente = C.id_cmd_vente JOIN Produit as P ON L.Produit = P.id_produit JOIN Article as A ON P.Article = A.id_article WHERE C.Paye = "non"');
+$recov = $bdd->query('SELECT P.Nom, A.Fermier, L.Qte, A.Unite, C.Consommateur, C.id_cmd_vente 
+					 FROM Cmd_vente as C JOIN Ligne_cmd_vente as L 
+					 ON L.cmd_vente = C.id_cmd_vente 
+					 JOIN Produit as P 
+					 ON L.Produit = P.id_produit 
+					 JOIN Article as A 
+					 ON P.Article = A.id_article 
+					 WHERE C.Paye = "non"');
 
+$i = 0;
+$a = 0;
 while ($donnees = $recov->fetch()){
-	array_push($tab,$donnees);
+	$id = $donnees['id_cmd_vente'];
+	if($id != $id_old){
+		$i++;
+		$a=0;
+	}
+	$tab[$i][$a]['id_cmd_vente'] = $donnees['id_cmd_vente'];
+	$tab[$i][$a]['Nom'] = $donnees['Nom'];
+	$tab[$i][$a]['Fermier'] = $donnees['Fermier'];
+	$tab[$i][$a]['Qte'] = $donnees['Qte'];
+	$tab[$i][$a]['Unite'] = $donnees['Unite'];
+	$tab[$i][$a]['Consommateur'] = $donnees['Consommateur'];
+	$id_old = $donnees['id_cmd_vente'];
+	$a++;
 }
 
 $recov->closeCursor();

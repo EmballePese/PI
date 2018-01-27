@@ -18,9 +18,10 @@ $recov = $bdd->query("SELECT *
 					  WHERE P.id_produit='$id'");
 while ($donnees = $recov->fetch()){
 $prix_total = $donnees['Prix_achat']*$marge;
+$cat = $_POST['cat'];
 }
 $bdd->exec("UPDATE Produit
-			SET Nom ='$nom',Marge='$marge',Prix_total='$prix_total'
+			SET Nom ='$nom',Marge='$marge',Prix_total='$prix_total',Type='$cat'
 			WHERE id_produit='$id'");
 include('../Controller/c_g_product.php');
 

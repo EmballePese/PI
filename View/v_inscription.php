@@ -32,9 +32,9 @@
     			<tr><td>Numéro de téléphone*</td> <td>:</td> <td><input type=\"text\" name=\"tel\" maxlength=\"10\" value=\"$tel\"></td></tr><p>
           <tr><td>S'inscrire en tant que*</td> <td>:</td>
           <td colspan=3><input type=\"radio\" name=\"type\"value=\"1\"> Fermier </input>
-          <input type=\"radio\" name=\"type\"value=\"2\"> Client </input>
-          <input type=\"radio\" name=\"type\"value=\"3\"> Gérant </input></td></tr>
-    			<tr><td colspan=2></td><td style=\"text-align:center;\"><button>Inscription</button></td></tr>
+          <input type=\"radio\" name=\"type\"value=\"2\"> Client </input>";
+		 // <input type=\"radio\" name=\"type\"value=\"3\"> Gérant </input></td></tr>
+    			echo"<tr><td colspan=2></td><td style=\"text-align:center;\"><button>Inscription</button></td></tr>
     			Les champs * sont obligatoires
     			</form>";
     			echo $message;

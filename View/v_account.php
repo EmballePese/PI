@@ -68,7 +68,7 @@
         	</form>
 					
             <h3>Supprimer votre compte</h3>
-        	 <form action="../Controller/c_desinscription.php">
+        	 <form action="../Controller/c_desinscription.php" method="POST">
              <table>
                 <tr><td>Mot de passe</td> <td>:</td> <td><input type="password" name="mdp"></td></tr>
         		 </table> <input type="Submit" value="Se désinscrire">

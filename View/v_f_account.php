@@ -47,13 +47,13 @@
             </table> <input type="Submit" value="Modifier">
         	</form>
         	</br>
-            <h3>Supprimer votre compte</h3>
-        	 <form action="../Controller/c_desinscription.php">
-        		<tr><td>Adresse mail</td> <td>:</td> <td><input type="text" name="mail"></td></tr></br>
-                <tr><td>Mot de passe</td> <td>:</td> <td><input type="text" name="mdp"></td></tr></br>
-        		<input type="Submit" value="Se desinscrire">
-        	</form>
-          
+			<h3>Supprimer votre compte</h3>
+             <form action="../Controller/c_desinscription.php" method="POST">
+             <table>
+                <tr><td>Mot de passe</td> <td>:</td> <td><input type="password" name="mdp"></td> <input type="hidden" name="droit" value="fermier"></tr>
+                 </table> <input type="Submit" value="Se désinscrire">
+            </form>
+
       </div>
     </div>
   </body>

@@ -32,8 +32,7 @@
 						echo "<table>";
 						$date_cre = strftime('%d-%m-%Y',strtotime($tab[$i]['Date_crea']));
 						$dlc = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
-
-            echo"<tr><td>Date limite de consommation</td><td> : </td><td>".$dlc."</td></tr>";
+						
   						echo"<tr><td>Nom</td><td> : </td><td>".$name."</td></tr>";
   						echo"<tr><td>Composition</td><td> : </td><td>".$tab[$i]['Composition']."</td></tr>";
 						echo"<tr><td>Date de création</td><td> : </td><td>".$date_cre."</td></tr>";

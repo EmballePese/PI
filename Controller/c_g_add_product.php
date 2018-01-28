@@ -1,4 +1,6 @@
 <?php
+session_start();
+$mail = $_SESSION["user"];
 include('../Controller/c_variable_inscription.php');
 // $id_article = $_POST['id_article'];
 // $name = $_POST['name'];

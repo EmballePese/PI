@@ -17,7 +17,7 @@ while ($donnees = $recov->fetch()){
 	$i++;
 }
 
-$recov = $bdd->query("SELECT * FROM Article 
+$recov = $bdd->query("SELECT * FROM Article
 					  WHERE Statut = 'Achete'");
 
 while ($donnees = $recov->fetch()){

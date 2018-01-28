@@ -45,7 +45,7 @@ $taille = count($order);
 	$recov = $bdd->query("SELECT * FROM Produit");
 
 	while ($donnees = $recov->fetch()){
-	if($z != $taille){
+	for($z=0;$z<count($order);$z++){
 		if($order[$z]['id_produit'] == $donnees['id_produit']){
 			$qty_stock = $donnees['Qte_stock'];
 			$qty_basket = $order[$z]['quantity'];

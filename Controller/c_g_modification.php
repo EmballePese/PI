@@ -12,7 +12,7 @@ if(!empty($cp) && ( !is_numeric($cp) || strlen($cp) !== 5))
 	$message = "<h3>Le code postal doit être composé de 5 chiffres !</h3><br>";
 }
 
-if(!empty($cp) && (!is_numeric($tel) || strlen($tel) !== 10))
+if(!is_numeric($tel) || strlen($tel) !== 10)
 {
 	$erreur = TRUE;
 	$message = "<h3>Le numéro de téléphone doit être composé de 10 chiffres !</h3>";

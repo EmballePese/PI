@@ -11,12 +11,20 @@ catch (Exception $e)
 $exist=false;
 $tab = array();
 
+$recov = $bdd->query("SELECT * FROM User");
+while ($donnees = $recov->fetch()){
+	if($farm == $donnees['Mail']){
+		$farm = $donnees['id_user'];
+	}
+}
+
 $recov = $bdd->query("SELECT * FROM Article");
 while ($donnees = $recov->fetch()){
 	if($farm == $donnees['Fermier'] && $name == $donnees['Nom']){
 		$exist = true;
 	}
 }
+
 if($exist==false){
 $req = $bdd->prepare("INSERT INTO Article VALUES(0,:Composition,:Nom,:DLC,:Date_crea,:Prix_achat,:Unite,:Label,:Fermier,:Statut,:Qte_article,:Qte_restantes,:Qte_acheter)");
        $req->execute(array(

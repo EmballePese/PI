@@ -45,10 +45,10 @@ $taille = count($order);
 	$recov = $bdd->query("SELECT * FROM Produit");
 
 	while ($donnees = $recov->fetch()){
-	if($z != $taille){
+	for($z=0;$z<count($order);$z++){
 		if($order[$z]['id_produit'] == $donnees['id_produit']){
-			$qty_stock = intval($donnees['Qte_stock']);
-			$qty_basket = intval($order[$z]['quantity']);
+			$qty_stock = $donnees['Qte_stock'];
+			$qty_basket = $order[$z]['quantity'];
 			$new_qty = $qty_stock - $qty_basket;
 			$id_produit =$donnees['id_produit'];
 			$bdd->exec("UPDATE Produit SET Qte_stock = '$new_qty' WHERE id_produit = '$id_produit'");

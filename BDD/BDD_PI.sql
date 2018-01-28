@@ -117,7 +117,7 @@ CREATE TABLE Ligne_cmd_vente(
   id_ligne_cmd_vente INT(11) NOT NULL AUTO_INCREMENT,
   cmd_vente INT(11) NOT NULL,
   Produit INT(11) NOT NULL,
-  Qte INT(2),
+  Qte FLOAT,
   Prix_facture FLOAT(6),
   PRIMARY KEY (id_ligne_cmd_vente),
   FOREIGN KEY (cmd_vente) REFERENCES Cmd_vente (id_cmd_vente) on delete cascade,

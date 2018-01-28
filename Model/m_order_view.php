@@ -8,13 +8,15 @@ catch (Exception $e)
 	die('Erreur : '. $e->POSTMessage());
 }
 
-$recov = $bdd->query("SELECT L.*,P.Nom,C.Livre,A.Fermier
+$recov = $bdd->query("SELECT L.*,P.Nom,C.Livre,U.Mail as Fermier
 					  FROM Ligne_cmd_vente L JOIN Produit P
 					  ON L.Produit = P.id_produit
 					  JOIN Cmd_vente C
 					  ON C.id_cmd_vente = L.cmd_vente
 					  JOIN Article A
 					  ON P.Article = A.id_article
+					  JOIN User U 
+					  ON U.id_user = A.Fermier
 				      WHERE L.cmd_vente ='$order'");
 
 while ($donnees = $recov->fetch()){

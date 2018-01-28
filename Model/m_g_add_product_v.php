@@ -17,7 +17,9 @@ while ($donnees = $recov->fetch()){
 	$i++;
 }
 
-$recov = $bdd->query("SELECT * FROM Article
+$recov = $bdd->query("SELECT A.*, U.Mail as Fermier
+					  FROM Article A JOIN User U
+					  ON A.Fermier = U.id_user
 					  WHERE Statut = 'Achete'");
 
 while ($donnees = $recov->fetch()){

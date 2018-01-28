@@ -60,5 +60,6 @@ $recov = $bdd->query("SELECT *
 					"Photo" => "$uploads_dir/$img_name"
 				));
 			}
+			$bdd->exec("UPDATE Article SET Qte_acheter=0 WHERE id_article='$id_article'");
 			$recov->closeCursor();
 			?>

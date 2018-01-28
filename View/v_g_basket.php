@@ -56,7 +56,7 @@
         </table>
 
     	<?php
-		// var_dump($order);
+		var_dump($order);
     	echo $message;
     		echo"</br>";
     		echo "Prix HTC : ".$price_htc."€</br>";

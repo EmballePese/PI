@@ -9,3 +9,5 @@ INSERT INTO Type VALUES(2,'Fruit','../Look/images/Pomme.png');
 INSERT INTO Type VALUES(3,'Legume','../Look/images/Legume.png');
 INSERT INTO Type VALUES(4,'Boisson','../Look/images/jus de pomme.png');
 INSERT INTO Label VALUES(1,'BIO');
+INSERT INTO Article VALUES(1,'Pomme','jus de pomme','2018-02-25','2018-01-28',1.55,'litre',1,1,'A vendre',10,10,0);
+INSERT INTO Article VALUES(2,'Pomme','pomme','2018-02-25','2018-01-28',0.40,'kilogramme',1,1,'A vendre',80,80,0);

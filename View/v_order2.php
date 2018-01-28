@@ -17,6 +17,9 @@
         </ul>
       </div>
       <div id="content">
+        <?php
+        echo$message;
+        ?>
         <h3> 2ème étape : Paiement </h3></br>
       Veuillez entrer vos coordonnées bancaires ci-dessous :
       <p>
@@ -36,9 +39,6 @@
       <input type="submit" name="check_p" value="Check">
       <input type="hidden" name="step" value="2">
     </form>
-    <?php
-    echo$message;
-    ?>
         <table class="tab_center">
         </table>
       </div>

@@ -22,14 +22,14 @@
     </div>
     <div id="content">
       <h2>Voici les articles en vente sur votre site :</h2></br>
-      <table class="tab_center" border="1px">
+      <table class="tab_center">
         <tr><th>Nom</th>
           <th>Quantité stock</th>
           <th>Compositions</th>
-          <th>Date limite de conso</th>
+          <th>Date limite de consommation</th>
           <th>Marge</th>
           <th>Prix achat</th>
-          <th>Categorie</th></tr>
+          <th>Catégorie</th></tr>
 
           <?php
           for($i=0;$i<count($tab);$i++){

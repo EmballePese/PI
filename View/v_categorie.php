@@ -27,6 +27,7 @@
 				   </select>
 				   <p>
 <?php
+echo $message;
 echo"<input type=\"hidden\" value=\"".$cat."\" name=\"cat\">";
 echo"Rechercher : <input type=\"text\" value=\"".$search."\" name=\"search\">";
 ?>
@@ -51,7 +52,7 @@ for($i=0;$i<count($tab);$i++){
 	echo"<form action=\"./c_categorie.php\" method=\"POST\">";
 	echo"<h3>".$tab[$i]['Nom']."</h3>";
 	echo"<img src=\"".$tab[$i]['Photo']."\"class=\"photo\" alt=\"photo\"/><br>";
-	echo"En stock : ".$tab[$i]['Qte_stock']." ".$unite."</br>";
+	echo"En stock : ".$tab[$i]['Qte_stock']." ".$unite."(s)</br>";
 	echo"Composition : ".$tab[$i]['Composition']."</br>";
 	echo"Date limite de consomation : ".$date_fr."</br>";
 	echo"Prix : ".$tab[$i]['Prix_total']."€ \\ ".$unite."</br>";
@@ -75,7 +76,6 @@ for($i=0;$i<count($tab);$i++){
 		</form>
 		</br>";
 }
-echo $message;
 ?>
 			</br>
 			<form action="../Controller/c_product.php">

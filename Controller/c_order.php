@@ -16,7 +16,7 @@ if($step == "1"){
 
 		$_SESSION['adresse'] = $adress_p.",".$cp_p.",".$city_p;
 		$_SESSION['delivry'] = "House";
-		if(!empty($adress_p)&&!empty($cp_p)&&!empty($city_p)&&is_numeric($cp_p)){
+		if(!empty($adress_p)&&!empty($cp_p)&&!empty($city_p)&&is_numeric($cp_p)&&!is_numeric($city_p)){
 			header("Location:../Controller/c_order.php?step=2");
 		}
 	}else if($meth=="2"){
@@ -26,7 +26,7 @@ if($step == "1"){
 	}else{
 		$message = "<h3> 1ere étape : Choix du Mode de Livraison </h3></br>
 
-			<h2>Preferez-vous faire : </h2></br>
+			<h2>Préférez-vous faire : </h2></br>
 			<a href=\"../Controller/c_order.php?step=1&meth=1\"<h1>Livraison à domicile</br></h1></a>
 			<a href=\"../Controller/c_order.php?step=1&meth=2\"<h1>Livraison en magasin</br></h1></a>
 			</br>
@@ -77,7 +77,7 @@ if($step == "1"){
 	if($delivry =="House"){
 		$message2 = "Vous receverez au plus tard votre commande le ".$date_delivry.".";
 	}else{
-		$message2 = "Vous pourrez récuperer au plus tard votre commande le ".$date_delivry.".";
+		$message2 = "Vous pourrez récuperer au plus tard votre commande le ".$date_delivry.". <br>";
 	}
 	include('../View/v_order4.php');
 

@@ -8,12 +8,12 @@ $check=$_POST['check'];
 
 if($check =="Check"){
 	if(empty($cat)||empty($image)){
-		$message="Il manque des champs";
+		$message="<h3>Il manque des informations</h3>";
 		include('../View/v_g_gerer.php');
 	}else{
-		
+
 	if($cat[0]==" "||is_numeric($cat)){
-			$message="Champ Incorrect";
+			$message="<h3>Champ incorrect</h3>";
 			include('../View/v_g_gerer.php');
 		}else{
 			$uploads_dir = '../Look/images';
@@ -23,10 +23,10 @@ if($check =="Check"){
 			$image=$uploads_dir."/".$name_image;
 			include('../Model/m_g_categorie.php');
 			if($exist==true){
-				$message="Catégorie deja existantes";
+				$message="<h3>Catégorie déjà existante</h3>";
 				include('../View/v_g_gerer.php');
 			}else{
-				$message="La Catégorie a bien été ajouté";
+				$message="<h3>La catégorie a bien été ajoutée</h3>";
 				include('../View/v_g_gerer.php');
 			}
 		}

@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+// session_start();
 $user = $_SESSION['user'];
 
 if(isset($_POST['submit'])) {
@@ -9,18 +9,18 @@ if(isset($_POST['submit'])) {
 	if(!is_uploaded_file($_FILES['image']['tmp_name']))
 		$message = 'Un problème est survenu durant l opération. Veuillez réessayer !<br>';
 	else {
-		//liste des extensions possibles    
+		//liste des extensions possibles
 		$extensions = array('/png', '/gif', '/jpg', '/jpeg');
 
 		//récupère la chaîne à partir du dernier / pour connaître l'extension
 		$extension = strrchr($_FILES['image']['type'], '/');
 
-		//vérifie si l'extension est dans notre tableau            
+		//vérifie si l'extension est dans notre tableau
 		if(!in_array($extension, $extensions))
-			$message = 'Vous devez uploader un fichier de type png, gif, jpg, jpeg.<br>';			
-		else {         
+			$message = 'Vous devez uploader un fichier de type png, gif, jpg, jpeg.<br>';
+		else {
 			//on définit la taille maximale
-			define('MAXSIZE', 256000000);        
+			define('MAXSIZE', 256000000);
 			if($_FILES['image']['size'] > MAXSIZE)
 				$message = 'Votre image est supérieure à la taille maximale de '.MAXSIZE.' octets<br>';
 			else {
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])) {
 		}
 	}
 }
-	
+
 				include("../Controller/c_account.php");
 
 ?>

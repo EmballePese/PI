@@ -24,7 +24,7 @@
         <h2>Voici les articles proposés par les différents fermiers:</h2></br>
         Trier par: <form action="c_g_articles.php" method="POST">
           <select name="trier">
-            <option value="prix_c">Prix decroissant</option>
+            <option value="prix_c">Prix décroissant</option>
             <option value="prix_d">Prix croissant</option>
             <option value="name_c">Par nom A->Z</option>
             <option value="name_d">Par nom Z->A</option>

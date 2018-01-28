@@ -50,7 +50,7 @@
     		echo("<td>".$order[$i]['price_tot']."€</td>");
 			echo "<td><form action=\"c_basket.php\" method=\"POST\">";
 			echo"<input type=\"number\" name=\"qte\" min=\"$min\" step=\"$step\" max=\"".$max."\" value=\"$qte\">
-				".$order[$i]['unite']."</td>
+				".$order[$i]['unite']."(s)</td>
     			<td><input type=\"hidden\" name=\"line\" value=\"$i\">
     			<input type=\"submit\" name=\"modify\" value=\"modifier\">
 				<input type=\"submit\" name=\"delete\" value=\"supprimer\"></td>
@@ -63,12 +63,12 @@
     	echo $message;
     		echo"</br>";
     		echo "Prix HTC : ".$price_htc."€</br>";
-    		echo "Prix TTC : ".$price_ttc."€</br>";
+    		echo "Prix TTC : ".$price_ttc."€</br><br>";
     		echo"<form action=\"c_order.php\" method=\"GET\">
     		<input type=\"hidden\" name=\"step\" value=\"1\">
     		<button>Effectuer la commande</button>
     		</form>";
-			var_dump($order,$_POST);
+			// var_dump($order,$_POST);
     	?>
       </div>
     </div>

@@ -34,11 +34,12 @@
           <?php
           for($i=0;$i<count($tab);$i++){
             echo"<form action=\"../Model/m_g_modify_product.php\"method=\"POST\">";
-            $cat_p = $tab[$i]['Type'];
-            echo"<tr><td><input type=\"text\" size=\"5\" name=\"Nom\" value=\"".$tab[$i]['Nom']."\"></td>";
+			$cat_p = $tab[$i]['Type'];
+			$date_fr = strftime('%d-%m-%Y',strtotime($tab[$i]['DLC']));
+            echo"<tr><td><input type=\"text\" size=\"20\" name=\"Nom\" value=\"".$tab[$i]['Nom']."\"></td>";
             echo"<td>".$tab[$i]['Qte_stock']." ".$tab[$i]['Unite']."</td>";
             echo"<td>".$tab[$i]['Composition']."</td>";
-            echo"<td>".$tab[$i]['DLC']."</td>";
+            echo"<td>".$date_fr."</td>";
             echo"<td><input type=\"number\" style=\"width: 3em;\" min=\"0.01\" step=\"0.01\" name=\"Marge\" value=\"".$tab[$i]['Marge']."\"></td>";
             echo"<td>".$tab[$i]['Prix_achat']." €</td>";
             echo"<td><select name=\"cat\">";

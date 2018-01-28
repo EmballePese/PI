@@ -21,7 +21,7 @@ $recov = $bdd->query('SELECT P.Nom,U.Mail as Fermier, L.Qte, A.Unite, C.Consomma
 					 ON L.Produit = P.id_produit 
 					 JOIN Article as A 
 					 ON P.Article = A.id_article 
-					 JOIN User
+					 JOIN User U
 					 ON U.Mail = A.Fermier
 					 WHERE C.Paye = "non"');
 

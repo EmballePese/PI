@@ -31,7 +31,7 @@
 			  $name = $tab_prod[$i]['Nom'];
         $name[0] = strtoupper($name[0]);
 			  $qte = $tab_prod[$i]['Qte_acheter'];
-			  $pxd = 1;
+			  $pxd = $tab_prod[$i]['Prix_achat'];
 			  $farm = $tab_prod[$i]['Fermier'];
 			  $id_article = $tab_prod[$i]['id_article'];
 		  if(!empty($tab_prod[$i]['Marge'])){

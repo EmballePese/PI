@@ -14,13 +14,15 @@ if($check=="check"){
 }
 
 
-$recov = $bdd->query('SELECT P.Nom, A.Fermier, L.Qte, A.Unite, C.Consommateur, C.id_cmd_vente 
+$recov = $bdd->query('SELECT P.Nom,U.Mail as Fermier, L.Qte, A.Unite, C.Consommateur, C.id_cmd_vente 
 					 FROM Cmd_vente as C JOIN Ligne_cmd_vente as L 
 					 ON L.cmd_vente = C.id_cmd_vente 
 					 JOIN Produit as P 
 					 ON L.Produit = P.id_produit 
 					 JOIN Article as A 
 					 ON P.Article = A.id_article 
+					 JOIN User
+					 ON U.Mail = A.Fermier
 					 WHERE C.Paye = "non"');
 
 $i = 0;

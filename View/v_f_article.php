@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div id="content">
-        <h1> Ajoutez vos proposition de vente</h1>
+        <h1> Ajoutez vos propositions de vente</h1>
         <table class="tab_center">
     			<?php
     		include('../Controller/c_variable_inscription.php');

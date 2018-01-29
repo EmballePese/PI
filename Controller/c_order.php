@@ -7,7 +7,7 @@ if($step == "1"){
 		$message = "<h2>Veuillez indiquer vos coordonnées : </h2></br>
 					<form action=\"c_order.php\" method=\"GET\">
 					<tr><td>Adresse</td> <td>:</td> <td><input type=\"text\" name=\"adress_p\" value=\"$adress_p\"></td></tr><p>
-					<tr><td>Code postal</td>:<td>:</td><td><input type=\"text\"name=\"cp_p\" value=\"$cp_p\" maxlength=\"5\"></td></tr><p>
+					<tr><td>Code postal</td> <td></td>:<td></td> </td><input type=\"text\"name=\"cp_p\" value=\"$cp_p\" maxlength=\"5\"></td></tr><p>
 					<tr><td>Ville</td> <td>:</td> <td><input type=\"text\" name=\"city_p\"value=\"$city_p\"></td></tr><p>
 					<input type=\"hidden\" name=\"step\"value=\"1\">
 					<input type=\"hidden\" name=\"meth\"value=\"1\">

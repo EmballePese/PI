@@ -19,13 +19,36 @@
 	  <div id="content">
 		<h2>Voici les categories disponibles :</h2></br>
 		Trier par :<form action="c_categorie.php" method="POST">
-				   <select name="trier">
-				   <option value="prix_c">Prix décroissant</option>
-				   <option value="prix_d">Prix croissant</option>
-				   <option value="name_c">Par nom A->Z</option>
-				   <option value="name_d">Par nom Z->A</option>
-				   </select>
-				   <p>
+<?php
+$tab_t = array();
+$tab_t[0]['Nom'] = "Prix décroissant";
+$tab_t[1]['Nom'] = "Prix croissant";
+$tab_t[2]['Nom'] = "Par nom A->Z";
+$tab_t[3]['Nom'] = "Par nom Z->A";
+$tab_t[0]['id'] = "prix_c";
+$tab_t[1]['id'] = "prix_d";
+$tab_t[2]['id'] = "name_c";
+$tab_t[3]['id'] = "name_d";
+echo" <select name=\"trier\">";
+for($i=0; $i<count($tab_t); $i++)
+{
+	    $id = $tab_t[$i]['id'];
+		    $nom = $tab_t[$i]['Nom'];
+
+    if($trier == $id)
+    {
+        echo"<option value=".$id." selected>".$nom."</option>";
+        $_SESSION['tri'] = $id;
+    }
+    else
+    {
+        echo"<option value=".$id.">".$nom."</option>";
+    }
+
+}
+echo"</select> <br>";
+?>
+
 <?php
 echo $message;
 echo"<input type=\"hidden\" value=\"".$cat."\" name=\"cat\">";
@@ -35,6 +58,10 @@ echo"Rechercher : <input type=\"text\" value=\"".$search."\" name=\"search\">";
 				   </form>
 
 <?php
+if(isset($_SESSION['tri']))
+{
+	    $trier = $_SESSION['tri'];
+}
 for($i=0;$i<count($tab);$i++){
 	$id_produit = $tab[$i]['id_produit'];
 	$qte_max = $tab[$i]['Qte_stock'];
@@ -72,6 +99,7 @@ for($i=0;$i<count($tab);$i++){
 	echo"<input type=\"hidden\" value=\"".$id_produit."\" name=\"id_produit\">";
 	echo"<input type=\"hidden\" value=\"".$qte_max."\" name=\"qte_max\">";
 	echo"<input type=\"hidden\" value=\"".$i."\" name=\"i\">";
+	echo"<input type=\"hidden\" value=\"".$trier."\" name=\"trier\">";
 	echo"<button> Ajouter </button> </br>
 		</form>
 		</br>";

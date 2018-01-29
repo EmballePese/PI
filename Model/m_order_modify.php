@@ -8,7 +8,7 @@ catch (Exception $e)
 	die('Erreur : '. $e->POSTMessage());
 }
 
-$bdd->exec("UPDATE cmd_vente
+$bdd->exec("UPDATE Cmd_vente
 			SET Livre = '$delivry'
 			WHERE id_cmd_vente = '$order'");
 ?>

@@ -21,7 +21,8 @@ $recov = $bdd->query("SELECT *
 					  WHERE Consommateur ='$id' AND Date_livraison >'$date'");
 
 	while ($donnees = $recov->fetch()){
-			$order_processing[$i]= $donnees['id_cmd_vente'];
+		$order_processing[$i]['id_cmd_vente'] = $donnees['id_cmd_vente'];
+		$order_processing[$i]['Paye'] = $donnees['Paye'];
 			$i++;
 	}
 	$recov = $bdd->query("SELECT *

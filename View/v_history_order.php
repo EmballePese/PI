@@ -23,12 +23,15 @@
       <?php
       for($i=0;$i<count($order_processing);$i++){
 
-        echo"Commande n°".$order_processing[$i];
-        $a = $order_processing[$i];
+        echo"Commande n°".$order_processing[$i]['id_cmd_vente'];
+		$a = $order_processing[$i]['id_cmd_vente'];
+		if($order_processing[$i]['Paye'] == 'non')
+		{
         echo"<form action=\"c_order_modify.php\" method=\"POST\">
         <input type=\"hidden\" name=\"order\"value=\"$a\">
         <button>Modifier</button>
-        </form>";
+		</form>";
+		}	
         echo"<form action=\"c_order_view.php\" method=\"POST\">
         <input type=\"hidden\" name=\"order\"value=\"$a\">
         <button>Voir</button>
